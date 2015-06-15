@@ -1,0 +1,588 @@
+;************
+hztxt style
+;************
+(defun c:txt()
+
+(command "-style" "hztxt" "romany.shx,hztxt.shx" 0 0.667 0 "" "" "")
+
+(princ)
+)
+
+;************
+;
+;************
+(defun c:dw (/ p1list p1 p2 i j)
+  (setq i 1)
+  (prompt "\n请选择第1个起点（或回车结束）:")
+  (while (setq p1 (getpoint))
+	(princ p1)
+	(prompt "\n请选择第")
+	(princ (setq i (1+ i)))
+	(prompt "个点起点（或回车结束）:")
+	(setq p1list (append p1list (list p1)))
+  )
+
+  (setq i (1- i))
+  (setq j 0)
+  (while (> i j)
+	(prompt "\n请选择第")
+	(prompt (rtos (setq j (1+ j))))
+	(prompt "个端点:")
+	(setq p1 (car p1list))
+	(setq p2 (getpoint p1))
+	(princ p2)
+	(command "line" p1 p2 ())
+	(setq p1list (cdr p1list))
+  )
+
+  (princ)
+)
+
+;************
+;
+;************
+(defun c:dw2 (/ p1list pt2list)
+  (setq i 0)
+  (while (setq p1 (getpoint(
+  (setq pt1 (getpoint "\n第一个点"))
+  (setq pt2 (getpoint "\n第二个点"))
+ ; (if
+    (command "line" pt1 (getpoint pt1 "\nFirst line end:") ())
+    (command "line" pt2 (getpoint pt2 "\nSecond line end") ())
+  ;)
+  (princ)
+)
+
+;***************
+SHORTED COMMAND
+;***************
+
+;*************
+绘制焊接T型材
+;**************
+(defun c:tt (/ osold t1 t2 h1 b1 p1 p2 p3 p4 p5 p6 p7 p8 ang1 ang2 ang3 dist1 dist2 dist3)
+(SETQ OSOLD (GETVAR "OSMODE"))
+(setvar "osmode" 0)
+(setq t1 (getreal "\n请输入腹板的厚度:"))
+(setq h1 (getreal "\n\请输入腹板的高度:"))
+(setq t2 (getreal "\n请输入面板的厚度:"))
+(setq b1 (getreal "\n\请输入面板的宽度:"))
+(setq p1 (getpoint "\npick the first point:"))
+(setq p2 (polar p1 0 t1))
+(setq ang1 (/ pi 2))
+(setq ang1 (* ang1 -1))
+(setq ang2 pi)
+(setq ang3 (/ pi 2))
+
+(setq p3 (polar p2 ang1 h1))
+
+(setq dist1 (/ b1 2))
+(setq dist2 (/ t1 2))
+(setq dist3 (- dist1 dist2))
+(setq p4 (polar p3 0 dist3))
+(setq p5 (polar p4 ang1 t2))
+(setq p6 (polar p5 ang2 b1))
+
+(setq p7 (polar p6 ang3 t2))
+(setq p8 (polar p7 0 dist3))
+(command "pline" p1 p2 p3 p4 p5 p6 p7 p8 "c")
+
+(setvar "osmode" osold)
+(princ)
+)
+
+
+;*****
+尺寸标注设置
+;*****
+(defun c:dimset ()
+(setvar "cmdecho" 0)
+(command "DIMALT""0")
+(command "DIMALTD""2")
+(command "DIMALTF""25.4000")
+(command "DIMASO""1")
+(command "DIMCEN""50.0000")
+(command "DIMCLRD""0")
+(command "DIMCLRE""0")
+(command "DIMCLRT""4")
+(command "DIMDLE""0.0000")
+(command "DIMDLI""0.0000")
+(command "DIMLFAC""1.0000")
+(command "DIMLIM""0")
+(command "DIMRND""0.0000")
+(command "DIMSAH""0")
+(command "DIMSCALE""1.0000")
+(command "DIMSE1""0")
+(command "DIMSE2""0")
+(command "DIMSHO""1")
+(command "DIMSOXD""0")
+(command "DIMTAD""1")
+(command "DIMTFAC""1.0000")
+(command "DIMTIH""0")
+(command "DIMTIX""0")
+(command "DIMTM""0.0000")
+(command "DIMTOFL""0")
+(command "DIMTOH""0")
+(command "DIMTOL""0")
+(command "DIMTP""0.0000")
+(command "DIMTSZ""0.0000")
+(command "DIMTVP""0.0000")
+(command "DIMZIN""8")
+(command "DIMDEC""0")
+(command "DIMTXSTY""HZTXT")
+(command "DIMFIT""2")
+(setq scale (getreal "\nPlease input the factor <50>:"))
+    (if (= scale nil)
+       (setq scale 50)
+    )
+    (SETQ SCALE (* 1.0 SCALE))    
+    (setq dt (* 3.5 scale))
+    (setq da (* 2 scale))
+    (setq de (* 0.75 scale))
+    (setq do (* 0.625 scale))
+    (setq ts (* 3.5 scale))
+
+         (command "DIMGAP" (* 0.5 scale))
+         (command "DIMTXT" dt)
+         (command "DIMASZ" da)
+         (command "DIMEXE" de)
+         (command "DIMEXO" do)
+         (command "TEXTSIZE" ts)
+         (SETQ DIMN (GETVAR "DIMSTYLE"))
+(setq a (getstring "\nPlease input the dimstyle <1-50>:"))         
+       (if (= a "")
+       (command "dim" "save" "1-50" "Y" "e")
+       (command "DIM" "SAVE" a "Y" "e")
+      )
+      (princ)
+)
+
+
+;**********
+构件标注1
+;**********
+
+(defun c:MM (/ osold b0 p0 p1 ang1 dist1 len1  kind TT WW TF TM)
+  (SETQ OSOLD (GETVAR "OSMODE"))
+   (setvar "osmode" 0)
+ (SETQ P0 (GETPOINT "\nSelect MN start position:")) 
+
+(SETQ P1 (GETPOINT "\nSelect MN end position:"))
+  (SETQ NUM (GETSTRING "\nNumber code:"))
+  (if (= dscale nil)
+    (setq dscale (getreal "\nDrawing scale:"))
+   (progn
+    (princ "\nDrawin scale <")
+    (princ dscale)
+    (princ ">:")
+    (setq b0 (getreal))
+    (if (/= b0 nil)
+        (setq dscale b0)
+    )
+   )
+  )
+
+(setq len1 (* 4.0 dscale))
+
+(setq ang1 (angle p0 p1))
+
+(setq dist1 (distance p0 p1))
+(setq dist1 (- dist1 len1))
+(setq p2 (polar p0 ang1 dist1))
+
+(setq kk (getreal "\nKind of Number code(0(only number),1(pl),2(plbr),3(L),4(T):"))
+
+(if (= kk 0)
+(progn 
+    (COMMAND "LINE" P0 P2 "")
+    (COMMAND "INSERT" "mn" p1 dscale "" "" num)
+ )
+)
+
+(if (= kk 1)
+(progn 
+(setq TT (GETSTRING "\nPlate thickness:"))
+    (COMMAND "LINE" P0 P2 "")
+    (COMMAND "INSERT" "nP" p1 dscale "" "" num TT )
+ )
+)
+
+(if (= kk 2)
+(progn 
+(setq TT (GETSTRING "\nPlate thickness:"))
+    (COMMAND "LINE" P0 P2 "")
+    (COMMAND "INSERT" "nP1" p1 dscale "" "" num TT )
+ )
+)
+
+(if (= kk 3)
+(progn 
+(setq TT (GETSTRING "\nPlate thickness:"))
+(setq WW (GETSTRING "\nFlange widthness:"))
+    (COMMAND "LINE" P0 P2 "")
+    (COMMAND "INSERT" "nL" p1 dscale "" "" num TT WW)
+)
+)
+
+(if (= kk 4)
+(progn 
+(setq TF (GETSTRING "\nWeb characteristic:"))
+(setq TM (GETSTRING "\nFlange characteristic:"))
+    (COMMAND "LINE" P0 P2 "")
+    (COMMAND "INSERT" "nT" p1 dscale "" "" num TF TM)
+)
+)
+
+ (setvar "osmode" osold)
+  (princ)
+)
+
+
+
+
+;*****
+修改云线
+;*****
+
+(defun c:cld (/ oldos p1 p2 x1 y1 x2 y2 x y xdiv ydiv xdist ydist b000)
+	(setq oldos(getvar "osmode"))
+	(setvar "plinegen" 1)	
+	(setvar "plinewid" 0.0)
+        (setvar "osmode" 0)
+
+  (setq p1 (getpoint "\nInput One Corner Point:"))
+  (setq p2 (getcorner p1 "\nInput Other Corner Point:"))
+
+  (if (= dscale nil)
+    (setq dscale (getreal "\nDrawing scale:"))
+   (progn
+    (princ "\nDrawin scale <")
+    (princ dscale)
+    (princ ">:")
+    (setq b000 (getreal))
+    (if (/= b000 nil)
+        (setq dscale b000)
+    )
+   )
+  )
+
+(setq x1 (car  p1)
+        y1 (cadr p1)
+        x2 (car  p2)
+        y2 (cadr p2)
+  )
+  (setq p1 (list (min x1 x2) (min y1 y2))
+        p2 (list (max x1 x2) (max y1 y2))
+  )
+  (setq x (abs (- x1 x2))
+        y (abs (- y1 y2))
+  )
+
+  (setq xdiv (fix (/ x dscale))
+        ydiv (fix (/ y dscale))
+  )
+  (if (< xdiv 2) (setq xdiv 2))
+  (if (< ydiv 2) (setq ydiv 2)) 
+  (setq xdist (/ x xdiv)
+        ydist (/ y ydiv)
+  )
+  (setq x1 (car  p1)
+        y1 (cadr p1)
+  )
+
+
+
+	(command "pline" p1 "a")
+
+	(repeat xdiv 
+		(setq x1 (+ x1 xdist))
+		(command "a" "120" (list x1 y1))
+	)
+	(repeat ydiv 
+		(setq y1 (+ y1 ydist))
+		(command "a" "120" (list x1 y1))
+	)
+	(repeat xdiv 
+		(setq x1 (- x1 xdist))
+		(command "a" "120" (list x1 y1))
+	)
+	(repeat ydiv 
+		(setq y1 (- y1 ydist))
+		(command "a" "120" (list x1 y1))
+	)
+        (command "")
+
+	(setvar "osmode" oldos)
+        (princ)
+)
+;*****
+层的改变
+;*****
+(setvar "cmdecho" 0)
+
+
+(DEFUN C:Lf (/ a b)
+(graphscr)
+(prompt "\nPick the entity to be turn off: ")
+(setq a (entget (car (entsel))))
+(setq b (cdr (assoc 8 a)))
+(command "layer" "off" b "")
+(setvar "highlight" 1)
+)
+
+
+
+(defun C:ll (/ p l n e lay0)
+ (princ "\nOnly turn on layers be selected.")
+ (setq p (ssget))
+ (command "layer" "off" "*" "y" "")
+ (if p
+  (progn
+   (setq l 0)
+   (setq n (sslength p))
+   (while (< l n)
+      (setq e (entget (ssname p l)))
+      (setq lay0 (cdr (assoc 8 e)))
+      (command "layer" "on" lay0 "")
+      (setq l (1+ l))
+    )
+   )
+  )
+ (terpri)
+ (princ)
+)
+
+(DEFUN C:LS ()
+(graphscr)
+(prompt "\nPick the entity to set layer: ")
+(setq a (entget (car (entsel))))
+(setq b (cdr (assoc 8 a)))
+(command "layer" "s" b "")
+(setvar "highlight" 1))
+
+
+(defun c:oa()
+  (command "layer" "on" "*" "")
+  (princ)
+)
+
+
+;**********
+构件标注2
+;**********
+
+
+(defun C:BB (/ P1 P2 LEN1 B0 TH)
+ (if (= dscale nil)
+    (setq dscale (getreal "\nDrawing scale:"))
+
+   (progn
+    (princ "\nDrawin scale <")
+    (princ dscale)
+    (princ ">:")
+    (setq b0 (getreal))
+    (if (/= b0 nil)
+        (setq dscale b0)
+    )
+   )
+  )
+
+(setq P1 (getpoint"\n输入标注线起点:")
+        P2 (getpoint"\n输入标注线终点:")
+  )
+
+(setq len1 (* 4.0 dscale))
+(setq TH (* 5.0 dscale))
+
+  (command "line" P1 P2 "")
+  (command "circle" P2 LEN1)
+
+  (setq el (entlast))
+  (command "trim" el "" P2 "")
+(command "text" "S" "HZTXT" "J" "MC" P2 TH 0)
+  (princ)
+)
+
+;********
+质量计算
+;********
+(defun C:QC (/ key1 ss val ent idx n lst)
+  (initget "Add Subtract Multiply Divide")
+  (setq key1 (getkword "\nSubtract/Multiply/Divide/<Add>:"))
+  (setq res 0.0)
+  (cond
+    ((= key1 "Subtract")
+     (progn (opsel) (setq res (- num1 num2)) (mc))
+    )					;end subtract
+    ((= key1 "Multiply")
+     (progn (opsel) (setq res (* num1 num2)) (mc))
+    )					;end multiply
+    ((= key1 "Divide")
+     (progn (opsel)
+	    (if	(zerop num2)
+	      (progn (princ "\n Divisor cannot be zero") (command))
+	      (progn (setq res (/ num1 num2)) (mc))
+	    )				;end if
+     )					;end progn
+    )					;end divide
+    (T
+     (progn
+       (setq ss (ssget '((0 . "TEXT"))))
+       (setq n (sslength ss))
+       (setq idx 0)
+       (repeat n
+	 (setq ent (ssname ss idx))
+	 (setq idx (1+ idx))
+	 (setq lst (entget ent))
+	 (setq val (read (cdr (assoc '1 lst))))
+	(if (numberp val)
+	  (setq res (+ res val))
+	  (ssdel ent ss)
+	)				;end if
+       )				;end repeat
+       (terpri)
+       (print (sslength ss))
+       (princ "number is select.")
+       (mc)
+     )					;end progn
+    )					;end T
+
+  )					;end cond
+)					;end qc()
+(defun mc (/ key2 pt ent olist nlist)
+  (initget "Moddify Creat")
+  (setq key2 (getkword "\n Creat/<Moddify>:"))
+  (cond
+    ((= key2 "Creat")
+     (progn
+       (setq pt (getpoint "Pick point:"))
+       (command "_.text" pt "" "" (rtos res))
+       (command "_.change" "l" "" "p" "c" 1 "")
+       (princ)
+     )
+    )
+    (T
+     (progn
+       (setq ent (car (entsel "Select text to modify:")))
+       (setq olist (entget ent))
+       (setq
+	 nlist (subst (cons 1 (rtos res)) (assoc '1 olist) olist)
+       )
+       (entmod nlist)
+       (command "_.change" ent "" "p" "c" 1 "")
+       (princ)
+     )					;end progn
+    )					;end T
+  )					;end cond
+)					;end mc()
+(defun opsel (/ ent1 ent2 op1 op2)
+  (setq ent1 (car (entsel "Select first operand:")))
+  (setq op1 (entget ent1))
+  (if (and
+	(= (cdr (assoc '0 op1)) "TEXT")
+	(numberp (read (cdr (assoc '1 op1))))
+      )
+    (progn (redraw ent1 3)
+	   (setq num1 (atof (cdr (assoc '1 op1))))
+    )
+    (progn (princ "\nA number is needed.") (command))
+  )					;end if
+  (setq ent2 (car (entsel "\nSelect second operand:")))
+  (setq op2 (entget ent2))
+  (if (and
+	(= (cdr (assoc '0 op2)) "TEXT")
+	(numberp (read (cdr (assoc '1 op2))))
+      )
+    (progn (redraw ent2 3)
+	   (setq num2 (atof (cdr (assoc '1 op2))))
+    )
+    (progn (princ "\nA number is needed.") (command))
+  )					;end if
+  (progn (redraw ent1 4) (redraw ent2 4))
+)					;end opsel()
+
+
+
+(defun c:xz(/ p0 zh h pt k xp plist pplist mm mmm i n os grid yy hh opw tt txt txt1 klist kklist)
+  (setvar "CMDECHO" 0)
+  (setq os (getvar "OSMODE"))
+  (setq grid (getvar "GRIDMODE"))
+  (setvar "GRIDMODE" 0)
+  (setvar "OSMODE" 15359)
+  (if (= #p0 nil) (setq #p0 (list 0 0 0)))
+  (prompt "\n请选择基线上任一点<")
+  (princ #p0)
+  (setq p0 (getpoint ">:"))
+  (if p0 (setq #p0 p0))
+  
+
+  (if (= #zg nil) (setq #zg 40))
+  (prompt "\n请输入型值数据字高<")
+  (princ #zg)
+  (setq zg (getdist ">:"))
+  (if zg (setq #zg zg))
+  
+
+  (if (= #h nil) (setq #h 100))
+  (prompt "\n请输入型值数据间距<")
+  (princ #h)
+  (setq h (getdist ">:"))
+  (if h (setq #h h))
+  
+
+  (while (setq pt (getpoint "\n请选择型值点(结束选点请按空格或回车):"))
+    (if (= i nil) (setq i 0))
+    (if (= plist nil) (setq plist (list (cadr pt))))
+    (if (= pplist nil) (setq pplist (list (car pt))))
+    (setq pplist (cons (car pt) pplist))
+    (setq plist (cons (cadr pt) plist))
+    (setq i (1+ i))
+    (prompt "<")
+    (princ i)
+    (prompt ">")
+    (princ (rtos (- (car pt) (car #p0)) 2 0)) 
+    (prompt ",")
+    (princ (rtos (- (cadr pt) (cadr #p0)) 2 0))
+    (if (= i 1) (setq plist (list (cadr pt))))
+    (if (= i 1) (setq pplist (list (car pt))))
+   )
+
+  (setq xp (getpoint "\n请选择型值数据插入的第一点:"))
+  
+  (setvar "OSMODE" 0)
+  
+  (repeat i
+    (if (= n nil) (setq n i))
+    (setq mm (list (car xp) (- (cadr xp) (* (- n 1) #h))))
+    (setq mmm (list (+(* 5 #zg) (car xp)) (- (cadr xp) (* (- n 1) #h))))
+    (setq txt (rtos (- (car plist) (cadr #p0)) 2 0))
+    (setq txt1 (rtos (- (car pplist) (car #p0)) 2 0))
+    (if (= klist nil) (setq klist (list txt)))
+    (if (= kklist nil) (setq kklist (list txt1)))
+    (setq klist (cons txt klist))
+    (setq kklist (cons txt1 kklist))
+    
+    (command "TEXT" mmm #zg "0" txt1 "")
+    (command "TEXT" mm #zg "0" txt "")
+    (princ)
+    (setq plist (cdr plist))
+    (setq pplist (cdr pplist))
+    (setq n (1- n))
+   )
+  ;(if (setq yy (getstring "\n请输入要保存的名称:"))
+   ; (progn
+    ;  (setq hh (strcat "d:/陈辉/" yy ".txt"))
+    ; (setq opw (open hh "w"))
+    ; (repeat i
+    ;   (setq tt (car klist))
+    ;   (princ tt opw)
+    ;   (princ "\n" opw)
+    ;   (setq klist (cdr klist))
+    ;   )
+    ; )
+  ;  )
+ ; (close opw)
+  (setvar "GRIDMODE" grid)
+  (setvar "OSMODE" os)
+  (princ)
+ )

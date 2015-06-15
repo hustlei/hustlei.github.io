@@ -1,0 +1,92 @@
+/*
+
+Visual Studio-like style based on original C# coloring by Jason Diamond <jason@diamond.name>
+
+*/
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: white;
+  color: black;
+  -webkit-text-size-adjust: none;
+}
+
+.hljs-comment,
+.hljs-annotation,
+.language-diff .hljs-header,
+.hljs-chunk,
+.language-apache .hljs-cbracket {
+  color: #008000;
+}
+
+.hljs-keyword,
+.hljs-id,
+.hljs-built_in,
+.language-smalltalk .hljs-class,
+.hljs-winutils,
+.language-bash .hljs-variable,
+.language-tex .hljs-command,
+.hljs-request,
+.hljs-status,
+.language-nginx .hljs-title,
+.language-xml .hljs-tag,
+.language-xml .hljs-tag .hljs-value {
+  color: #00f;
+}
+
+.hljs-string,
+.hljs-title,
+.hljs-parent,
+.hljs-tag .hljs-value,
+.hljs-rule .hljs-value,
+.language-ruby .hljs-symbol,
+.language-ruby .hljs-symbol .hljs-string,
+.hljs-template_tag,
+.language-django .hljs-variable,
+.hljs-addition,
+.hljs-flow,
+.hljs-stream,
+.language-apache .hljs-tag,
+.hljs-date,
+.language-tex .hljs-formula,
+.language-coffeescript .hljs-attribute,
+.hljs-name {
+  color: #a31515;
+}
+
+.language-ruby .hljs-string,
+.hljs-decorator,
+.hljs-filter .hljs-argument,
+.hljs-localvars,
+.hljs-array,
+.hljs-attr_selector,
+.hljs-pseudo,
+.hljs-pi,
+.hljs-doctype,
+.hljs-deletion,
+.hljs-envvar,
+.hljs-shebang,
+.hljs-preprocessor,
+.hljs-pragma,
+.userType,
+.language-apache .hljs-sqbracket,
+.language-nginx .hljs-built_in,
+.language-tex .hljs-special,
+.hljs-prompt {
+  color: #2b91af;
+}
+
+.hljs-doctag,
+.hljs-xmlDocTag {
+  color: #808080;
+}
+
+.hljs-type,
+.hljs-typename { font-weight: bold; }
+
+.language-vhdl .hljs-string { color: #666666; }
+.language-vhdl .hljs-literal { color: #a31515; }
+.language-vhdl .hljs-attribute { color: #00b0e8; }
+
+.language-xml .hljs-attribute { color: #f00; }

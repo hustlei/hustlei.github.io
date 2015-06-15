@@ -1,0 +1,6 @@
+fdisk
+mount
+ar
+tar
+zip
+unzip

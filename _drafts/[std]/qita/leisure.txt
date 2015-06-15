@@ -1,0 +1,64 @@
+﻿tender and toys:
+tender/novurania/jet tender/rescue tender/RIB tender
+laser sailing dinghy/sunfish sailing boat
+waverunner/jet-ski/watercraft
+flats boat
+mono-ski
+Cayago F7 Seabobs
+inflatable kayaks
+banana
+windsurfer
+water-skis&wakeboard&kneeboard&slalom ski&beginner ski
+*scooter/waterbike
+*inflatable trampoline
+*Donut&gyro tube
+___spinning rods
+paddle boards,
+segways
+scuba diving equipment
+snorkelling equipment/snorkel gear
+fishing equipment
+
+miscellaneous items：
+wetsuits
+booties & gloves
+___underwater lights
+jetski helmets & goggles
+kid's beach toys
+volleyball/net
+beach balls
+bouyancy aides
+fins
+
+Gym/Exercise Equipment
+Woodway Path Treadmill
+SX Scifit Total Body Elliptical Trainer (located on Sundeck)
+weight bench
+elliptical machine
+medicine balls
+assorted resistance bands
+Swiss balls
+Yoga mats
+
+equipment:
+BBQ/beach gazebo
+jacuzzi
+gangway登船走道
+boarding ladder/舷梯，登船梯
+bathing ladder/beach ladder/游泳梯
+swimming platform/transformer
+davits/crane/吊臂
+Monkey swing
+
+
+AMX touch panel 
+sun pads
+sun beds
+
+
+送审图
+总图 布置 型线 说明书 干舷 吨位
+性能 静水力 稳性 破舱
+结构 基本结构 横剖面 机座 艏柱 尾柱 计算书
+舾装 锚泊系泊 舵系 桨
+安全 门窗盖梯 消防 救生 海损 信号 

@@ -1,0 +1,9 @@
+<style type="text/css">
+/*背景*/
+#bottom{
+        color: #666;
+}
+body{
+     background: #222;
+}
+</style>

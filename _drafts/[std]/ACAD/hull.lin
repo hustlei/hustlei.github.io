@@ -1,0 +1,52 @@
+;;
+;;  Ver. 1.0 - IGES Linetype file
+;;
+;;  1/21/93 - Autodesk Data Exchange Group
+;;(结构图线型)
+
+*cent
+A,25,-1.5,1,-1.5
+
+*sd
+A,25,-1.5,1,-1.5,1,-1.5
+
+*guidao
+A,8,-8
+
+*xx
+A,5,-1.5
+
+;;  Complex linetypes
+;;
+;;  Complex linetypes have been added to this file.
+;;  These linetypes were defined for anti-fire control
+;;  drawings.(防火区域划分图线型)
+
+*A60
+A,4,-2.5,["A60",hztxt,S=2.54,R=0.0,X=-2.54,Y=-1.27],-2
+*A30
+A,4,-2.5,["A30",hztxt,S=2.54,R=0.0,X=-2.54,Y=-1.27],-2
+*A15
+A,4,-2.5,["A15",hztxt,S=2.54,R=0.0,X=-2.54,Y=-1.27],-2
+*A0
+A,4,-2.5,["A0",hztxt,S=2.54,R=0.0,X=-2.54,Y=-1.27],-0.5
+*B60
+A,4,-2.5,["B60",hztxt,S=2.54,R=0.0,X=-2.54,Y=-1.27],-2
+*B30
+A,4,-2.5,["B30",hztxt,S=2.54,R=0.0,X=-2.54,Y=-1.27],-2
+*B15
+A,4,-2.5,["B15",hztxt,S=2.54,R=0.0,X=-2.54,Y=-1.27],-2
+*B0
+A,4,-2.5,["B0",hztxt,S=2.54,R=0.0,X=-2.54,Y=-1.27],-0.5
+*C
+A,4,-2.5,["C",hztxt,S=2.54,R=0.0,X=-2.54,Y=-1.27],-0.1
+;;  Linetype Definition related to JIS Z 8312
+
+;;(气体危险区域的划分图线型)
+*0类危险区
+A,4,-2.5,["0类",hztxt,S=2.54,R=0.0,X=-2.54,Y=-1.27],-2
+*1类危险区
+A,4,-2.5,["1类",hztxt,S=2.54,R=0.0,X=-2.54,Y=-1.27],-2
+*2类危险区
+A,4,-2.5,["2类",hztxt,S=2.54,R=0.0,X=-2.54,Y=-1.27],-2
+

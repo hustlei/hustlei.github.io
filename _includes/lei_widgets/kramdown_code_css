@@ -1,0 +1,12 @@
+<style type="text/css">
+/*代码表格和行号*/
+div.highlight table tbody tr td:first-child{
+    width: 40px;
+    color: green;
+}
+td.code{
+    text-align: left;
+}
+/* coderay
+.line-numbers{width: 40px;}
+</style>

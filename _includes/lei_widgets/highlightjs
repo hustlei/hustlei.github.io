@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="/assets/lei_assets/highlightjs/vs.css">
+<script type="text/javascript" src="/assets/lei_assets/highlightjs/highlight.pack.js"></script>
+<script type="text/javascript">
+  hljs.configure({
+    tabReplace: '    ', // 4 spaces   
+  });
+  hljs.initHighlightingOnLoad();
+    $(document).ready(function() {
+    $('pre code').each(function(i, block) {
+      hljs.highlightBlock(block);
+    });
+    $('p code').each(function(i, block) {
+      hljs.highlightBlock(block);
+    });
+  });
+
+</script>
+<style type="text/css">
+.hljs{
+  background: rgba(100,100,100,0);
+}
+p code.hljs{
+  display: inline;
+  white-space: pre-wrap;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+  border-radius: 3px;
+  padding: 0 3px;
+  margin: 0 2px;
+}
+</style>
