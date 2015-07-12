@@ -87,6 +87,15 @@ Opencascade提供了二维和三维几何体的生成、显示和分析，以及
 + 编译
 
 
+事实上，如果使用的不是vs2010编译的时候，还有一个非常简单但是有一点点风险（一般情况下没问题）的方法，即直接修改msvc.bat
+
+例如我用的是vs2013（vc12），直接在`set "PRJFILE=%~dp0\adm\msvc\%VCVER%\OCCT.sln"`前一行添加如下代码，然后打开msvc就ok了
+
+~~~ batch
+set "DevEnvDir=%VS120COMNTOOLS%..\IDE"
+set "VCVER=vc12"
+~~~
+
 ## VS手动编译OpenCascade
 
 如果vs版本和opencascade默认vs版本不同或有其他原因导致编译失败，可以通过如下方式手动设置和编译

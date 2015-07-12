@@ -1,6 +1,6 @@
 ---
 layout: post
-title: c链接库(c语言dll和lib)
+title: c链接库(c语言dll和lib)的编写及调用
 category: 编程语言
 group: IT
 tags: [c语言]
@@ -21,6 +21,8 @@ revision:
 
 c链接库分两种，动态链接库(.dll, .so)与静态链接库(.lib, .a)。
 
+> 另外，.net平台的类库(托管dll，managed code)，虽然也是dll后缀，作用也类似于本地代码dll（Native code），但是编写和调用与原生链接库有较大不同，且只能被托管代码调用，本文不作介绍
+
 静态链接库：编译时，连接器找出程序需要的函数，从静态库中拷贝到执行文件。连接成功后，程序不在需要静态库。也就是说，编译完后程序不需要静态库就可以运行。
 
 静态库是一个或者多个obj文件的打包，所以有人干脆把从obj文件生成lib的过程称为Archive(存档)，即合并到一起。比如你链接一个静态库，如果其中有错，它会准确的找到是哪个obj有错，静态lib只是壳子。
@@ -30,7 +32,11 @@ c链接库分两种，动态链接库(.dll, .so)与静态链接库(.lib, .a)。
 
 # windows平台链接库
 
-## 静态链接库
+## 静态链接库(.lib)
+
+> 静态库其实就是.o中间文件的集合，可以直接链接到新的文件，和源代码重用有相似作用。以.lib作为后缀名
+> 
+> > 在windows平台，动态链接库dll生成时，也可以同时生产一个.lib文件，这个文件不是静态链接库，而是dll的导入库，仅包含dll里的函数声明信息（方便调用dll），不能作为静态链接库用。
 
 ### 静态库编写
 
@@ -57,7 +63,7 @@ c链接库分两种，动态链接库(.dll, .so)与静态链接库(.lib, .a)。
 因为静态链接库是将全部指令都包含入调用程序生成的EXE文件中。因此如果用的是静态链接库，那么也就不存在“导出某个函数提供给用户使用”的情况，要想用就得全要！要不就都别要!
 
 
-## 动态链接库
+## 动态链接库(.dll)
 
 ### 动态链接库声明方式
 
@@ -125,11 +131,13 @@ lib /def:test.def /machine:i386 /out:test.lib
 
 动态链接库在静态调用时，需要提供.lib（该.lib文件不是静态链接库）文件，称为引入库，它主要提供被Dll导出的函数和符号名称，使得链接的时候能够找到dll中对应的函数映射。
 
-+ 静态链接方式调用dll
-    - 包含dll的头文件
-    - 采用`#pragma comment(lib,"..\\debug\\libTest.lib")`导入动态库生成的*.lib头文件
-    - 将动态链接库生产的.dd文件放到调用的exe或dll同一目录下
-+ 动态加载方式调用dll
+#### 静态链接方式调用dll
+
+1. 包含dll的头文件
+2. 采用`#pragma comment(lib,"..\\debug\\libTest.lib")`导入动态库生成的*.lib文件（到入库文件）
+3. 将动态链接库生产的.dll文件放到调用的exe或dll同一目录下
+
+#### 动态加载方式调用dll
 
 ~~~ c
 //test.dll中的int add(int x, int y)函数调用过程
@@ -141,7 +149,9 @@ funPtr(2,3);
 FreeLibrary(handle);
 ~~~
 
-### 动态链接库搜索路径
+### 动态链接库dll搜索路径
+
+无论调用native dll的代码是native代码还是.net 托管代码，搜索方式都遵循如下规则（与调用托管dll类库不同）
 
 假如安全DLL搜索模式启用，搜索顺序如下：
 
@@ -161,21 +171,42 @@ FreeLibrary(handle);
 5. Windows目录。通过调用GetWindowsDirectory函数可以获取这个目录的路径。
 6. PATH环境变量指定的路径。请注意，这并不包括每个应用程序的应用程序路径注册表项中指定。在应用程序路径注册表项的键值并不作为DLL的搜索路径。
 
++ 用SetDllDirectory函数增加程序加载时的dll搜索路径
++ 如果path环境变量使用的是相对路径，则相对路径个根是打开当前进程的程序的路径。
 
-> dll文件放在环境变量设置的目录中，应用程序可以搜索到。编译exe的时候 增加对应dll 延迟加载 选项，然后exe执行的时候，先调用api设置一下PATH环境变量即可。
-> 
-> > 设置基于进程的临时环境变量，SetEnvironmentVariable("path","E:\\");立即可以用
-> 
-> > C# .net引用类库仅需要设置配置文件即可，当然也可以按如下方式
-> 
-> > C#中可以用`Evironment.SetEnvironmentVarible()`，也可以调用系统方法
-> 
-> > `[DllImport("Kernel32.DLL", SetLastError=true)]`
-> 
-> > `public static extern bool SetEnvironmentVariable(string lpName, string lpValue);`
-> 
-> 用SetDllDirectory函数增加程序加载时的dll搜索路径
+**延迟加载（delayload）**
 
+
+延迟加载就是指被指定为delay load的dll只有当需要的时候才会真正载入进程空间。如果要通过设置path环境变量来指定dll加载路径的话最好先**增加设置对应dll 延迟加载** 选项。在调用dll的程序中设置path环境变量后，只有先设置了延迟加载dll，path才会对dll起作用，否则会先调用dll，后设置环境变量，导致出错。
+
+例如：
+
+~~~
+root
+ |- main.exe
+    |- dir1
+       |- a.dll
+       |- dir2
+          |- b.dll
+
+~~~
+
+main调用了a.dll，a.dll调用了b.dll
+
++ 在main中直接添加dir1和dir2到path路径，可以正常工作
++ 在a.dll中添加dir2路径到path环境变量就必须在链接时设置dll延迟加载选项
++ 在main中设置环境变量时相对路径是要设置为相对root目录。
+
+设置dll延迟加载选项delay load的方法：
+
+1. 在源代码的开头加上`#pragma comment(lib, "DelayImp.lib")`，如果你使用vs也可以在input里面加上这么一项。
+2. 在编译的时候加上delay选项（也可以在vs项目属性中设置）
+    + `cl x.c /link /DELAYLOAD:xxx.dll`
+    + `link x.o /DELAYLOAD:xxx.dll`
+
+**note**
+
+如果包含dll路径的path环境变量在构造函数内声明，则建议写在在static静态构造函数里，因为在.net里会第一时间调用静态构造函数，否则的话可能会先初始化类成员（如果类成员类型是dll内的就悲剧了）
 
 # linux平台链接库
 

@@ -22,7 +22,7 @@ dll文件在windows上通常是指动态链接库文件，但是在.Net平台上
 
 在.NET中，引入了一个程序集的概念，指经由编译器编译得到的，供CLR进一步编译执行的那个中间产物，在WINDOWS系统中，它一般表现为.dll,或者是.exe的格式。因此，在.Net中dll文件为程序集，也叫类库，是托管代码，.Net可以像动态链接库一样引用它，但是非托管代码，如C程序等无法直接调用该dll。
 
-本文总结了.Net平台下调用.dll类库和动态链接库(原生dll)文件的基本方法。
+本文总结了.Net平台下调用.dll类库和动态链接库(本地dll，native code)文件的基本方法。
 
 # .Net程序集(DLL类库文件）调用
 
@@ -185,3 +185,47 @@ extern static int FunctionName(ref byte param1[1], ref byte param2);
 但是，知道函数的入口地址后，怎样调用这个函数呢？因为在C#中是没有函数指针的，没有像C++那样的函数指针调用方式来调用函数，所以我们得借助其它方法。经过研究，发现我们可以通过结合使用System.Reflection.Emit及System.Reflection.Assembly里的类和函数达到我们的目的。
 
 详见《C#程序实现动态调用DLL的研究》一文。
+
+# 类库（托管dll）搜索路径
+
++ 托管dll(类库）的搜索路径与native dll的搜索路径是不同的
++ 搜索路径的方式是按照被调用的dll库（是类库还是native dll）决定的，与调用程序是否托管代码无关
+
+.net CLR在运行时寻找正确的Assembly（类库dll也是Assembly），Net提供了搜索算法，可以根据.config文件添加自定义搜索路径。
+
+搜索顺序如下：
+
++ 在GAC(Global Assembly Cache,全局程序集缓存)中搜索相应版本的DLL.
++ 配置文件(web.config或app.config)中配置codeBase（assemblyIdentity应该可以不用）
+
+~~~ xml
+<configuration>
+   <runtime>
+      <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+         <dependentAssembly>
+            <assemblyIdentity name="myAssembly"
+                              publicKeyToken="32ab4ba45e0a69a1"
+                              culture="neutral" />
+            <codeBase version="2.0.0.0"
+                      href="om/myAssembly.dll"/>
+         </dependentAssembly>
+      </assemblyBinding>
+   </runtime>
+</configuration>
+~~~
+
++ 应用程序(.exe)当前目录下
++ 配置文件(web.config或app.config)中配置privatePath
+
+~~~ xml
+<configuration>
+   <runtime>
+      <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+         <probing privatePath="bin;bin2\subbin;bin3"/>
+      </assemblyBinding>
+   </runtime>
+</configuration>
+~~~
+
+OK,CLR就是根据上面的顺序从1到4进行搜索Assembly的。如果没有搜索到指定版本的类库DLL，则程序会抛出异常，提示：DLL文件无法找到。
+
