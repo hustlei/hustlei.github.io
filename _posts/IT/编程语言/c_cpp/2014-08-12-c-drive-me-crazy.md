@@ -1,7 +1,7 @@
 ---
 layout: post
 title: c让人抓狂的特性
-category: 编程语言
+category: C
 group: IT
 tags: [c语言]
 keywords: [c语言]

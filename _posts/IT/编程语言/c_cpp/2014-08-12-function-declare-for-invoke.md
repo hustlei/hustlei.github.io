@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 函数调用方式
-category: 编程语言
+category: C
 group: IT
 tags: [c语言]
 keywords: [__stdcall, __cdecl]

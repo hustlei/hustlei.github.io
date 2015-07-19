@@ -138,6 +138,7 @@ JB :
   LIFEcategories_path : /pages/Lifecategories.html
   tags_path : /pages/tags.html
   messages_path : /pages/messages.html
+  music_path : /pages/music.html
   about_path : /pages/about.html
   links_path : /pages/links.html
   weiboxiu_path : /pages/weiboxiu.html

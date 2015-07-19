@@ -1,7 +1,7 @@
 ---
 layout: post
 title: c语言动态数组
-category: 编程语言
+category: C
 group: IT
 tags: [c语言]
 keywords: [c语言, 动态数组]

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: c链接库(c语言dll和lib)的编写及调用
-category: 编程语言
+category: C
 group: IT
 tags: [c语言]
 keywords: [链接库, dll, so]
