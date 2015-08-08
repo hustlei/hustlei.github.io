@@ -110,7 +110,7 @@ opencascade的示例都到了不少第3方库，在编译及运行程序的时�
     - Tcl/Tk： 是运行 DRAW 测试程序所必须的。
     - FreeType： 是3D viewer中，文字表现所必须的。
 + 弱依赖（可选的）
-    - TBB：intel线程库
+    - TBB：intel线程库(threadingbuildingblocks.org上可以下载各个版本的绿色包)
     - gl2ps：openGL输出成PS/EPS
     - FreeImage：支持20多种图像类型(BMP、JPEG、PNG等)的图像处理库
     - VTK：开源3D图形、图像处理和系那是软件系统，为OCCT visualization提供改写版处理方式（Draw示例编译需要改组件）
