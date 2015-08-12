@@ -39,11 +39,5 @@ var musicList = [
         singer : 'Time & July',
         cover  : '',
         src    : 'http://ra01.sycdn.kuwo.cn/resource/n1/128/22/25/1949558411.mp3'
-    },
-    {
-        title : '她说',
-        singer : '张碧晨',
-        cover  : 'http://www.smohan.net/data/upfiles/media/2015/05/smusic/2015051704.jpg',
-        src    : 'http://www.smohan.net/data/upfiles/media/2015/05/smusic/2015051704.mp3'
     }
 ];

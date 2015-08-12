@@ -232,16 +232,13 @@ html,body{
     cursor: pointer;
 }
 .grid-music-container .u-volume .volume-control:hover{
-    /*background-position: -158px -80px;*/
-    background-position: 0px -80px;
+    background-position: -158px -80px;
 }
 .grid-music-container .u-volume .volume-control.muted{
-    /*background-position: -140px -98px;*/
-    background-position: 18px -98px;
+    background-position: -140px -98px;
 }
 .grid-music-container .u-volume .volume-control.muted:hover{
-    /*background-position: -158px -98px;*/
-    background-position: 0px -98px;
+    background-position: -158px -98px;
 }
 .grid-music-container .m-music-list-wrap{
     margin-left: 135px;
