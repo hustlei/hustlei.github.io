@@ -103,13 +103,16 @@ k&r风格,历史悠久,而且有众多友好的开源兄弟,如linux内核风格
     - 接口不建议以I开头，可以以able或ible结尾，如interface Runnable； interface Accessible 。
 
 + 函数/方法
-    - Camel命名法
+    - Pascal命名法(非私有函数)
+    - Camel命名法(private函数)
     - 函数名保持命令性语气，使用“动词”或者“动词＋名词”（动宾词组）。如：drawBox()
     - 类的成员方法应当只使用“动词”，被省略掉的名词就是对象本身。如：box.draw()
     - 用正确的反义词组命名具有互斥意义的变量或相反动作的函数等。
 
 + 变量
-    - Camel命名法
+    - Pascal命名法(非私有变量)
+    - Camel命名法（private变量）
+    - 对于C#来说相当于属性用Pascal命名法，字段用Camel命名法，因为属性是要暴露的，字段最好是private变量
     - 使用“名词”或者“形容词＋名词”，如：oldValue，newValue
     - 变量的名字应该可望文知意，不必进行“解码”。有单位的变量应该将单位加到变量的名字当中，如：freqencyOffsetKHz
     - 保护成员变量（只有类对象自己和子类对象可以访问）建议以下划线_作为前缀
@@ -132,6 +135,7 @@ k&r风格,历史悠久,而且有众多友好的开源兄弟,如linux内核风格
 + 较长的单词可取单词的头几个字母形成缩写
 + 此外还有一些约定成俗的英文单词缩写
 
+~~~
 addition add
 answer ans
 array arr
@@ -175,6 +179,7 @@ subtraction sub
 table tab
 temporary tmp或temp
 value val
+~~~
 
 + 命名中若使用特殊约定或缩写，则要注释说明。应该在源文件的开始之处，对文件中所使用的缩写或约定，特别是特殊的缩写，进行必要的注释说明。
 + 变量命名，禁止取单个字符（如i, j, k），但i, j, k作为局部循环变量是允许的。
@@ -182,6 +187,7 @@ value val
 
 ### 软件中常用的反义词组
 
+~~~
 add / remove       begin / end        create / destroy 
 insert / delete    first / last       get / release
 increment / decrement                 put / get
@@ -190,3 +196,4 @@ min / max          old / new          start / stop
 next / previous    source / target    show / hide
 send / receive     source / destination   init/term
 cut / paste        up / down		init/deinit
+~~~
