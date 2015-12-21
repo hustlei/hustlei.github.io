@@ -24,5 +24,15 @@ EpubVeiwer是一个免费的阅读Epub电子书的软件
 
 EpubViwer是本人在编写软件帮助文档时，编写的一个软件，用Epub作为帮助系统文档格式，由于在Windows上没有找到好用的Epub阅读文件，因此特别编写的。本软件有2个版本。
 
-1. EpubViewer Light版：安装程序和占用磁盘面积比较小，在IE版本低于7.0时，可能会遇到某些epub电子书阅读无法显示页面的情况，如果出现这种情况可以选择安装EpubViwer Standard版本或安装高版本IE。
-2. EpubViwer标准版：安装程序比Light版本稍大一些。
+1. EpubViewer Light版（[下载地址](http://kuai.xunlei.com/d/xi16Dkx0JeR3VgQA61d)）：安装程序和占用磁盘面积比较小，在IE版本低于7.0时，可能会遇到某些epub电子书阅读无法显示页面的情况，如果出现这种情况可以选择安装EpubViwer 增强版本或安装高版本IE。
+2. EpubViwer增强版(开发中...)：安装程序比Light版本稍大一些，兼容性稳定性更强。
+
+软件界面：
+
+[](http://hustlei.qiniudn.com/epubviewer/epubviewer1.1-lite.png)
+
+
+
+友情链接：
+
+<a href='http://xiazai.zol.com.cn/'>ZOL应用下载</a>
