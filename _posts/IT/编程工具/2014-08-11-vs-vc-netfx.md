@@ -1,6 +1,6 @@
 ---
 layout: post
-title: vs2010,vs2013,vc2010,vc2013,.netframework2.0,.netframework4.0
+title: vs20xx,vc20xx,.netframework2.0,.netframework4.0
 category: 编程工具
 group: IT
 tags: [Visual Studio, Visual C++, .NET Framework]
@@ -22,11 +22,10 @@ revision:
 
 作为一个喜欢新版本的人，总是喜欢用最新的软件，但是却常常弄出无法运行的程序，怎么都找不到解决方法，事实上，了解一下各个版本之间的差异，这些问题都可以避免。
 
-# vs各个版本差异
+# vs版本
 
-+ vs 2008帮助文件十分好用
-+ vs 2010编译的程序在xp上运行很好
-+ vs 2013程序不能执行在xp上运行，但支持metro程序
++ vs 2012开始不能在xp上安装运行，vs2012开始支持Metro开发
++ vs 2015只能在win8.1上安装运行
 
 # vc20xx编译程序如何运行
 
@@ -34,15 +33,13 @@ revision:
 
 # vc2012、vc2013编译程序如何在xp上运行
 
-详见本文链接
-
-不同的工具集需要安装不同版本的vc redist运行库。
+VC编译的程序依赖VC运行库，不同版本的工具集需要安装不同版本的vc redist运行库。如vc2013开发的C++程序需要安装vc redist 2013的计算机上才能运行。当然，直接复制vc redist 2013中msvcr120.dll和msvcp120.dll两个文件到应用程序文件夹不安装vc redist也可以；直接设置为静态链接也可以。
 
 # .net framework2.0, .net framework4.0 差异
 
-.net 运行时(clr)有四个版本clr1.0(建议抛弃)，clr1.1，clr2.0，clr4.0
+.net 运行时(clr)有四个版本clr1.0(建议抛弃)，clr1.1(建议抛弃)，clr2.0，clr4.0
 
-clr4.0本质上和clr2.0很多功能是兼容的，但微软强力推荐clr4.0，导致很多程序无法运行，当然还是建议.net framwork4.0的程序在clr4.0上运行。
+clr4.0本质上和clr2.0很多功能是兼容的，但微软强力推荐clr4.0，导致很多程序无法运行，当然还是建议.net framwork4.0的程序在clr4.0上运行。.net 2.0的程序经过配置还是可以在clr4.0上运行的。
 
 # 各个windows兼容性
 

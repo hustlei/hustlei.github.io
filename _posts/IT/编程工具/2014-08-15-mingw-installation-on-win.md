@@ -26,9 +26,7 @@ MinGW是Mininalist GNU on Windows的缩写
 + 相比Cygwin，体积小，使用方便
 + Dev-C++使用的编译工具就是MinGW
 
-MinGW项目还提供了MSYS工具，用于在windows上模拟linux shell环境。
-
-MSYS是“Minimal SYStem”的缩写，大意是最小的系统，是一个Bourne Shell命令行解释器，可以用来替换MS的cmd.exe，也是MinGW的补充。如果不喜欢用windows的cmd，可以使用MSYS代替。
+MinGW项目还提供了MSYS工具，用于在windows上模拟linux shell环境。MSYS是“Minimal SYStem”的缩写，大意是最小的系统，是一个Bourne Shell命令行解释器，可以用来替换MS的cmd.exe，也是MinGW的补充。如果不喜欢用windows的cmd，可以使用MSYS代替。
 
 在<http://www.mingw.org/wiki>可以找到下载地址
 
