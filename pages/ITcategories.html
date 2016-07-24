@@ -14,7 +14,7 @@ comments: false
   {% include widgets/group_categories_list %}
 </ul>
 
-{% for category in site.categories %} 
+{% for category in site.categories %}
   {% assign g = 0 %}
   {% for page in category[1] %}
      {% if page.group == "IT" %} {% assign g = 1 %} {% endif %}

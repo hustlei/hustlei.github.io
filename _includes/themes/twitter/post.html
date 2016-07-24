@@ -1,4 +1,15 @@
-
+<div class="pagination">
+    <ul>
+      {% if page.categories == empty %}
+        <li><a href="/pages/{{ page.group }}categories.html" title="文章分类列表">分类列表</a></li>
+      {% else %}
+        <li><a href="/pages/{{ page.group }}categories.html#{{ page.categories[0] }}-ref" title="文章分类列表">分类列表</a></li>
+      {% endif %}
+      <li><a href="{{ site.JB.tags_path }}" rel="nofollow" title="标签">tags标签</a></li>
+      <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}" rel="nofollow">所有文档</a></li>
+    </ul>
+  </div>
+ 
 <section id="content">
   <article class="post">
 
@@ -30,22 +41,22 @@
 
 <section>
 
-  {% unless page.categories == empty %}
   <ul class="tag-box inline">
+  {% unless page.categories == empty %}
     <li><i class="icon-large icon-folder-open"></i></li>
     {% assign categories_list = page.categories %}
-    {% include JB/categories_list %}
-  </ul>
+    <li><a href="/pages/{{ page.group }}categories.html#{{ page.categories[0] }}-ref">
+    		{{ page.categories | join: "/" }} <span>{{ site.categories[page.category].size }}</span>
+    	</a></li>
   {% endunless %}
 
   {% unless page.tags == empty %}
-  <ul class="tag-box inline">
-    <li><i class="icon-large icon-tags"></i></li>
+    <li style="margin-left: 30"><i class="icon-large icon-tags"></i></li>
     {% assign tags_list = page.tags %}
     {% include JB/tags_list %}
-  </ul>
   {% endunless %}
-
+  </ul>
+  
   <div class="pagination">
     <ul>
       {% if page.previous %}

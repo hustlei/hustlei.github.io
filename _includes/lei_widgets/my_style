@@ -3,9 +3,9 @@
 #bottom{
         color: #666;
 }
-body{
+/*body{
      background: #222;
-}
+}*/
 </style>
 
 <link rel="stylesheet" type="text/css" href="/assets/lei_assets/smusic/css/smusic.css" />
