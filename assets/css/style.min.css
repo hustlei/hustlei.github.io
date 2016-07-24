@@ -106,7 +106,6 @@ body, select, input, textarea {
 }
 
 body {
-    background-image: url(../img/bgs/bg_body.png);
     font-family: Verdana, Arial, sans-serif, "Hiragino Sans GB", "Microsoft YaHei";
     font-size: 13px;
     *font-size: small;
@@ -193,10 +192,6 @@ a {
         float: left;
     }
 
-#navbar {
-    float: right;
-}
-
     #navbar ul {
         list-style: none;
     }
@@ -231,7 +226,7 @@ a {
     -webkit-box-shadow: 2px 2px 12px #787878;
     box-shadow: 2px 2px 12px #787878;
     border-radius: 3px;
-    background: #e6e6e6 url(../img/bgs/bg_main.png) repeat-y 263px 0;
+    background: #e6e6e6;
 }
 
 #sidebar {
@@ -312,7 +307,7 @@ a {
 #main-inner {
     background-color: #fff;
     min-height: 1500px;
-    margin-left: 271px;
+    margin: 5px;
     padding: 40px;
 }
 
@@ -355,7 +350,7 @@ article {
             margin-bottom: .8em;
         }
 
-		
+
         article section h2 {
             font-size: 181%;
         }

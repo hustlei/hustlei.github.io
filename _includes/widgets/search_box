@@ -1,8 +1,9 @@
 <form id="search-form">
-  <input id="query" type="text" placeholder="支持正则搜索"></input>
+  <input id="query" type="text" placeholder="支持正则搜索">
   <button type="submit">
     <i class="icon-search"></i>
   </button>
+</input>
 </form>
 <script type="text/javascript">
   $(document).ready(function () {

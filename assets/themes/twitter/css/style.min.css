@@ -106,7 +106,7 @@ body, select, input, textarea {
 }
 
 body {
-    background-image: url(../img/bgs/bg_body.png);
+    background: transparent;
     font-family: Verdana, Arial, sans-serif, "Hiragino Sans GB", "Microsoft YaHei";
     font-size: 13px;
     *font-size: small;
@@ -179,13 +179,12 @@ a {
 }
 
 #wrap {
-    width: 1000px;
+    width: 900px;
     margin: 20px auto;
 }
 
 #top {
     width: 100%;
-    float: left;
 }
 
     #top > a {
@@ -193,7 +192,7 @@ a {
     }
 
 #navbar {
-    float: right;
+    text-align: center;
 }
 
     #navbar ul {
@@ -201,9 +200,10 @@ a {
     }
 
         #navbar ul li {
+            display: inline;
+            float: none;
             font-weight: bold;
             font-size: 120%;
-            float: left;
             text-align: center;
             padding-left: 12px;
             padding-right: 12px;
@@ -310,8 +310,7 @@ a {
 
 #main-inner {
     background-color: #fff;
-    min-height: 1500px;
-    margin-left: 271px;
+    min-height: 1200px;
     padding: 40px;
 }
 
@@ -899,7 +898,7 @@ pre {
 }
 
 #search-box {
-    padding: 24px;
+    padding: 0 24px;
     overflow: hidden;
     background: none !important;
 }
@@ -910,19 +909,19 @@ pre {
 }
 
 #query {
-    margin-bottom: 0;
-    padding: 4px 14px;
+    padding: 2px 14px;
     font-size: 13px;
     font-weight: normal;
     line-height: 100%;
     width: 132px;
-    height: 19px;
+    height: 18px;
     float: left;
 }
 
 #search-form button {
-    margin-left: 8px;
-    width: 50px;
+    margin: 0 2px;
+    width: 45px;
+    height: 23px;
     float: right;
 }
 
