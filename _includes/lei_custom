@@ -1,5 +1,4 @@
-<!--百度统计验证-->
-  <meta name="baidu-site-verification" content="ZieNfZ64Fz" />
+<meta name="baidu-site-verification" content="ZieNfZ64Fz" />
 <!--highlightjs-->
   {% include lei_widgets/highlightjs %}
 <!--pygements 代码样式vs theme，用pygments和rouge时会有用，也可能没有用
