@@ -58,5 +58,19 @@ rdiscount引擎会吧`$ $`或`$$ $$`内部latex公式的上标转换为`<sup>`�
 
 `*`号、`1.`表示目录格式是有序列表还是无序列表
 
+# 本地调试Permission denied
+
+在本地使用`jekyll serve`命名后，本应该直接生成网站的，但是可能在jekyll本身没错的情况下提示如下错误
+
++ “jekyll 2.5.3 | Error:  Permission denied - bind(2) for 127.0.0.1:4000”
+
+意思是4000端口被占用。有两种解决方法：
+
+1. 改端口
+    + 打开_config.yml，加入一行：port:5001(没有被占用的端口均可)即可解决，也就是使用5001端口不使用4000端口。
+2. 解除4000端口占用
+    + 找出占用4000端口的程序。比如使用360卫士中的360流量防火墙查看占用4000端口的程序。（我自己就经常是因为打开foxitreader导致4000端口被占用）。
+    + 在任务管理器中介绍占用端口的程序。
+
 # 参考资料
 [github+jekyll搭建博客流水帐](http://yochuo.com/tools/2013/10/24/githubjekyll-da-jian-bo-ke-liu-shui-zhang/)
