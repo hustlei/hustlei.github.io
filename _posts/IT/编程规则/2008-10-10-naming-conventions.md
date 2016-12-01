@@ -78,22 +78,29 @@ k&r风格,历史悠久,而且有众多友好的开源兄弟,如linux内核风格
 
 ## 标识符
 
-+ 类库
++ 类库(一般指一个dll文件)
     - Pascal命名法
-    - 同一模块的类库用同一前缀，前缀表示模块，如：AnyBase.dll，AnyCore.dll
+    - 同一模块的类库建议用同一前缀，前缀表示模块，如：AnyBase.dll，AnyCore.dll
 
-+ 包,命名空间
++ 命名空间/模块/包
     - Pascal命名法
     - 采用反域名规则。如：Com.Company.App.Module。
     - 或者采用组织名称后跟技术名称(软件名)的方法。即：CompanyName.Technology.[Feature]
-    - 命名空间内不建议包含同名的类
-    - 包可以以文件夹形式存在（如c语言）
+
+    个人不建议命名空间太长，所以我常用这样的方式<Company>.<Module><lib>，比如：OCCT.AnyBase
+
+    - 包/模块可以以文件夹形式存在（如c语言）
 
 + 文件
-    - 文件名全小写，单词用短横线-相连
     - 按项目约定命名，且尽量保证文件名明确
-    - 文件一般是成对出现，如：foo-bar.hxx, foo-bar.cxx, foo-bar.inl
     - 建议一个类一个文件
+    - 2种命名方式建议，看个人喜好
+        * Pascal命名法
+            - 和类命名方式相同
+            - 例如GeomTools.cs
+        * 全小写文件名
+            - 文件名全小写，单词用短横线-相连
+            - 文件一般是成对出现，如：foo-bar.hxx, foo-bar.cxx, foo-bar.inl
 
 + 类型(类/结构/枚举)
     - Pascal命名法，不含下划线
@@ -104,33 +111,35 @@ k&r风格,历史悠久,而且有众多友好的开源兄弟,如linux内核风格
     - 接口不建议以I开头，可以以able或ible结尾，如interface Runnable； interface Accessible。
 
 + 函数/方法
-    - Pascal命名法(非私有函数)
-    - Camel命名法(private函数)
+    - Pascal命名法(非私有函数)，例如SetCoord()
+    - Camel命名法(private函数)，例如setCoord()
     - 函数名保持命令性语气，使用“动词”或者“动词＋名词”（动宾词组）。如：DrawBox()
     - 类的成员方法应当只使用“动词”，被省略掉的名词就是对象本身。如：box.Draw()
     - 用正确的反义词组命名具有互斥意义的变量或相反动作的函数等。
 
 + 字段(成员变量)/属性
     - Pascal命名法(非私有字段、属性)
-    - Camel命名法，并以\_开头（private字段）
-    - 对于C#来说相当于属性用Pascal命名法，字段用Camel命名法，因为属性是要暴露的，字段最好是private变量
+    - Camel命名法，并以\_开头（private字段,私有字段）
+    - 受保护方法、内部方法用Camel命名法
     - 使用“名词”或者“形容词＋名词”，如：oldValue，newValue
     - 变量的名字应该可望文知意，不必进行“解码”。有单位的变量应该将单位加到变量的名字当中，如：freqencyOffsetKHz
-    - 私有字段（只有类对象自己能访问）建议以下划线_作为前缀
-    - 个人建议受保护方法、内部方法用Camel命名法
 
-+ 变量
-    - Camel命名法
-    - 非成员变量（局部变量、全局变量）建议直接用Camel命名法
++ 变量/对象
+    - Camel命名法，例如：myCounter
+    - 变量可以是局部变量、全局变量、函数参数等
+        * 建议局部变量以a,an开头，比如:aPoint，aCircle
+        * 建议函数参数以the开头，比如：thePoint
+        * 成员变量可以用my开头
+        * 不建议使用全局变量，如果可以尽量不要定义
 
 + 宏/常量
     - 全大写，用\_分割
-    - 除非万不得已，否则不使用任何不标准的扩展，如#pragma和`__declspec`，允许使用`__declspec(dllimport)`和`__declspec(dllexport)`，但必须通过DLLIMPORT和DLLEXPORT等宏，以便其他人在共享使用这些代码时容易放弃这些扩展
+    - 除非万不得已，否则不使用任何不标准的扩展，如#pragma和`__declspec`，允许使用`__declspec(dllimport)`和`__declspec(dllexport)`，但必须通过DLLIMPORT（或者STANDARD_IMPORT）和DLLEXPORT（或者STANDARD_EXPORT）等宏，以便其他人在共享使用这些代码时容易放弃这些扩展
 
 
-### 命名原则
+### 命名词汇
 
-#### 标识符命名
+#### 标识符命名词汇
 
 标识符的命名要清晰、明了，有明确含义，同时使用完整的单词或大家基本可以理解的缩写，避免使人产生误解。标识符的命名原则为：“min-length && max-information”原则，尽可能的用最少的字符而又能完整的表达标识符的含义。
 
@@ -141,64 +150,64 @@ k&r风格,历史悠久,而且有众多友好的开源兄弟,如linux内核风格
 + 此外还有一些约定成俗的英文单词缩写
 
 ~~~
-addition add
-answer ans
-array arr
-average avg
-buffer buf或buff
-capture cap或capt
-check chk
-column col
-control ctrl
-decode dec
-define def
-delete del
+addition    add
+answer      ans
+array       arr
+average     avg
+buffer      buf或buff
+capture     cap或capt
+check       chk
+column      col
+control     ctrl
+decode      dec
+define      def
+delete      del
 destination dest
-display disp
-division div
-encode enc
+display     disp
+division    div
+encode      enc
 environment env
-error err
-frequency freq
-index idx
-image img
-increment inc
-initalize init
-length len
-memory mem
-middle mid
-make mk
-message msg
-number num
+error       err
+frequency   freq
+index       idx
+image       img
+increment   inc
+initalize   init
+length      len
+memory      mem
+middle      mid
+make        mk
+message     msg
+number      num
 optimization opt
-operator optr
-parameters params 
-positon pos
-previous pre或prev
-result res
-return ret
-source src
-statistic stat
-string str
+operator    optr
+parameters  params 
+positon     pos
+previous    pre或prev
+result      res
+return      ret
+source      src
+statistic   stat
+string      str
 subtraction sub
-table tab
-temporary tmp或temp
-value val
+table       tab
+temporary   tmp或temp
+value       val
 ~~~
 
 + 命名中若使用特殊约定或缩写，则要注释说明。应该在源文件的开始之处，对文件中所使用的缩写或约定，特别是特殊的缩写，进行必要的注释说明。
 + 变量命名，禁止取单个字符（如i, j, k），但i, j, k作为局部循环变量是允许的。
 
 
-### 软件中常用的反义词组
+### 常用的反义词组
 
 ~~~
-add / remove       begin / end        create / destroy 
-insert / delete    first / last       get / release
-increment / decrement                 put / get
-add / delete       lock / unlock      open / close
-min / max          old / new          start / stop
-next / previous    source / target    show / hide
-send / receive     source / destination   init/term
-cut / paste        up / down		init/deinit
+add / remove         begin / end        create / destroy 
+insert / delete      first / last       get / release
+increment/decrement  put / get          retrieve / store
+add / delete         lock / unlock      open / close
+min / max            old / new          start / stop
+next / previous      source / target    show / hide
+send / receive       source/destination init/term
+cut / paste          up / down		    init/deinit
 ~~~

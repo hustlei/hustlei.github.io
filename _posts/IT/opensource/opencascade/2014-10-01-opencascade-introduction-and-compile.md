@@ -20,40 +20,37 @@ revision:
 
 OpenCASCADE 是一套开放源代码的CAD/CAM/CAE几何模型核心，这一套函数库系统原来是著名的CADCAM软体EUCLID的开发平台，源自于法国的Matra Datavision公司。OpenCASCADE是一个真正工业级的3D建模工具，基于OpenCASCADE可以快速的开发其他CAD系统，能够处理2D或3D建模的各种问题，比如建立实体模型、提供布尔操作、面角操作（倒角、圆角）、计算实体属性、可视化操作、数据格式转换等。
 
-OpenCASCADE是面向对象的C++类库，这些类库被分成了六个类库模块（最小类库模块是基础类库模块，最大的类库模块是模型运算类库模块），这些类库模块及其内容如下表:
+## 与其他几何引擎比较
+目前，几何造型引擎主要有3个，商业引擎：ACIS和Parasolid ，开源引擎Opencascade。
 
-|----------+------------+------------+------------+----------------+----------|
-|基类      |建模数据类  |建模运算类  |可视化类    |数据转换类      |应用框架  |
-|----------+------------+------------+------------+----------------+----------|
-|- 内核类  |- 二维几何体|- 基本体构造|- 二维三维  |- IGES          |- 数据框架|
-|- 数学工具|- 三维几何体|- 布尔操作  |- 通用体系  |- STEP AP203    |- 数据存储|
-|          |- 几何体工具|- 倒角圆角  |- 二维可视化|- STEP AP214    |- 应用界面|
-|          |- 拓扑      |- 偏移草图  |- 三维可视化|- 扩展数据      |          |
-|          |            |- 缝补扫掠  |            |- exchange(XDE) |          |
-|          |            |- 特征      |            |                |          |
-|          |            |- 缝补扫掠  |            |                |          |
-|          |            |- 消除隐藏线|            |                |          |
-|          |            |- 几何工具  |            |                |          |
-|          |            |- 拓扑工具  |            |                |          |
-|----------+------------+------------+------------+----------------+----------|
+在国内ACIS应用相对比较多，国内有几所高校（如重庆大学、华中科大、清华大学等）有使用ACIS进行项目应用，并且由若干硕士、博士论文发表。ACIS学习曲线比较陡峭，公开资料比较稀缺，需要购买单独的技术支持服务。考虑到成本因素，在项目开发初期不建议使用该平台。比较适合有充足资金的项目。
 
+Open CASCADE（简称OCC）为开源社区比较成熟的基于BREP结构的建模引擎，能够满足二维三维实体造型和曲面造型，国内研究和使用它的单位也越来越多。OCC可以分为建模、可视化和数据管理（OCAF）三大模块。其中建模为核心组件；可视化组件基于OpenGL，相对其他的三维可视化OpenGL平台（如Coin3d，Open Inventor， Ogre3d， OSG， VTK等）,功能简单，并且显示效果比较差，不能充分利用GPU硬件加速；OCAF采用树的方式管理数据，使用比较复杂，效率比较低，并且不适合自定义扩展。因此，不推荐使用OCC的可视化和数据管理组件。
 
+## 基于Opencascade的CAD软件
+FreeCAD是一款基于Open CASCADE和Coin3d的CAD软件，支持2d和3d。支持Python，跨平台，使用简单。但是缺少清晰的软件架构，代码组织比较杂乱，不易读懂。FreeCAD适合用户用来建立简单模型，不适合CAD研究和开发者。
 
-Opencascade提供了二维和三维几何体的生成、显示和分析，以及应用框架服务和数据格式转换功能。
+HeeksCAD与FreeCAD类似，缺少清晰的软件架构，不适合CAD研究和开发者。
 
-在建模和模型运算方面提供的主要功能有：
+AnyCAD
+与其说AnyCAD是AnyCAD是一款CAD软件，不如说AnyCAD是一个基于Open CASCADE的三维建模和可视化平台。基于AnyCAD，AnyCAD团队开发了AnyCAD Free，AnyCAD Viewer，AnyCAD Design Suites等产品，并且提供.Net SDK供第三方产品集成。但是是收费的。
 
-+ 创建基本几何体及复杂曲面
-+ 几何体布尔操作
-+ 倒角，斜切，镂空，偏移等操作
-+ 几何空间关系计算（法线，点积，叉积，投影，拟合等）
-+ 几何体分析（质心，体积，曲率等）
-+ 空间变换（平移，缩放，旋转）
+pythonOCC 提供一個完整的Python包裝的OpenCascade三维建模/可視化库。
 
+## Opencascade下载
 
-# Opencascade结构及windows下编译方法
+Opencascade源代码可以从官网[[www.opencascade.com](https://www.opencascade.com/)]下载。
 
-## Opencascade目录结构
++ 可以选择最新版本也可以选择老版本。（近保含5.5版以后的）
++ 可以选择安装版也可以选择压缩包下载，都包含了源代码，文档，示例以及测试文件。安装版还包含了依赖的第三方库以及编译好的dll及lib文件。
+
+在官网的[开发者页面](https://dev.opencascade.org/index.php?q=home/resources)上也可以找到git地址，可以直接clone到本地。
+
+也可以再官网的[gitweb](http://git.dev.opencascade.org/gitweb/)上直接浏览或下载源码。
+
+Opencascade还有一个社区版本，即OCE，由非官方人员维护，算是Opencascade的一个分支吧。可以再github上查看，地址为<http://git.dev.opencascade.org/gitweb/>，貌似大名鼎鼎的FreeCAD用的就是OCE，有兴趣可以查看，本人没有接触过。
+
+# Opencascade目录结构
 
 + adm: 编译OCCT的管理工具
     - cmake:包含CMake编译过程文件
@@ -73,23 +70,31 @@ Opencascade提供了二维和三维几何体的生成、显示和分析，以及
 
 > 不同版本略有不同，上述为6.8版
 
-## VS直接编译Opencascade
+
+# 在windows下编译Opencascade
+
+## 直接编译Opencascade
+直接双击msvc.bat打开vs，就可以编译了。
+
+如果你的vc版本和或者想编译不同构架(x86/x64)的occt，则需要先进行设置，然后编译：
 
 + 设置custom.bat中的变量
     - VCVER:Visual Studio版本(vc8, vc9, vc10, vc11 or vc12)默认是vc10，我的是vs2013我就改为vc12
     - VCVARS:Visual C++工具路径
     - ARCH:系统构架(32 or 64),影响CSF_OPT_*变量
     - CSF_OPT_*：搜索第3方库的路径，建议不改
-        * 第三方库的文件夹默认是带有vc10的，如`freeimage-3.16.0-vc10-64`,建议把所有类似的带有vc10的第三方库文件夹改为自己版本，我自己就改为`freeimage-3.16.0-vc12-64`
-        * 另外，注意第3方库的版本的位数，如果是64位，就不能编译为32位了，当然可以自己下载32位库
++ 第三方库
+    - 第三方库默认只根据你下载的版本安装某一个版本。比如我的opencascade6.9默认安装的就是vc10 32位的
+    - 第三方库的vc10，vc12等并不需要和你编译occt的vc版本相同，只是如果不同的话，运行的时候就需要两个版本的vc运行时都要有
+    - 但是第3方库的版本的位数必须和你要编译的位数相同，如果是64位，就不能编译为32位了。如果你要编译32位的，但是没有安装32位第三方库，你就需要自己下载32位库了，下载方法参考本文最后小节
+        * 如果第三方库是你自己下载的，那么就需要在custom中修改为你自己下载的名字。
 + 通过msvc.bat启动Visual Studio
     - note:有时会出现msvc执行后没反应的情况，可以在cmd内执行msvc.bat
 + 编译
 
+**找不到VS的问题**
 
-事实上，如果使用的不是vs2010编译的时候，还有一个非常简单但是有一点点风险（一般情况下没问题）的方法，即直接修改msvc.bat
-
-例如我用的是vs2013（vc12），直接在`set "PRJFILE=%~dp0\adm\msvc\%VCVER%\OCCT.sln"`前一行添加如下代码，然后打开msvc就ok了
+例如我用的是vs2013（vc12），但是编译opencascade6.9的时候用msvc.bat就找不到vs。这是因为msvc里没有设置vs2013的位置。可以这样解决：在msvc.bat的`set "PRJFILE=%~dp0\adm\msvc\%VCVER%\OCCT.sln"`前一行添加如下代码，然后打开msvc就ok了
 
 ~~~ batch
 set "DevEnvDir=%VS120COMNTOOLS%..\IDE"
@@ -140,7 +145,7 @@ opencascade的示例都到了不少第3方库，在编译及运行程序的时�
 
 ### OCCT示例不能运行
 
-Opencascade6.9.0的示例中，引用了CASROOT变量（可以设置系统变量，也可以在windows批处理文件或cmd中设置），再打开程序：
+Opencascade6.9.0(包括以后版本)的示例中，引用了CASROOT等很多环境变量，所以需要设置环境变量后（可以在bat中设置系统变量然后在bat中直接start示例）再打开程序：
 
 ~~~ batch
 set "CASROOT=C:\OpenCASCADE6.9.0\opencascade-6.9.0\"
@@ -148,43 +153,8 @@ set "CASROOT=C:\OpenCASCADE6.9.0\opencascade-6.9.0\"
 
 opencascade6.8.0不需要。
 
-opencascade6.9.0中包含了很多引用系统变量的地方，类似`casroot  = getenv("CASROOT");`，会导致编译的组件到其他电脑无法运行，可以把引用系统变量的地方改为字符串重新编译。
+opencascade6.9.0(包括以后版本)中包含了很多引用系统变量的地方，类似`casroot  = getenv("CASROOT");`，如果没有设置CASROOT等环境变量会导致编译的组件到其他电脑无法运行。所以，无论是编译OCCT还是自己编写程序调用OCCT，都要先根据env.bat文件中的变量设置环境变量。
 
-# opencascade逻辑结构
-
-## Opencascade的模块划分
-
-OCCT由C++ Class组成, 这些类用于：定义数据结构（几何模型， 显示和图形选取）、实现复杂算法、提供API。
-
-class被分组放在package中，package放在toolkit（library）中管理，toolkit被分组放在不同的module中。即OCCT的组织方式为
-
-+ module（模块）
-    - library/toolkit(库/工具)
-        * package（包）
-            + class（类）
-
-OCCT的模块(module)结构为
-
-![](http://hustlei.qiniudn.com/opencascade/modules.png)
-
-
-OCCT模块简介
-
-+ 基础类
-    - Foundation Classes 包含了基本的底层功能。
-+ 模型数据
-    - Modeling Data 包含了表示 2D 和 3D 几何和拓朴模型的数据结构（类）。
-+ 建模算法
-    - Modeling algorithms 包含了大量的拓朴算法和几何算法。
-    - Mesh包含了模型对象的网格化算法等。
-+ 可视化
-    - Visualization 包含了显示模型对象和模型对象的选择功能，一个基于OpenGL的显示系统。
-+ 程序框架
-    - Application Framework
-+ 数据交换
-    - Data Exchange
-
-> 如果仅仅使用 Opencascade 中的算法，Foundation, Modeling Data, Modeling algorithms三个模块可以单独拿出来使用。 
 
 # 相关链接
 

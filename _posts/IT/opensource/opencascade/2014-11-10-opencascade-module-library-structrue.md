@@ -1,6 +1,6 @@
 ---
 layout: post
-title: OpenCascade模块及库
+title: OpenCascade模块及库组织方式
 category: OpenSource
 group: IT
 tags: [OpenCascade]
@@ -17,6 +17,7 @@ revision:
 {:toc}
 
 # Opencascade模块及类库结构
+OCCT由C++ Class组成, 这些类用于：定义数据结构（几何模型， 显示和图形选取）、实现复杂算法、提供API。class被分组放在package中，package放在toolkit（library，每个都是一个独立的dll文件）中管理，toolkit被分组放在不同的module中。即OCCT的组织方式为
 
 + Opencascade库被分为6个主要模块(module)
 + 每个模块包含多个类库/工具箱(toolkit/library)
@@ -25,12 +26,14 @@ revision:
  
 层次关系如下：
 
-+ module（模块）
-    - library/toolkit(库/工具)
-        * package（包）
-            + class（类）
++ module（模块）            //共6个模块
+    - library/toolkit(库/工具)//ps:每个库都是一个单独的dll文件
+        * package（包）       //库中同一个包内的类具有相同的前缀
+            * class（类）        //类命名方式为：<package-name>_<class-name>.cxx (or .hxx)
 
-## opencascade dll类库明细
+## opencascade模块库明细
+
+OCCT共有6个模块，每个模块包含多个toolkit（每个toolkit都是一个单独的dll文件），每个
 
 + Opencascade共有57个类库(dll)
     - Foundation（基础类模块）
