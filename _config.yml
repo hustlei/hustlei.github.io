@@ -1,6 +1,6 @@
 ﻿permalink: :year/:month/:title.html
-markdown: Kramdown
-# Maruku Kramdown rdiscount Redcarpet
+markdown: kramdown
+# Maruku kramdown rdiscount Redcarpet
 
 img: http://hustlei.qiniudn.com/
 
