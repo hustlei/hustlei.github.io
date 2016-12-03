@@ -154,7 +154,7 @@ pt1=POINT(10,20)
 
 用byref()函数可以实现传递引用参数
 
-~~~ python
+~~~
 >>> i = c_int()
 >>> f = c_float()
 >>> s = create_string_buffer(b'\000' * 32)
@@ -173,7 +173,7 @@ pt1=POINT(10,20)
 
 用contents属性可以访问指针内容
 
-~~~ python
+~~~
 >>> from ctypes import *
 >>> i=c_int(42)
 >>> pi=pointer(i)
@@ -194,7 +194,7 @@ python通过ctypes调用的dll函数返回值，被默认假定为
 
 如果返回值是其他类型，必须通过restype属性指定
 
-~~~ python
+~~~
 >>> strchr = libc.strchr
 >>> strchr(b"abcdef", ord("d")) 
 8059983

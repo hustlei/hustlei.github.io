@@ -39,7 +39,7 @@ FileSystemObject（FSO）对象包含在Scripting类型库 (Scrrun.Dll）中,在
 
 FileSystemObject写文件示例
 
-~~~ JavaScript
+~~~ javascript
 var fso= new ActiveXObject("Scripting.FileSystemObject")
 //CreateTextFile三个参数分别为：文件名，是否覆盖，是否unicode编码
 f=fso.CreateTextFile("music.html",true,true)
@@ -120,7 +120,7 @@ Stream 对象用于表示二进制数据流或文本流。使用Stream对象可�
 + EOS 属性和 SetEOS 方法确定流位置的结尾。
 
 
-~~~ JavaScript
+~~~ javascript
 var content="string..."
 var stm = new ActiveXObject("adodb.Stream")
 stm.Type=2 //adTypeText, 文本数据

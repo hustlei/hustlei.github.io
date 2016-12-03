@@ -1,5 +1,3 @@
-
-
   module LeiFilter
     def squeezenewline(input)
       input.gsub(/\r?\n\s*\r?\n/,"\n")

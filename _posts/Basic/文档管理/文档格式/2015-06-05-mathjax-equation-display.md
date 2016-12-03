@@ -38,7 +38,7 @@ mathjax主要特点：
 
 **调用mathjax代码**
 
-~~~ javascript
+~~~ html
 // 设置$作为inline公式标记，默认$不是
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({

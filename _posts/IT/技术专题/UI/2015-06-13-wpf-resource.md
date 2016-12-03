@@ -66,10 +66,8 @@ Resource资源只支持二进制资源，图片资源应用该形式的最多。
     - `<Image  Source="pack://application:,,,/Learn.Library;component/s.gif" />`
     - `<Image Source="/Learn.Library;component/s.gif"/>`
     - `<Image Source="/ResourceDll;component/Resources/cancel.png"/>`
-    - 
-    ~~~
-    myBitmapImage.UriSource = new Uri(“pack://application:,,,/ResourceDll;component/Resources/cancel.png”, UriKind.Absolute);
-    ~~~
+    - myBitmapImage.UriSource = 
+      new Uri(“pack://application:,,,/ResourceDll;component/Resources/cancel.png”, UriKind.Absolute);
 
 > 其他程序集的资源必须以 Resource 方式嵌入。
 > 
@@ -83,10 +81,7 @@ Resource资源只支持二进制资源，图片资源应用该形式的最多。
 
 + 调用方式
     - `<Image Source="pack://siteoforigin:,,,/Images/Cancel.png"/>`
-    - 
-    ~~~
-    myBitmapImage.UriSource = new Uri(“pack://siteoforigin:,,,/Images/Cancel.png”, UriKind.Absolute);
-    ~~~
+    - myBitmapImage.UriSource = new Uri(“pack://siteoforigin:,,,/Images/Cancel.png”, UriKind.Absolute);
     - `<Image Source="Images/Cancel.png"/>` //可惜我在合并资源字典时用这种方式调用失败了
     - `<Image Source="C:\Images/Cancel.png"/>`
     - `<Image Source="file://C:Images/Cancel.png"/>`

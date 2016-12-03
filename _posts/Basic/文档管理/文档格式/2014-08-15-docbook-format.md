@@ -109,7 +109,7 @@ docbook是一个[OASIS标准](http://www.oasis-open.org/specs/#dbv5.0)由该组�
 <article xml:lang="zh-CN"
          xmlns="http://docbook.org/ns/docbook" version="5.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://docbook.org/ns/docbook xsd/docbook.xsd>
+         xsi:schemaLocation="http://docbook.org/ns/docbook xsd/docbook.xsd">
 ~~~
 
 xsi:schemaLocation属性的值由一个URI引用对组成，两个URI之间以空白符分隔。第一个URI是名称空间的名字，第二个URI给出模式文档的位置，模式处理器将从这个位置读取模式文档，该模式文档的目标名称空间必须与第一个URI相匹配。上例中就指定docbook默认命名空间的模式文件为本地xsd文件夹下的docbook.xsd文件(官方网站上下载的)
@@ -154,6 +154,7 @@ xmlns:xi="http://www.w3.org/2001/XInclude">
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://docbook.org/ns/docbook xsd/docbook.xsd
                              http://www.w3.org/2001/XInclude xsd/xinclude.xsd">
+</article>
 ~~~
 
 ## 章节标签
@@ -286,7 +287,40 @@ info标识元信息区域，info标签内常用元素有：
         * date
 + editor（编辑人）
 
-还有很多其他的标签，但是对于个人文章来说一般应用较少，包括：orgname（组织名称），pubdate（出版日期），publisher（出版者），publishername（出版者名称），releaseinfo（发布信息），annotation（注），artpagenums（出版时使用的页码），authorinitials（作者姓名缩写或其他较短的标识），bibliocoverage（涉及的时空范畴），biblioid（文档标识），bibliomisc（其他信息），bibliomset（组织好了的相关书目信息），bibliorelation（与其他文档的关系），biblioset（原始形态的的相关书目信息），bibliosource（文档来源），collab（协作者），confgroup（关于会议的元信息），contractnum（文档的条款数），contractsponsor（条款的发起人），extendedlink（XLink extended link），issuenum（期数，用于杂志），itermset（术语索引），legalnotice（法律声明），mediaobject（媒体对象，例如录象、音频、图像），othercredit（贡献者），pagenums（页码，用于参考条目），printhistory（印刷纪录），productname（产品名），productnumber（产品号），，seriesvolnums（卷数，用于丛书），subjectset（描述文档主题的术语），volumenum（卷数，用于文集）。
+还有很多其他的标签，但是对于个人文章来说一般应用较少，包括：
+
++ orgname（组织名称）
++ pubdate（出版日期）
++ publisher（出版者）
++ publishername（出版者名称）
++ releaseinfo（发布信息）
++ annotation（注）
++ artpagenums（出版时使用的页码）
++ authorinitials（作者姓名缩写或其他较短的标识）
++ bibliocoverage（涉及的时空范畴）
++ biblioid（文档标识）
++ bibliomisc（其他信息）
++ bibliomset（组织好了的相关书目信息）
++ bibliorelation（与其他文档的关系）
++ biblioset（原始形态的的相关书目信息）
++ bibliosource（文档来源）
++ collab（协作者）
++ confgroup（关于会议的元信息）
++ contractnum（文档的条款数）
++ contractsponsor（条款的发起人）
++ extendedlink（XLink extended link）
++ issuenum（期数，用于杂志）
++ itermset（术语索引）
++ legalnotice（法律声明）
++ mediaobject（媒体对象，例如录象、音频、图像）
++ othercredit（贡献者）
++ pagenums（页码，用于参考条目）
++ printhistory（印刷纪录）
++ productname（产品名）
++ productnumber（产品号）
++ seriesvolnums（卷数，用于丛书）
++ subjectset（描述文档主题的术语）
++ volumenum（卷数，用于文集）
 
 简单示例如下：
 
@@ -810,7 +844,7 @@ xref显示的文字是“诗选”。
 
 # docbook较完整示例
 
-~~~ docbook
+~~~ xml
 <?xml version="1.0" encoding="utf-8"?>
 <article xml:lang="zh-CN"
          xmlns="http://docbook.org/ns/docbook" version="5.0"

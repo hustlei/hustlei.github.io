@@ -34,8 +34,6 @@ FlowDocument内容框架由多级嵌套元素组成，表示不同的内容显�
 
 FlowDocument文档根元素为`<FlowDocument>`标签，其子元素主要分为3类：块(Block)内容元素、行内(Inline)内容元素、控件元素。具体总结如下：
 
-> FlowDocument命名空间声明为`xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"`,另外可能用到的命名空间有：`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`
-
 + FlowDocument
     1. Block元素
         - Section
@@ -70,9 +68,9 @@ FlowDocument文档根元素为`<FlowDocument>`标签，其子元素主要分为3
         - Button
         - RadioButton
 
-Run 标签用于包含无格式文本，在xaml文档中，Run无需显示调用，例如Paragraph标签省略Run标签直接包含文本。
+Run 标签用于包含无格式文本，在xaml文档中，Run无需显示调用，例如Paragraph标签省略Run标签直接包含文本。Span元素是可以包含其他Inline元素的Inline元素。
 
-Span元素是可以包含其他Inline元素的Inline元素。
+> FlowDocument命名空间声明为`xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"`,另外可能用到的命名空间有：`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`
 
 FlowDocument各元素嵌套关系简介如下：
 
@@ -94,9 +92,7 @@ FlowDocument各元素嵌套关系简介如下：
     - LineBreak
     - TableColumn
 
-Section不能直接包含文本，只能包含其他Block元素。
-
-Inline元素必须放在Block元素内。
+Section不能直接包含文本，只能包含其他Block元素。Inline元素必须放在Block元素内。
 
 控件元素也必须放在UIContainer里，但是，InlineUIContainer可以省略（编译代码时仍将创建一个 InlineUIContainer），BlockUIContainer不可以省略。
 
@@ -104,7 +100,7 @@ Inline元素必须放在Block元素内。
 
 **表格**
 
-~~~ xaml
+~~~ xml
   <Table>
     <!--声明表格有3列-->
     <Table.Columns>
@@ -129,7 +125,7 @@ Inline元素必须放在Block元素内。
 
 **列表**
 
-~~~ xaml
+~~~ xml
 <List>
   <ListItem><Paragraph>ListItem 1</Paragraph></ListItem>
   <ListItem><Paragraph>ListItem 2</Paragraph></ListItem>
@@ -200,7 +196,7 @@ List有如下属性可确定列表项的项目符号样式的外观
 
 可以直接设置属性，例如
 
-~~~ xaml
+~~~ xml
 <Paragraph FontStyle="Italic" Background="Beige" Foreground="DarkGreen" >
     A Figure embeds content into flow content with placement properties 
     that can be customized independently from the primary content flow
@@ -234,7 +230,7 @@ List有如下属性可确定列表项的项目符号样式的外观
 
 例如
 
-~~~ xaml
+~~~ xml
 <FlowDocument>
   <FlowDocument.Resources>
     <!-- This style is used to set the margins for all paragraphs in the FlowDocument to 0. -->

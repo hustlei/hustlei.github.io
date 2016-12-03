@@ -130,7 +130,7 @@ LaTeX构筑在Tex基础上，是当今世界上最流行和使用最为广泛的
 
 简单示例如下：
 
-~~~ Latex
+~~~ tex
 \documentclass[a4paper,12pt,landspace]{ctexart}
 \setmainfont{Times New Roman}
 \setsansfont{Arial}
@@ -162,7 +162,7 @@ LaTeX构筑在Tex基础上，是当今世界上最流行和使用最为广泛的
 
 SGML由标签（标签在尖括号内）和内容组成，大家所熟悉的html就是SGML的一种实现，SGML更加通用，扩展性更好，简单示例如下：
 
-~~~ SGML
+~~~ xml
 <!DOCTYPE　示例 　PUBLIC　"-//示例//DTD　示范范例//ZH">
 <元素　类型="例子">
  　正文具体内容
@@ -183,7 +183,7 @@ DocBook是一个描述型的标记语言，是XML的一种应用，它用不同�
 
 简单示例如下：
 
-~~~ Docbook
+~~~ xml
 <article xml:lang="zh-CN" xmlns="http://docbook.org/ns/docbook" version="5.0">
   <info>
     <title>设计需求</title>
@@ -277,7 +277,7 @@ Et dolore magna aliqua.Ut enim ad ``minim veniam``.
 
 给个简单示例如下：
 
-~~~ asciiDoc
+~~~ asciidoc
 The Article Title
 =================
 Author's Name <authors@email.address>
@@ -328,7 +328,7 @@ Org-模式（Org-mode）是文本编辑软件Emacs的一种支持内容分级显
 
 POD(Plain Old Documentation)是Perl的文档格式标准。
 
-~~~ POD
+~~~ pod
 =head1 Title
 =head2 Subtitle
 Some Text

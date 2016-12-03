@@ -86,7 +86,7 @@ BOOL Beep(DWORD dwFreq, DWORD dwDuration)
 
 以C#为例，由于DWORD是4字节的整数，因此可以用int或uint作为C#对应类型。bool类型与Bool对应。因此可以用C#编写该函数原型如下：
 
-~~~ chh
+~~~ hpp
 public static extern bool Beep(int frequency, int duration);
 ~~~
 
