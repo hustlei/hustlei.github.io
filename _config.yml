@@ -5,7 +5,7 @@ markdown: Kramdown
 img: http://hustlei.qiniudn.com/
 
 # excerpt_separator: "####"
-
+highlighter: nil
 kramdown:
   auto_ids:       true
   footnote_nr:    1
@@ -15,7 +15,6 @@ kramdown:
   hard_wrap:      false
   header_offset:  1
 #  math_engine:  mathjax
-
   enable_coderay: false
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
