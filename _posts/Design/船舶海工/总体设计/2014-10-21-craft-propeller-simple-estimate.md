@@ -19,7 +19,7 @@ revision:
 > 适用于高速船
 
 $$
-D_{opt}=15.8 \left(\frac{P}{N^3}\right)^0.2
+D_{opt}=15.8 \left(\frac{P}{N^3}\right)^{0.2}
 $$
 
 其中:

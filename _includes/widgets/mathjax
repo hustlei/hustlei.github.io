@@ -1,0 +1,30 @@
+{% comment %}<!--
+The categories_list include is a listing helper for categories.
+Usage:
+  1) test whether content contains equation.
+  2) include JB/mathjax
+  example:
+    <!--mathjax-->
+    {% if page.content contains "$" %}
+      {% include widgets/mathjax %}
+    {% endif %}
+-->{% endcomment %}
+
+<!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      equationNumbers: { autoNumber: "AMS" } 
+    }
+  });
+</script>
+
+<script type="text/javascript" async
+src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML-full">
+</script>

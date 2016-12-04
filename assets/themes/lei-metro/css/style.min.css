@@ -107,7 +107,7 @@ body, select, input, textarea {
 
 body {
     background: transparent;
-    font-family: Verdana, Arial, sans-serif, "Hiragino Sans GB", "Microsoft YaHei";
+    font-family: Arial,'Times New Roman','Microsoft YaHei',SimHei; 
     font-size: 13px;
     *font-size: small;
     zoom: 1;
@@ -230,7 +230,7 @@ a {
     -webkit-box-shadow: 2px 2px 12px #787878;
     box-shadow: 2px 2px 12px #787878;
     border-radius: 3px;
-    background: #EFCFA8 url(../img/bgs/bg_main.png) repeat-y 263px 0;
+    background: #EFCFA8;
 }
 
 #sidebar {

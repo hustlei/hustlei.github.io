@@ -16,7 +16,9 @@ Usage:
 {% for category in categories_list %} 
   {% assign g = 0 %}
   {% for page in category[1] %}
-    {% if page.group == group %} {% assign g = 1 %} {% endif %}
+    {% if page.group == group %}
+      {% assign g = 1 %}  {% break %} 
+    {% endif %}
   {% endfor %}
   {% if g == 1 %}
    <li><a href="{{ BASE_PATH }}{{ path }}#{{ category[0] }}-ref">

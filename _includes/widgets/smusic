@@ -33,9 +33,9 @@
     <div class="m-music-list-wrap"></div>
 </div>
 <script>
-{% include lei_widgets/musics_list %}
+{% include widgets/musics_list %}
 </script>
-<script src="/assets/lei_assets/smusic/js/smusic.min.js"></script>
+<script src="/assets/widgets/smusic/js/smusic.min.js"></script>
 <script>
     new SMusic({
         musicList : musicList

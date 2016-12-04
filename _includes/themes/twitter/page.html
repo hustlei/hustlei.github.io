@@ -1,28 +1,9 @@
-<section id="content">
-  <article class="page">
+<div class="page-header">
+  <h1>{{ page.title }} {% if page.tagline %} <small>{{ page.tagline }}</small>{% endif %}</h1>
+</div>
 
-    <header>
-      <h1>{{ page.title }}{% if page.tagline %} <small>{{ page.tagline }}</small>{% endif %}</h1>
-    </header>
-
-    <section>
-      {{ content }}
-    </section>
-
-  </article>
-</section>
-
-
-<section id="comments">
-  {% include JB/comments %}
-</section>
-{% if page.url == site.JB.messages_path %}
-<section>
-<p><br/><br/><br/><br/></p>
-    {% include widgets/recent_visitors %}
-</section>
-<section>
-<p><br/><br/></P>
-    {% include widgets/recent_comments %}
-</section>
-{% endif %}
+<div class="row-fluid">
+  <div class="span12">
+    {{ content }}
+  </div>
+</div>

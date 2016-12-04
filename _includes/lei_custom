@@ -1,10 +1,9 @@
 <meta name="baidu-site-verification" content="ZieNfZ64Fz" />
-
-<!--mathjax-->
-{% if page.content contains "$" %}
-  {% include lei_widgets/mathjax %}
-{% endif %}
 <!--背景样式-->
-  {% include lei_widgets/my_style %}
+  {% include widgets/my_style %}
 <!--目录及标题序号-->
-  {% include lei_widgets/counter_css_style %}
+  {% include widgets/counter_css_style %}
+      <!--mathjax-->
+    {% if page.content contains "$" %}
+      {% include widgets/mathjax %}
+    {% endif %}
