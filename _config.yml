@@ -5,21 +5,29 @@ markdown: kramdown
 img: http://hustlei.qiniudn.com/
 
 # excerpt_separator: "####"
-highlighter: nil
+
+# github pages hasn't coderay
 kramdown:
-  auto_ids:       true
-  footnote_nr:    1
-  entity_output:  as_char
-  toc_levels:     1..2
+  input:               GFM
+  auto_ids:          true
+  footnote_nr:     1
+  entity_output:   as_char
+  toc_levels:         1..2
   smart_quotes:   lsquo,rsquo,ldquo,rdquo
-  hard_wrap:      false
-  header_offset:  1
-#  math_engine:  mathjax
+  hard_wrap:        false
+  header_offset:   1
+  math_engine:     mathjax
   enable_coderay: false
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    line_numbers:    false
+  
+# github pages mandatory default setting, modify can't take effect
+highlighter: rouge
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 
-paginate: 5
+#paginate: 5
 
 
 title : 昨夜星辰
@@ -55,10 +63,10 @@ JB :
 
   archive_path: /pages/archive.html
   categories_path : /pages/categories.html
-  PKMcategories_path : /pages/PKMcategories.html
-  ITcategories_path : /pages/ITcategories.html
-  DESIGNcategories_path : /pages/Designcategories.html
-  LIFEcategories_path : /pages/Lifecategories.html
+  PKMcategories_path : /pages/pkmcategories.html
+  ITcategories_path : /pages/itcategories.html
+  DESIGNcategories_path : /pages/designcategories.html
+  LIFEcategories_path : /pages/lifecategories.html
   tags_path : /pages/tags.html
   messages_path : /pages/messages.html
   music_path : /pages/music.html

@@ -80,7 +80,7 @@ public:
 
 xxx.h
 
-~~~ hpp
+~~~ cpp
 public ref class Point
 {
 
