@@ -10,21 +10,16 @@ comments: false
 <ul class="tag_box inline" style="margin-bottom: 20px;">
   {% assign categories_list = site.categories %}
   {% assign group = "PKM" %}
-  {% assign path = site.JB.PKMcategories_path %}
+  {% assign path = site.JB.pkmcategories_path %}
   {% include widgets/group_categories_list %}
 </ul>
 
-{% for category in site.categories %} 
-  {% assign g = 0 %}
-  {% for page in category[1] %}
-     {% if page.group == "PKM" %} {% assign g = 1 %} {% endif %}
-  {% endfor %}
-  {% if g == 1 %}
-  <h2 id="{{ category[0] }}-ref">{{ category[0] | join: "/" }}</h2>
-  <ul>
-    {% assign pages_list = category[1] %}  
-    {% include JB/pages_list %}
-  </ul>
-  {% endif %}
-{% endfor %}
-
+{% for category in site.categories %}
+     {% if category[1][1].group == "PKM" %}
+       <h2 id="{{ category[0] }}-ref">{{ category[0] | join: "/" }}</h2>
+        <ul>
+         {% assign pages_list = category[1] %}
+         {% include JB/pages_list %}
+        </ul>
+     {% endif %}
+ {% endfor %}

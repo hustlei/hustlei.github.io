@@ -1,115 +1,100 @@
 <!DOCTYPE html>
-<!--[if IE 7 ]>    <html lang="zh-CN" class="ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="zh-CN" class="ie8"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
 <html lang="zh-CN">
-<!--<![endif]-->
-
 <head>
-    <meta charset="UTF-8">
-    <!--[if IE 8 ]><meta http-equiv="X-UA-Compatible" content="IE=7"><![endif]-->
-    <title>{% if page.title %} {% if page.tagline == "Home Page" %} {{ site.title }} -  {{ page.title }} {% else %} {{ page.title }}-{{ site.title}} {% endif %} {% else %}{{ site.title }}{% endif %}</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     {% if page.keywords %}
-    <meta name="keywords" content="{{ page.keywords | join: " ," }}">{% endif %}
+    <meta name="keywords" content="{{ page.keywords | join: " ," }}">
+    {% endif %}
     {% if page.description %}
-    <meta name="description" content="{{ page.description }}">{% endif %}
+    <meta name="description" content="{{ page.description }}">
+    {% endif %}
     <meta name="author" content="{{ site.author.name }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Robots" content="All">
-
-    <!-- Favicon -->
+    <meta name="robots" content="all">
     <link rel="shortcut icon" href="/assets/favicon.ico">
-    {% include lei_custom %}
-    <!-- Styles -->
-    <link rel="stylesheet" href="{{ ASSET_PATH }}/css/style.min.css">
-    <link rel="stylesheet" href="{{ ASSET_PATH }}/css/font-awesome.min.css">
-    <!-- Scripts -->
-    <script type="text/javascript" src="{{ ASSET_PATH }}/js/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="/assets/widgets/clock_time_gbk.js"></script>
+    <title>
+        {% if page.title %}
+        {% if page.tagline == "Home Page" %} {{ site.title }} - {{ page.title }}
+        {% else %} {{ page.title }}-{{ site.title}} {% endif %}
+        {% else %} {{ site.title }} {% endif %}
+    </title>
+    <!-- Bootstrap core css and custom styles -->
+    <link rel="stylesheet" href="{{ ASSET_PATH }}/bootstrap-4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ ASSET_PATH }}/css/mystyle.css">
 </head>
-
 <body>
-  <div class="fixbar" style="position:fixed;height:25px;left:0;right:0;top:0;z-index:1001;border:1px solid #EEEEEE;background: #FAFAFA;line-height:25px;">
-  <div style="max-width:900px;margin:0 auto;">
-       <div style="float:left;"><script type="text/javascript">CalConv();</script></div>
-       <div style="float:right;">
-         <span id="search-box">{% include widgets/search_box %}</span>
-         <span><a href="{{ site.JB.about_path }}" rel="nofollow" title="关于我">关于我</a></span>
-         <span><a href="{{ site.JB.messages_path }}" rel="nofollow" title="留言板">留言板</a></span>
-         <span>{% include widgets/add_fav %}</span>         
-       </div>
-    </div>
-    </div>
-        <header id="top" style="background:rgba(44,90,160,1); padding:80px 0 20px 0">
-           <style>
-            @font-face {
-    font-family: 'beast_of_avalon';
-    src: url('/assets/widgets/beast_of_avalon-webfont.woff2') format('woff2'),
-         url('/assets/widgets/beast_of_avalon-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;}</style>
-           <div align="center" style="font-family:'beast_of_avalon',Papyrus; font-size:200%;color:white ">
-            <p>If you do not leave me,</p>
-            <p> I will be by your side until the end.</p>
-           </div>
-            <!-- Navigation Bar -->
-            <nav id="navbar" style="margin:45px 0 25px 0;">
-                <ul>
-                    {% capture home_url %}{{ HOME_PATH | append: '/index.html' | replace: '//', '/' }}{% endcapture %}
-                    <li{% if page.url == home_url %} class="active" {% endif %}>
-                        <a href="{{ HOME_PATH }}" rel="nofollow" title="首页">首页</a>
-                        </li>
-
-                        <li{% if page.url == site.JB.pkmcategories_path %} class="active" {% endif %}>
-                            <a href="{{ site.JB.pkmcategories_path }}" rel="nofollow" title="PKM"> PKM</a>
-                            </li>
-                            <li{% if page.url == site.JB.itcategories_path %} class="active" {% endif %}>
-                                <a href="{{ site.JB.itcategories_path }}" rel="nofollow" title="IT"> IT</a>
-                                </li>
-                                <li{% if page.url == site.JB.designcategories_path %} class="active" {% endif %}>
-                                    <a href="{{ site.JB.designcategories_path }}" rel="nofollow" title="DESIGN">Design</a>
-                                    </li>
-                                    <li{% if page.url == site.JB.lifecategories_path %} class="active" {% endif %}>
-                                        <a href="{{ site.JB.lifecategories_path }}" rel="nofollow" title="LIFE"> Life</a>
-                                        </li>
-                                        <li{% if page.url == site.JB.music_path %} class="active" {% endif %}>
-                                            <a href="{{ site.JB.music_path }}" rel="nofollow" title="音乐">音乐</a>
-                                            </li>
-                </ul>
-            </nav>
-        </header>
-    <div id="wrap">
-
-        <section id="main">
-            <!-- Main Content -->
-            <div id="main-inner">
-                <div id="loader"><img src="{{ ASSET_PATH }}/img/loading.gif" alt="请稍侯"></div>
-                <div id="main-content">
-                    {{ content }}
+    <header id="top" class="jumbotron p-1">
+        <div class="container px-2">
+            <nav class="navbar navbr-light hidden-sm-down">
+                <div class="float-xs-right">
+                    <a href="{{ site.JB.messages_path }}" rel="nofollow" title="留言板">留言板</a>
+                    <span>/</span>
+                    <a href="{{ site.JB.about_path }}" rel="nofollow" title="关于我">关于</a>
                 </div>
+            </nav>
+            <div class="text-xs-center hidden-xs-down my-2">
+                <h2>If you do not leave me</h2>
+                <h2> I will be by your side until the end.</h2>
             </div>
-            {% include widgets/baidu_share %}
-            {% include widgets/back_top_button %}
+            <!-- Navigation Bar -->
+            {% capture home_url %}{{ HOME_PATH | append: '/index.html' | replace: '//', '/' }}{% endcapture %}
+            <nav id="navbar" class="navbar navbr-light">
+                <span class="nav navbar-nav">
+                    <a class="nav-item nav-link" {% if page.url == home_url %} class="active" {% endif %}
+                       href="/" rel="nofollow">Home</a>
+                    <a class="nav-item nav-link" {% if page.url == site.JB.pkmcategories_path %} class="active" {% endif %}
+                       href="{{ site.JB.pkmcategories_path }}" rel="nofollow" title="PKM">PKM</a>
+                    <a class="nav-item nav-link" {% if page.url == site.JB.itcategories_path %} class="active" {% endif %}
+                       href="{{ site.JB.itcategories_path }}" rel="nofollow" title="IT">IT</a>
+                    <a class="nav-item nav-link" {% if page.url == site.JB.designcategories_path %} class="active" {% endif %}
+                       href="{{ site.JB.designcategories_path }}" rel="nofollow" title="DESIGN">Design</a>
+                    <a class="nav-item nav-link" {% if page.url == site.JB.lifecategories_path %} class="active" {% endif %}
+                       href="{{ site.JB.lifecategories_path }}" rel="nofollow" title="LIFE">Life</a>
+                    <a class="nav-item nav-link" {% if page.url == site.JB.music_path %} class="active" {% endif %}
+                       href="{{ site.JB.music_path }}" rel="nofollow" title="音乐">音乐</a>
+                </span>
+            </nav>
+            <form id="search-form" class="input-group input-group-sm float-md-right" style="width: 200px">
+                <input id="query" type="text" class="form-control" placeholder="支持正则搜索">
+                <span class="input-group-btn"><button type="submit" class="btn btn-secondary">search</button></span>
+            </form>
+        </div>
+    </header>
+
+    <div class="container px-3">
+        <section id="main">
+            {{ content }}
         </section>
 
-
-        <footer id="bottom">
-            <p align="center">
-                <a href="{{ site.JB.about_path }}" rel="nofollow" title="关于我" style="margin-right: 20">关于我</a>
-                <a href="{{ site.JB.links_path }}" rel="nofollow" title="友情链接" style="margin-right: 20">友情链接</a>
-                <a href="{{ site.JB.messages_path }}" rel="nofollow" title="留言板">留言板</a>
-            </p>
-            <p align="center">
-                本站基于<a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
-                和<a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>构建 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#666666">
-                    {% include widgets/statcounter %}
-                </font>
-            </p>
-            <p align="center" valign="middle">
-                &copy; 2013-{{ site.time | date: '%Y' }} <a href="http://weibo.com/hustlei" target="_blank" title="Author's Sina Wibo Main Page">lileilei</a> All Rights Reserved.
-            </p>
+        <footer id="bottom" class="footer m-1">
+            <hr class="my-1"/>
+            <div class="row text-xs-center db-footer-links px-3">
+                <a class="col-md-4" href="{{ site.JB.links_path }}" rel="nofollow">友情链接</a>
+                <a class="col-md-4" href="{{ site.JB.messages_path }}" rel="nofollow">留言板</a>
+                <a class="col-md-4" href="{{ site.JB.about_path }}" rel="nofollow">关于我</a>
+            </div>
+            <hr class="my-1" />
+            <div class="row">
+                <div class="col-md-3 text-xs-center"><img src="/assets/qr.png" style="max-width: 200px;" alt="扫我浏览" /></div>
+                <div class="col-md-9">
+                    <p>
+                        本站基于<a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+                        和<a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>构建.
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#666666">{% include widgets/statcounter %}</font>
+                    </p>
+                    <p>&copy; 2013-{{ site.time | date: '%Y' }} <a href="http://weibo.com/hustlei" target="_blank" title="Author's Sina Wibo Main Page">lileilei</a> All Rights Reserved.</p>
+                </div>
+            </div>
         </footer>
     </div>
+    <!-- Scripts -->
+    <script type="text/javascript" defer src="{{ ASSET_PATH }}/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" defer src="{{ ASSET_PATH }}/bootstrap-4.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" defer src="/assets/js/search_box.js"></script>
 
+    {% include widgets/baidu_share %}
+    {% include widgets/back_top_button %}
 </body>
 </html>

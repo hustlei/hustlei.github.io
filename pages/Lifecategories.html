@@ -10,21 +10,20 @@ comments: false
 <ul class="tag_box inline" style="margin-bottom: 20px;">
   {% assign categories_list = site.categories %}
   {% assign group = page.title %}
-  {% assign path = site.JB.LIFEcategories_path %}
+  {% assign path = site.JB.lifecategories_path %}
   {% include widgets/group_categories_list %}
 </ul>
 
-{% for category in site.categories %} 
-  {% assign g = 0 %}
+{% for category in site.categories %}
   {% for page in category[1] %}
-     {% if page.group == "Life" %} {% assign g = 1 %} {% endif %}
+     {% if page.group == "Life" %}
+       <h2 id="{{ category[0] }}-ref">{{ category[0] | join: "/" }}</h2>
+        <ul>
+         {% assign pages_list = category[1] %}
+         {% include JB/pages_list %}
+        </ul>
+        {% break %}
+     {% endif %}
+        {% break %}
   {% endfor %}
-  {% if g == 1 %}
-  <h2 id="{{ category[0] }}-ref">{{ category[0] | join: "/" }}</h2>
-  <ul>
-    {% assign pages_list = category[1] %}  
-    {% include JB/pages_list %}
-  </ul>
-  {% endif %}
 {% endfor %}
-

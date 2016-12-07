@@ -1,6 +1,11 @@
 ## Changelog
 
-- **0.7.0:2015.05.04**
+- **0.8.0:2016.05.05**
+    - **Features**
+    - 把mathjax的{% if page.content contains "$" %}取消，不再判断是否含有$,因为网站只会下载一次mathjax.js
+ 
+
+- **0.7.5:2016.05.04**
     - **Features**
     - 用css给每个文档标题添加序号，给文档目录也添加序号
     - 添加代码高亮设置（kramdown+rouge）

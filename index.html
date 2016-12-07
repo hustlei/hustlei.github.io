@@ -7,128 +7,66 @@ comments: false
 ---
 
 {% include JB/setup %}
-<div>
-     {% assign posts_num = 12 %}
-<div style="width: 380px; border: 1px solid gray;margin:14px;float:left">
-<div style="width: 380px; height: 400px; padding: 10px 0; background: #FF7023;">
-  <article class="category-main">
-    <header style="height:26px">
-      <h2><a href="{{ site.JB.pkmcategories_path }}" title="PKM分类文章">PKM</a></h2>
-    </header>
-    <section>
-     {% assign posts_category = 'PKM' %}
-     {% include widgets/posts_collate2 %}
-    </section>
-    <footer>
-      <span align="right"><a class="button-link" href="{{ site.JB.pkmcategories_path }}" rel="nofollow"
-       title="查看更多本类文章">more ...</a></span>
-    </footer>
-  </article>
-</div></div>
-<div style="width: 380px; border: 1px solid gray;margin:14px;float:left"> 
-<div style="width: 380px; height: 400px; padding: 10px 0; background: #91D100;">
-  <article class="category-main">
-    <header style="height:26px">
-      <h2><a href="{{ site.JB.itcategories_path }}" title="IT分类文章">IT</a></h2>
-    </header>
-    <section>
-     {% assign posts_category = 'IT' %}
-     {% include widgets/posts_collate2 %}
-    </section>
-    <footer>
-      <span align="right"><a class="button-link" href="{{ site.JB.itcategories_path  }}" rel="nofollow"
-       title="查看更多本类文章">more ...</a></span>
-    </footer>
-  </article>
-</div></div>
-<div style="width: 380px; border: 1px solid gray;margin:14px;float:left"> 
-<div style="width: 380px; height: 400px; padding: 10px 0; background: #AA40FF;">
-  <article class="category-main">
-    <header style="height:26px">
-      <h2><a href="{{ site.JB.designcategories_path }}" title="Design分类文章">Design</a></h2>
-    </header>
-    <section>
-     {% assign posts_category = 'Design' %}
-     {% include widgets/posts_collate2 %}
-    </section>
-    <footer>
-      <span align="right"><a class="button-link" href="{{ site.JB.designcategories_path }}" rel="nofollow"
-       title="查看更多本类文章">more ...</a></span>
-    </footer>
-  </article>
-</div></div>
-<div style="width: 380px; border: 1px solid gray;margin:14px;float:left"> 
-<div style="width: 380px; height: 400px; padding: 10px 0; background: #56c5ff;">
-  <article class="category-main">
-    <header style="height:26px">
-      <h2><a href="{{ site.JB.lifecategories_path }}" title="Life分类文章">Life</a></h2>
-    </header>
-    <section>
-     {% assign posts_category = 'Life' %}
-     {% include widgets/posts_collate2 %}
-    </section>
-    <footer>
-      <span align="right"><a class="button-link" href="{{site.JB.lifecategories_path}}" rel="nofollow"
-       title="查看更多本类文章">more ...</a></span>
-    </footer>
-  </article>
-</div>
-</div>
-</div>
-<style>
-.demo1{
-    background-color: yellow;
-    text-align: center;
-    height: 80px;    
-    display: -webkit-flex;     
-    display: flex;
-    -webkit-align-items: center;
-    align-items: center;
-    /* for uc */
-    display: -webkit-box;  
-    -webkit-box-align: center;
-  }
-  .demo1>div{
-    background-color: #E1B700;
-    margin: 2px;       
-    -webkit-flex: 1;          
-    flex: 1;         
-    /* for uc */
-    -webkit-box-flex: 1;      
-    -moz-box-flex: 1;         
-    -ms-flex: 1;                
-  }
-  .demo2{
-    background-color: yellow;
-    width: 80px;
-    height: 200px;
-    display: -webkit-flex;     
-    display: flex;
-    -webkit-flex-direction: column;
-    flex-direction: column;
-    -webkit-align-items: center;
-    align-items: center;
-    /* for uc */
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -moz-box-orient: vertical;
-    box-orient: vertical;
-    -webkit-box-align: center;
-  }
-  .demo2>div{
-    background-color: green;
-    width: 40px;
-    margin: 2px;       
-    -webkit-flex: 1;          
-    flex: 1;         
-    /* for uc */
-    -webkit-box-flex: 1;      
-    -moz-box-flex: 1;         
-    -ms-flex: 1;    
-  }
-</style>
-<div class="demo1" style="clear:both;margin:12px">
-  <div padding="25" style="height:220px;">
-    <img src="/assets/qr.png" style="max-width:100%;max-height:100%;"  alt="扫我浏览" />
-  </div>
+{% assign posts_num = 12 %}
+<div class="row">
+    <article class="col-md-6 col-lg-4 p-1">
+        <header>
+            <h2>
+                <a href="{{ site.JB.pkmcategories_path }}" title="PKM分类文章">PKM</a>
+            </h2>
+        </header>
+        <section>
+            {% assign posts_category = 'PKM' %}
+            {% include widgets/posts_collate2 %}
+        </section>
+        <footer>
+            <a class="btn " href="{{ site.JB.pkmcategories_path }}" rel="nofollow"
+               title="查看更多本类文章">more ...</a>
+        </footer>
+    </article>
+    <article class="col-md-6 col-lg-4 p-1">
+        <header>
+            <h2>
+                <a href="{{ site.JB.itcategories_path }}" title="IT分类文章">IT</a>
+            </h2>
+        </header>
+        <section>
+            {% assign posts_category = 'IT' %}
+            {% include widgets/posts_collate2 %}
+        </section>
+        <footer>
+                <a class="button-link" href="{{ site.JB.itcategories_path  }}" rel="nofollow"
+                   title="查看更多本类文章">more ...</a>
+        </footer>
+    </article>
+    <article class="col-md-6 col-lg-4 p-1">
+        <header>
+            <h2>
+                <a href="{{ site.JB.designcategories_path }}" title="Design分类文章">Design</a>
+            </h2>
+        </header>
+        <section>
+            {% assign posts_category = 'Design' %}
+            {% include widgets/posts_collate2 %}
+        </section>
+        <footer>
+                <a class="button-link" href="{{ site.JB.designcategories_path }}" rel="nofollow"
+                   title="查看更多本类文章">more ...</a>
+        </footer>
+    </article>
+    <article class="col-md-6 col-lg-4 p-1">
+        <header>
+            <h2>
+                <a href="{{ site.JB.lifecategories_path }}" title="Life分类文章">Life</a>
+            </h2>
+        </header>
+        <section>
+            {% assign posts_category = 'Life' %}
+            {% include widgets/posts_collate2 %}
+        </section>
+        <footer>
+                <a class="button-link" href="{{site.JB.lifecategories_path}}" rel="nofollow"
+                   title="查看更多本类文章">more ...</a>
+        </footer>
+    </article>
 </div>

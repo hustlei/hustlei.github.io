@@ -77,7 +77,7 @@ html,body{
     width: 121px;
     height: 121px;
     overflow: hidden;
-    background: url(/assets/lei_assets/smusic/img/music_icons.png) 0 0 no-repeat;
+    background: url(/assets/widgets/smusic/img/music_icons.png) 0 0 no-repeat;
     position: absolute;
     top: 0;
     left: 0;
@@ -228,7 +228,7 @@ html,body{
     display: inline-block;
     width: 18px;
     height: 18px;
-    background: url(/assets/lei_assets/smusic/img/music_icons.png) -140px -80px no-repeat;
+    background: url(/assets/widgets/smusic/img/music_icons.png) -140px -80px no-repeat;
     cursor: pointer;
 }
 .grid-music-container .u-volume .volume-control:hover{
@@ -286,7 +286,7 @@ html,body{
     cursor: pointer;
 }
 .u-play-btn{
-    background: url(/assets/lei_assets/smusic/img/music_icons.png) -220px 0 no-repeat;
+    background: url(/assets/widgets/smusic/img/music_icons.png) -220px 0 no-repeat;
 }
 .u-play-btn.prev,.u-play-btn.next{
     background-position: -220px 0;

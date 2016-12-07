@@ -9,8 +9,6 @@ Usage:
   	  {% assign categories_list = site.categories %}  
   	  {% include JB/group_categories_list %}
   	</ul>
-  
-
 -->{% endcomment %}
 
 {% for category in categories_list %} 

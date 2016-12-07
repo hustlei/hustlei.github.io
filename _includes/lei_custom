@@ -1,9 +1,0 @@
-<meta name="baidu-site-verification" content="ZieNfZ64Fz" />
-<!--背景样式-->
-  {% include widgets/my_style %}
-<!--目录及标题序号-->
-  {% include widgets/counter_css_style %}
-      <!--mathjax-->
-    {% if page.content contains "$" %}
-      {% include widgets/mathjax %}
-    {% endif %}

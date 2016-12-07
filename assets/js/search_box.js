@@ -1,9 +1,3 @@
-<form id="search-form" class="input-group">
-  <input id="query" type="text" class="from-control" placeholder="æ”¯æŒæ­£åˆ™æœç´¢">
-  <button type="submit" class="btn btn-secondary input-group-btn">search</button>
-</input>
-</form>
-<script type="text/javascript">
   $(document).ready(function () {
 var entries = null;
 
@@ -73,12 +67,12 @@ function findEntries(q) {
             html += '<article class="nested">';
             html += '<header><h2><a href="' + match.link + '">' + htmlEscape(match.title) + '</a></h2></header>';
             html += '<section><pre  style="background-color: transparent;border: 0;">' + htmlEscape(match.content) + '</pre></section>';
-            html += '<footer><p>æ›´æ–°æ—¥æœŸï¼š' + match.date + '</p></footer>';
+            html += '<footer><p>¸üĞÂÈÕÆÚ£º' + match.date + '</p></footer>';
             html += '</article>';
         }
     } else {
         html += '<article class="nested">';
-        html += '<h1>ä½ è¾“å…¥çš„å…³é”®è¯æ²¡æœ‰æœç´¢ç»“æœï¼Œè¯·æ›´æ¢å…³é”®è¯ï¼ O(âˆ©_âˆ©)O~</h1>';
+        html += '<h1>ÄãÊäÈëµÄ¹Ø¼ü´ÊÃ»ÓĞËÑË÷½á¹û£¬Çë¸ü»»¹Ø¼ü´Ê£¡ O(¡É_¡É)O~</h1>';
         html += '</article>';
     }
     $('#main-content').html(html);
@@ -93,7 +87,7 @@ $('#main-content').hide();
 $('#loader').show();
 if (entries == null) {
     $.ajax({
-        url: '/pages/atom.xml',
+        url: '/atom.xml',
         dataType: 'xml',
         success: function (data) {
             entries = data.getElementsByTagName('entry');
@@ -101,8 +95,8 @@ if (entries == null) {
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
             var html = '<article class="nested">';
-            html += '<h1>å‡ºé”™</h1>';
-            html += '<p>å‡ºé”™ä»£ç ï¼š<strong>' + textStatus + '</strong></p></article>';
+            html += '<h1>³ö´í</h1>';
+            html += '<p>³ö´í´úÂë£º<strong>' + textStatus + '</strong></p></article>';
             $('#main-content').html(html);
             $('#loader').hide();
             $('#main-content').show();
@@ -117,4 +111,3 @@ $('#query').blur().attr('disabled', false);
   });
 
   });
-</script>
