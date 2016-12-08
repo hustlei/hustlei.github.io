@@ -1,4 +1,4 @@
-  $(document).ready(function () {
+$(document).ready(function () {
 var entries = null;
 
 function htmlEscape(s) {
@@ -75,15 +75,15 @@ function findEntries(q) {
         html += '<h1>你输入的关键词没有搜索结果，请更换关键词！ O(∩_∩)O~</h1>';
         html += '</article>';
     }
-    $('#main-content').html(html);
+    $('#main').html(html);
     $('#loader').hide();
-    $('#main-content').show();
+    $('#main').show();
 }
 
   $('#search-form').submit(function () {
 var query = $('#query').val();
 
-$('#main-content').hide();
+$('#main').hide();
 $('#loader').show();
 if (entries == null) {
     $.ajax({
@@ -97,9 +97,9 @@ if (entries == null) {
             var html = '<article class="nested">';
             html += '<h1>出错</h1>';
             html += '<p>出错代码：<strong>' + textStatus + '</strong></p></article>';
-            $('#main-content').html(html);
+            $('#main').html(html);
             $('#loader').hide();
-            $('#main-content').show();
+            $('#main').show();
         }
     });
 }

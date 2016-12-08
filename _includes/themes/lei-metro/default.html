@@ -14,67 +14,64 @@
     <meta name="author" content="{{ site.author.name }}">
     <meta name="robots" content="all">
     <link rel="shortcut icon" href="/assets/favicon.ico">
-    <title>
-        {% if page.title %}
-        {% if page.tagline == "Home Page" %} {{ site.title }} - {{ page.title }}
-        {% else %} {{ page.title }}-{{ site.title}} {% endif %}
-        {% else %} {{ site.title }} {% endif %}
-    </title>
+    <title>{% if page.title %}{% if page.tagline == "Home Page" %} {{ site.title }} - {{ page.title }}{% else %} {{ page.title }}-{{ site.title}} {% endif %}{% else %} {{ site.title }} {% endif %}</title>
     <!-- Bootstrap core css and custom styles -->
     <link rel="stylesheet" href="{{ ASSET_PATH }}/bootstrap-4.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ ASSET_PATH }}/css/mystyle.css">
 </head>
 <body>
-    <header id="top">
-        <div class="jumbotron container p-1 hidden-xs-down">
+    <header id="top" class="jumbotron my-0 p-0 pb-3">
+        <div class="container p-0 hidden-xs-down">
             <nav class="navbar navbr-light hidden-sm-down">
-                <div class="float-xs-right mr-2">
-                    <a href="{{ site.JB.messages_path }}" rel="nofollow" title="留言板">留言板</a>
-                    <span>/</span>
-                    <a href="{{ site.JB.about_path }}" rel="nofollow" title="关于我">关于</a>
+                <div class="float-xs-right">
+                    <a href="{{ site.JB.messages_path }}" class="text-muted" rel="nofollow" title="留言板">留言板</a>
+                    <span class="text-muted">/</span>
+                    <a href="{{ site.JB.about_path }}" class="text-muted" rel="nofollow" title="关于我">关于</a>
                 </div>
             </nav>
-            <div class="text-xs-center my-2">
+            <div class="text-xs-center">
                 <h2>If you do not leave me</h2>
                 <h2> I will be by your side until the end.</h2>
             </div>
         </div>
+    </header>
+    <section id="nav" class="container">
         <!-- Navigation Bar -->
         {% capture home_url %}{{ HOME_PATH | append: '/index.html' | replace: '//', '/' }}{% endcapture %}
-        <div class="container px-0">
-            <div class="row px-3 my-0">
-            <nav id="navbar" class="navbar navbr-light col-md-8">
-                <span class="nav navbar-nav">
-                    <a class="nav-item nav-link {% if page.url == home_url %} active {% endif %}"
-                       href="/" rel="nofollow">Home</a>
-                    <a class="nav-item nav-link {% if page.url == site.JB.pkmcategories_path %} active {% endif %}"
-                       href="{{ site.JB.pkmcategories_path }}" rel="nofollow">PKM</a>
-                    <a class="nav-item nav-link {% if page.url == site.JB.itcategories_path %} active {% endif %}"
-                       href="{{ site.JB.itcategories_path }}" rel="nofollow">IT</a>
-                    <a class="nav-item nav-link {% if page.url == site.JB.designcategories_path %} active {% endif %}"
-                       href="{{ site.JB.designcategories_path }}" rel="nofollow">Design</a>
-                    <a class="nav-item nav-link {% if page.url == site.JB.lifecategories_path %} active {% endif %}"
-                       href="{{ site.JB.lifecategories_path }}" rel="nofollow">Life</a>
-                    <a class="nav-item nav-link {% if page.url == site.JB.music_path %} active {% endif %}"
-                       href="{{ site.JB.music_path }}" rel="nofollow">音乐</a>
-                </span>
-            </nav>
-            <form id="search-form" class="input-group input-group-sm col-md-4 float-md-right" style="width: 200px">
+        <nav class="navbar navbar-light bg-faded row">
+            <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#navbar-header"></button>
+            <ul id="navbar-header" class="nav navbar-nav collapse navbar-toggleable-xs col-md-8">
+                <li class="nav-item {% if page.url == home_url %} active {% endif %}">
+                    <a class="nav-link" href="/" rel="nofollow">Home</a>
+                </li>
+                <li class="nav-item {% if page.url == site.JB.pkmcategories_path %} active {% endif %}">
+                    <a class="nav-link" href="{{ site.JB.pkmcategories_path }}" rel="nofollow">PKM</a>
+                </li>
+                <li class="nav-item {% if page.url == site.JB.itcategories_path %} active {% endif %}">
+                    <a class="nav-link" href="{{ site.JB.itcategories_path }}" rel="nofollow">IT</a>
+                </li>
+                <li class="nav-item {% if page.url == site.JB.designcategories_path %} active {% endif %}">
+                    <a class="nav-link" href="{{ site.JB.designcategories_path }}" rel="nofollow">Design</a>
+                </li>
+                <li class="nav-item {% if page.url == site.JB.lifecategories_path %} active {% endif %}">
+                    <a class="nav-link" href="{{ site.JB.lifecategories_path }}" rel="nofollow">Life</a>
+                </li>
+                <li class="nav-item {% if page.url == site.JB.music_path %} active {% endif %}">
+                    <a class="nav-link" href="{{ site.JB.music_path }}" rel="nofollow">音乐</a>
+                </li>
+            </ul>
+            <form id="search-form" class="input-group input-group-sm form-inline float-md-right col-md-4" style="width: 200px">
                 <input id="query" type="text" class="form-control" placeholder="支持正则搜索">
                 <span class="input-group-btn"><button type="submit" class="btn btn-secondary">search</button></span>
             </form>
-            </div>
-            <hr/>
-        </div>
-    </header>
-
-    <section id="main" class="container p-3">
-       {{ content }}
+        </nav>
     </section>
-
-    <footer id="bottom" class="footer m-1">
+    <section id="main" class="container">
+        {{ content }}
+    </section>
+    <footer id="footer" class="footer">
         <div class="container">
-            <hr class="my-1"/>
+            <hr class="my-1" />
             <div class="row text-xs-center db-footer-links px-3">
                 <a class="col-md-4" href="{{ site.JB.links_path }}" rel="nofollow">友情链接</a>
                 <a class="col-md-4" href="{{ site.JB.messages_path }}" rel="nofollow">留言板</a>
@@ -82,12 +79,14 @@
             </div>
             <hr class="my-1" />
             <div class="row">
-                <div class="col-md-6 text-xs-center"><img src="/assets/qr.png" style="max-width: 200px;" alt="扫我浏览" /></div>
+                <div class="col-md-6 text-xs-center"><img src="/assets/qr.png" style="max-width: 200px;" alt="二维码" /></div>
                 <div class="col-md-6">
                     <p>{% include widgets/statcounter %}</p>
                     <p>&copy; 2013-{{ site.time | date: '%Y' }} <a href="http://weibo.com/hustlei" target="_blank" title="Author's Sina Wibo Main Page">lileilei</a> All Rights Reserved.</p>
-                    <p>本站基于<a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
-                        和<a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>构建.</p>
+                    <p>
+                        本站基于<a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+                        和<a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>构建.
+                    </p>
                 </div>
             </div>
         </div>
