@@ -9,55 +9,59 @@ comments: false
 {% include JB/setup %}
 {% assign posts_num = 12 %}
 <div class="row">
-    <article class="col-md-6 col-lg-4 p-1" style="min-height:440px">
+    <article class="col-md-6 col-lg-4 p-1" style="min-height:420px">
         <header>
             <h2>
                 <a href="{{ site.JB.pkmcategories_path }}" title="PKM分类文章">PKM</a>
             </h2>
+            <hr/>
         </header>
         <section>
             {% assign posts_category = 'PKM' %}
             {% include widgets/posts_collate2 %}
         </section>
         <footer>
-            <a class="btn " href="{{ site.JB.pkmcategories_path }}" rel="nofollow"
+            <a class="btn-sm btn-outline-info float-xs-right" href="{{ site.JB.pkmcategories_path }}" rel="nofollow"
                title="查看更多本类文章">more ...</a>
         </footer>
     </article>
-    <article class="col-md-6 col-lg-4 p-1" style="min-height:440px">
+    <article class="col-md-6 col-lg-4 p-1" style="min-height:420px">
         <header>
             <h2>
                 <a href="{{ site.JB.itcategories_path }}" title="IT分类文章">IT</a>
             </h2>
+            <hr/>
         </header>
         <section>
             {% assign posts_category = 'IT' %}
             {% include widgets/posts_collate2 %}
         </section>
         <footer>
-                <a class="button-link" href="{{ site.JB.itcategories_path  }}" rel="nofollow"
+                <a class="btn-sm btn-outline-info float-xs-right" href="{{ site.JB.itcategories_path  }}" rel="nofollow"
                    title="查看更多本类文章">more ...</a>
         </footer>
     </article>
-    <article class="col-md-6 col-lg-4 p-1" style="min-height:440px">
+    <article class="col-md-6 col-lg-4 p-1" style="min-height:420px">
         <header>
             <h2>
                 <a href="{{ site.JB.designcategories_path }}" title="Design分类文章">Design</a>
             </h2>
+            <hr/>
         </header>
         <section>
             {% assign posts_category = 'Design' %}
             {% include widgets/posts_collate2 %}
         </section>
         <footer>
-                <a class="button-link" href="{{ site.JB.designcategories_path }}" rel="nofollow"
+                <a class="btn-sm btn-outline-info float-xs-right" href="{{ site.JB.designcategories_path }}" rel="nofollow"
                    title="查看更多本类文章">more ...</a>
         </footer>
     </article>
-    <article class="col-md-6 col-lg-4 p-1" style="min-height:440px">
+    <article class="col-md-6 col-lg-4 p-1" style="min-height:420px">
         <header>
             <h2>
                 <a href="{{ site.JB.lifecategories_path }}" title="Life分类文章">Life</a>
+            <hr/>
             </h2>
         </header>
         <section>
@@ -65,7 +69,7 @@ comments: false
             {% include widgets/posts_collate2 %}
         </section>
         <footer>
-                <a class="button-link" href="{{site.JB.lifecategories_path}}" rel="nofollow"
+                <a class="btn-sm btn-outline-info float-xs-right" href="{{site.JB.lifecategories_path}}" rel="nofollow"
                    title="查看更多本类文章">more ...</a>
         </footer>
     </article>

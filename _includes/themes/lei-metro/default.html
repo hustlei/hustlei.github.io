@@ -37,10 +37,10 @@
     </header>
     <section id="nav" class="container">
         <!-- Navigation Bar -->
-        {% capture home_url %}{{ HOME_PATH | append: '/index.html' | replace: '//', '/' }}{% endcapture %}
-        <nav class="navbar navbar-light bg-faded row">
-            <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#navbar-header"></button>
-            <ul id="navbar-header" class="nav navbar-nav collapse navbar-toggleable-xs col-md-8">
+        <nav class="navbar navbar-light bg-faded">
+            <button class="navbar-toggler float-xs-right hidden-sm-up" type="button" data-toggle="collapse" data-target="#navbar-header"></button>
+            <ul id="navbar-header" class="nav navbar-nav collapse navbar-toggleable-xs">
+                {% capture home_url %}{{ HOME_PATH | append: '/index.html' | replace: '//', '/' }}{% endcapture %}
                 <li class="nav-item {% if page.url == home_url %} active {% endif %}">
                     <a class="nav-link" href="/" rel="nofollow">Home</a>
                 </li>
@@ -60,11 +60,11 @@
                     <a class="nav-link" href="{{ site.JB.music_path }}" rel="nofollow">音乐</a>
                 </li>
             </ul>
-            <form id="search-form" class="input-group input-group-sm form-inline float-md-right col-md-4" style="width: 200px">
+        </nav>
+            <form id="search-form" class="input-group input-group-sm form-inline float-sm-right float-xs-center" style="max-width: 240px">
                 <input id="query" type="text" class="form-control" placeholder="支持正则搜索">
                 <span class="input-group-btn"><button type="submit" class="btn btn-secondary">search</button></span>
             </form>
-        </nav>
     </section>
     <section id="main" class="container">
         {{ content }}

@@ -17,9 +17,7 @@ Usage:
         
 -->{% endcomment %}
 
-<ul>
-
-
+<ul class="list-unstyled">
 {% capture posts_num %} {{ posts_num }} {% endcapture %}
 
 {% assign p = "0" %}
@@ -29,7 +27,7 @@ Usage:
     {% if posts_num > p %}
       {% if post.group == posts_category %}
         {% capture posts_num %} {{ posts_num | minus: 1 }} {% endcapture %}
-        <li><a href="{{ BASE_PATH }}{{ post.url }}" rel="nofollow">
+        <li class="nobr"><a href="{{ BASE_PATH }}{{ post.url }}" rel="nofollow">
                {{ post.title }}</a></li>
       {% endif %}
     {% else %}

@@ -1,3 +1,9 @@
+/* 行内强制不换行显示省略号*/
+.nobr {
+overflow:hidden;
+white-space:nowrap;
+text-overflow:ellipsis;
+}
 /*目录序号*/
 #markdown-toc li:before {
     content: counter(toc1)" ";
