@@ -53,13 +53,6 @@ production_url : http://hustlei.tk
 
 safe: false
 
-# 设定文章分组（group）所包含的几个项
-group_list:
-  PKM
-  IT
-  Design
-  Life
-
 JB :
   version : 0.3.0
   

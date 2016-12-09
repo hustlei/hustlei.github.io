@@ -3,11 +3,12 @@ layout: page
 title: Life
 header: Posts By Category
 comments: false
+showtitle: false
 ---
 
 {% include JB/setup %}
 
-<ul class="tag_box inline" style="margin-bottom: 20px;">
+<ul class="tag_box">
   {% assign categories_list = site.categories %}
   {% assign group = page.title %}
   {% assign path = site.JB.lifecategories_path %}

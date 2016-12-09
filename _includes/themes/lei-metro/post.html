@@ -1,15 +1,16 @@
-<div class="pagination">
-    <ul>
-      {% if page.categories == empty %}
-        <li><a href="/pages/{{ page.group }}categories.html" title="文章分类列表">分类列表</a></li>
-      {% else %}
-        <li><a href="/pages/{{ page.group }}categories.html#{{ page.categories[0] }}-ref" title="文章分类列表">分类列表</a></li>
-      {% endif %}
-      <li><a href="{{ site.JB.tags_path }}" rel="nofollow" title="标签">tags标签</a></li>
-      <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}" rel="nofollow">所有文档</a></li>
-    </ul>
-  </div>
- 
+<nav id="nav-pos">
+<ol class="breadcrumb my-2" style="background:transparent">
+  <li class="breadcrumb-item"><a href="/">Home</a></li>
+  {% if page.group %}
+  <li class="breadcrumb-item"><a href="/pages/{{page.group | downcase}}categories.html">{{ page.group }}</a></li>
+  {% endif %}
+  {% if page.categories != empty %}
+  <li class="breadcrumb-item"><a href="/pages/{{page.group | downcase}}categories.html#{{ category[0] }}-ref">分类</a></li>
+  {% endif %}
+  <li class="breadcrumb-item active">正文</li>
+</ol>
+</nav>
+
 <section id="content">
   <article class="post">
 
@@ -26,7 +27,8 @@
 
       {{ content }}
       {% if page.license != false %}
-      <footer>
+      <footer class="text-muted">
+        <hr/>
         <p>
           本作品由 <a href="{{  site.JB.about_path }}" rel="nofollow">{{ site.author.name }}</a> 创作，采用
           <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="查看协议详细信息" target="_blank">CC BY-NC-SA 3.0 许可协议</a>
@@ -39,40 +41,37 @@
   </article>
 </section>
 
-<section>
-
-  <ul class="tag-box inline">
-  {% unless page.categories == empty %}
-    <li><i class="icon-large icon-folder-open"></i></li>
-    {% assign categories_list = page.categories %}
+<section id="content-footer">
+  <div id="pagination" class="btn-group my-1" role="group">
+      {% if page.previous %}
+      <a type="button" class="btn btn-sm btn-secondary" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; 上一篇</a>
+      {% else %}
+      <a type="button" class="btn btn-sm btn-secondary disabled">&larr; 上一篇</a>
+      {% endif %}
+       {% if page.categories == empty %}
+       <a type="button" class="btn btn-sm btn-secondary" href="/pages/{{ page.group }}categories.html" rel="nofollow">分类目录</a>
+      {% else %}
+      <a type="button" class="btn btn-sm btn-secondary" href="/pages/{{ page.group }}categories.html#{{ page.categories[0] }}-ref" rel="nofollow">分类目录</a>
+      {% endif %}
+      <a type="button" class="btn btn-sm btn-secondary" href="{{ site.JB.tags_path }}" rel="nofollow">标签目录</a>
+      <a type="button" class="btn btn-sm btn-secondary" href="{{ site.JB.archive_path }}" rel="nofollow">日期目录</a>
+      {% if page.next %}
+      <a type="button" class="btn btn-sm btn-secondary" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">下一篇 &rarr;</a>
+      {% else %}
+      <a type="button"  class="btn btn-sm btn-secondary disabled">下一篇 &rarr;</a>
+      {% endif %}
+  </div>
+  <ul class="tag_box">
+  {% unless page.categories == empty %}<li><i>分类：</i></li>{% assign categories_list = page.categories %}
     <li><a href="/pages/{{ page.group }}categories.html#{{ page.categories[0] }}-ref">
-    		{{ page.categories | join: "/" }} <span>{{ site.categories[page.category].size }}</span>
-    	</a></li>
+    		{{ page.categories | join: "/" }} <span class="tag tag-pill tag-default">{{ site.categories[page.category].size }}</span></a></li>
   {% endunless %}
-
   {% unless page.tags == empty %}
-    <li style="margin-left: 30"><i class="icon-large icon-tags"></i></li>
+    <li style="margin-left: 30"><i>标签：</i></li>
     {% assign tags_list = page.tags %}
     {% include JB/tags_list %}
   {% endunless %}
   </ul>
-  
-  <div class="pagination">
-    <ul>
-      {% if page.previous %}
-      <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; 上一篇</a></li>
-      {% else %}
-      <li class="prev disabled"><a>&larr; 上一篇</a></li>
-      {% endif %}
-      <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}" rel="nofollow">文章列表</a></li>
-      {% if page.next %}
-      <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">下一篇 &rarr;</a></li>
-      {% else %}
-      <li class="next disabled"><a>下一篇 &rarr;</a></li>
-      {% endif %}
-    </ul>
-  </div>
-
 </section>
 
 <section id="comments">

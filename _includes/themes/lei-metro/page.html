@@ -1,10 +1,10 @@
 <section id="content">
   <article class="page">
-
-    <header>
+    {% if page.showtitle != false %}
+    <header class="py-1">
       <h1>{{ page.title }}{% if page.tagline %} <small>{{ page.tagline }}</small>{% endif %}</h1>
     </header>
-
+    {% endif %}
     <section>
       {{ content }}
     </section>

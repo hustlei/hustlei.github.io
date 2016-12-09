@@ -20,7 +20,7 @@ Usage:
   {% endfor %}
   {% if g == 1 %}
    <li><a href="{{ BASE_PATH }}{{ path }}#{{ category[0] }}-ref">
-    		{{ category[0] | join: "/" }} <span>{{ category[1].size }}</span>
+    		{{ category[0] | join: "/" }} <span class="tag tag-pill tag-default">{{ category[1].size }}</span>
     	</a></li>
   {% endif %}
 {% endfor %}

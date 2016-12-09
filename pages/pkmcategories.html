@@ -3,11 +3,12 @@ layout: page
 title: PKM
 header: Posts By Category
 comments: false
+showtitle: false
 ---
 
 {% include JB/setup %}
 
-<ul class="tag_box inline" style="margin-bottom: 20px;">
+<ul class="tag_box">
   {% assign categories_list = site.categories %}
   {% assign group = "PKM" %}
   {% assign path = site.JB.pkmcategories_path %}
