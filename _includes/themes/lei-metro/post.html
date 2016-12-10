@@ -49,9 +49,9 @@
       <a type="button" class="btn btn-sm btn-secondary disabled">&larr; 上一篇</a>
       {% endif %}
        {% if page.categories == empty %}
-       <a type="button" class="btn btn-sm btn-secondary" href="/pages/{{ page.group }}categories.html" rel="nofollow">分类目录</a>
+       <a type="button" class="btn btn-sm btn-secondary" href="/pages/{{ page.group | downcase }}categories.html" rel="nofollow">分类目录</a>
       {% else %}
-      <a type="button" class="btn btn-sm btn-secondary" href="/pages/{{ page.group }}categories.html#{{ page.categories[0] }}-ref" rel="nofollow">分类目录</a>
+      <a type="button" class="btn btn-sm btn-secondary" href="/pages/{{ page.group | downcase }}categories.html#{{ page.categories[0] }}-ref" rel="nofollow">分类目录</a>
       {% endif %}
       <a type="button" class="btn btn-sm btn-secondary" href="{{ site.JB.tags_path }}" rel="nofollow">标签目录</a>
       <a type="button" class="btn btn-sm btn-secondary" href="{{ site.JB.archive_path }}" rel="nofollow">日期目录</a>

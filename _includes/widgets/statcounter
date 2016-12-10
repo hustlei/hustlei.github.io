@@ -1,14 +1,14 @@
 <!-- End of StatCounter Code for Default Guide -->
-<a href="http://statcounter.com/p10008162/?guest=1">
+<a href="http://zh_cn.statcounter.com/p10008162/summary/daily-pur-labels-area-last7days/">
 <!-- Start of StatCounter Code for Default Guide -->
-<script defer type="text/javascript">
+<script type="text/javascript">
 var sc_project=10008162; 
 var sc_invisible=0; 
 var sc_security="42211a39"; 
 var sc_text=5; 
 var scJsHost = (("https:" == document.location.protocol) ?
 "https://secure." : "http://www.");
-document.write("<sc"+"ript type='text/javascript' src='" +
+document.write("<sc"+"ript defer type='text/javascript' src='" +
 scJsHost+
 "statcounter.com/counter/counter.js'></"+"script>");
 </script>
