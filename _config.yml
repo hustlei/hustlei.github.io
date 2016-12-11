@@ -11,7 +11,7 @@ markdown: kramdown
 # Maruku kramdown rdiscount Redcarpet
 
 # excerpt_separator: "####"
-
+theme : lei-metro
 # github pages hasn't coderay
 kramdown:
   input:               GFM

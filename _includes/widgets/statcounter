@@ -8,7 +8,7 @@ var sc_security="42211a39";
 var sc_text=5; 
 var scJsHost = (("https:" == document.location.protocol) ?
 "https://secure." : "http://www.");
-document.write("<sc"+"ript defer type='text/javascript' src='" +
+document.write("<sc"+"ript type='text/javascript' src='" +
 scJsHost+
 "statcounter.com/counter/counter.js'></"+"script>");
 </script>

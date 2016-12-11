@@ -65,8 +65,8 @@
                     </ul>
                 </nav>
                 <div class="float-sm-right col-sm-4 px-0">
-                    <form id="search-form" class="input-group input-group-sm w-search">
-                        <input id="query" type="text" class="form-control" placeholder="支持正则搜索">
+                    <form id="search-form" class="input-group input-group-sm w-search" action="/pages/search.do">
+                        <input id="query" type="text" name="s" class="form-control" placeholder="支持正则搜索">
                         <span class="input-group-btn"><button type="submit" class="btn btn-primary">搜&nbsp;索</button></span>
                     </form>
                 </div>
@@ -103,8 +103,7 @@
     <!-- Scripts -->
     <script type="text/javascript" defer src="{{ ASSET_PATH }}/js/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" defer src="{{ ASSET_PATH }}/bootstrap-4.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript" defer src="/assets/js/search_box.js"></script>
-
+    {% if page.url == /pages/search.do %}<script type="text/javascript" defer src="/assets/js/search_box.js"></script>{% endif %}
     {% include widgets/baidu_share %}
     {% include widgets/back_top_button %}
 </body>

@@ -1,7 +1,7 @@
 <div id="back-top">
   <a href="#top" title="回到顶部"></a>
 </div>
-<script type="text/javascript">
+<script defer type="text/javascript">
 $("#back-top").hide();
 $(document).ready(function () {
   $(window).scroll(function () {
