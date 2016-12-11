@@ -11,7 +11,6 @@ markdown: kramdown
 # Maruku kramdown rdiscount Redcarpet
 
 # excerpt_separator: "####"
-theme : lei-metro
 # github pages hasn't coderay
 kramdown:
   input:               GFM
@@ -55,7 +54,7 @@ safe: false
 
 JB :
   version : 0.3.0
-  
+  theme : lei-metro
    # Some JB helpers refer to these paths; change them here if needed. user can use them too.
   #
   archive_path: /pages/archive.html

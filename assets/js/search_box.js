@@ -1,6 +1,3 @@
-$(document).ready(function () {
-    var entries = null;
-    alert("aaa");
 $('#search_result').html("asdfasdfasdfaf");
     /** myself func **/
     function GetArgsFromHref(sArgName, sHref) {
@@ -95,17 +92,21 @@ $('#search_result').html("asdfasdfasdfaf");
             html += '<h1>你输入的关键词没有搜索结果，请更换关键词！ O(∩_∩)O~</h1>';
             html += '</article>';
         }
+
+    alert("fffff");
         $('#search_result').html(html);
         $('#loader').hide();
-        $('#search_content').Attr("class", "text-success");
+        $('#search_content').attr("class", "text-success");
         $('#search_content').show();
     }
-
+    
+$(document).ready(function () {
+    var entries = null;
 /*    $('#search-form').submit(function () {*/
         var s = GetArgsFromHref("s", window.location.href);
-        $('#query').html(unescape(decodeURI(s).replace("+", " ")));
-        var query = $('#query').val();
-
+        var query=unescape(decodeURI(s).replace("+", " "));
+        $('#query').attr("value",query);
+        /*var query = $('#query').val();*/
         $('#search_content').hide();
         $('#loader').show();
         if (entries == null) {
@@ -122,7 +123,7 @@ $('#search_result').html("asdfasdfasdfaf");
                     html += '<p>出错代码：<strong>' + textStatus + '</strong></p></article>';
                     $('#search_result').html(html);
                     $('#loader').hide();
-                    $('#search_content').Attr("class", "text-warning");
+                    $('#search_content').attr("class", "text-warning");
                     $('#search_content').show();
                 }
             });

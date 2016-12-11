@@ -22,7 +22,7 @@
       {% elsif page.theme.name %}
       {% capture ASSET_PATH %}{{ BASE_PATH }}/assets/themes/{{ page.theme.name }}{% endcapture %}
       {% else %}
-      {% capture ASSET_PATH %}{{ BASE_PATH }}/assets/themes/{{ site.theme.name }}{% endcapture %}
+      {% capture ASSET_PATH %}{{ BASE_PATH }}/assets/themes/{{ site.JB.theme }}{% endcapture %}
       {% endif %}
     {% endif %}  
   {% endif %}
