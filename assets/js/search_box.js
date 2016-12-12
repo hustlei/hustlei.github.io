@@ -1,18 +1,20 @@
 $(document).ready(function () {
     var entries = null;
     $('#search-form').removeAttr("action");
+    var s = GetArgsFromHref("s", window.location.href);
+    var q=unescape(decodeURI(s).replace("+", " "));
+    $('#query').val(q);/*$('#query').attr("value",query);*/
     search();
 
     $('#search-form').submit(function (e) {
+        var s=decodeURI(escape($('#query').val()));
+        history.replaceState(null, "", "/pages/search.html?s="+s);
         search();
         return false;
     });
 
 
     function search(){
-        var s = GetArgsFromHref("s", window.location.href);
-        var q=unescape(decodeURI(s).replace("+", " "));
-        $('#query').val(q);/*$('#query').attr("value",query);*/
         var query = $('#query').val();
         $('#search_content').hide();
         $('#loader').show();

@@ -63,7 +63,6 @@ JB :
   itcategories_path : /pages/itcategories.html
   designcategories_path : /pages/designcategories.html
   lifecategories_path : /pages/lifecategories.html
-  search_path : /pages/search.html
   tags_path : /pages/tags.html
   messages_path : /pages/messages.html
   music_path : /pages/music.html

@@ -47,7 +47,7 @@
                         <li class="nav-item {% if page.url == home_url %} active {% endif %}">
                             <a class="nav-link" href="/" rel="nofollow">Home</a>
                         </li>
-                        <li class="nav-item {% if site.JB.pkmcategories_path contains page.url %} active {% endif %}">
+                        <li class="nav-item {% if site.JB.pkmcategories_path == page.url %} active {% endif %}">
                             <a class="nav-link" href="{{ site.JB.pkmcategories_path }}" rel="nofollow">PKM</a>
                         </li>
                         <li class="nav-item {% if page.url == site.JB.itcategories_path %} active {% endif %}">
@@ -101,9 +101,9 @@
         </div>
     </footer>
     <!-- Scripts -->
-    <script type="text/javascript" defer src="{{ ASSET_PATH }}/js/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" defer src="{{ ASSET_PATH }}/bootstrap-4.0/js/bootstrap.min.js"></script>
-    {% if site.JB.search_path contains page.url %}<script type="text/javascript" defer src="/assets/js/search_box.js"></script> {% endif %}
+    <script defer src="{{ ASSET_PATH }}/js/jquery-1.11.3.min.js"></script>
+    <script defer src="{{ ASSET_PATH }}/bootstrap-4.0/js/bootstrap.min.js"></script>
+    {% if page.url == "/pages/search" %}<script defer src="/assets/js/search_box.js"></script> {% endif %}
     {% include widgets/baidu_share %}
     {% include widgets/back_top_button %}
 </body>
