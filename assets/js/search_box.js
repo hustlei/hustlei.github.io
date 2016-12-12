@@ -1,4 +1,46 @@
-$('#search_result').html("asdfasdfasdfaf");
+$(document).ready(function () {
+    var entries = null;
+    $('#search-form').removeAttr("action");
+    search();
+
+    $('#search-form').submit(function (e) {
+        search();
+        return false;
+    });
+
+
+    function search(){
+        var s = GetArgsFromHref("s", window.location.href);
+        var query=unescape(decodeURI(s).replace("+", " "));        
+        $('#query').val(query);/*$('#query').attr("value",query);var query = $('#query').val();*/        
+        $('#search_content').hide();
+        $('#loader').show();
+        if (entries == null) {
+            $.ajax({
+                url: '/atom.xml',
+                dataType: 'xml',
+                success: function (data) {
+                    entries = data.getElementsByTagName('entry');
+                    findEntries(query);
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    var html = '<article class="nested">';
+                    html += '<h1>出错</h1>';
+                    html += '<p>出错代码：<strong>' + textStatus + '</strong></p></article>';
+                    $('#search_result').html(html);
+                    $('#loader').hide();
+                    $('#search_content').attr("class", "text-warning");
+                    $('#search_content').show();
+                }
+            });
+        }
+        else {
+            findEntries(query);
+        }
+        $('#query').blur().attr('disabled', false);
+        return false;
+    }
+/*func************/
     /** myself func **/
     function GetArgsFromHref(sArgName, sHref) {
         var args = sHref.split("?");
@@ -93,46 +135,11 @@ $('#search_result').html("asdfasdfasdfaf");
             html += '</article>';
         }
 
-    alert("fffff");
         $('#search_result').html(html);
         $('#loader').hide();
         $('#search_content').attr("class", "text-success");
         $('#search_content').show();
     }
-    
-$(document).ready(function () {
-    var entries = null;
-/*    $('#search-form').submit(function () {*/
-        var s = GetArgsFromHref("s", window.location.href);
-        var query=unescape(decodeURI(s).replace("+", " "));
-        $('#query').attr("value",query);
-        /*var query = $('#query').val();*/
-        $('#search_content').hide();
-        $('#loader').show();
-        if (entries == null) {
-            $.ajax({
-                url: '/atom.xml',
-                dataType: 'xml',
-                success: function (data) {
-                    entries = data.getElementsByTagName('entry');
-                    findEntries(query);
-                },
-                error: function (XMLHttpRequest, textStatus, errorThrown) {
-                    var html = '<article class="nested">';
-                    html += '<h1>出错</h1>';
-                    html += '<p>出错代码：<strong>' + textStatus + '</strong></p></article>';
-                    $('#search_result').html(html);
-                    $('#loader').hide();
-                    $('#search_content').attr("class", "text-warning");
-                    $('#search_content').show();
-                }
-            });
-        }
-        else {
-            findEntries(query);
-        }
-        $('#query').blur().attr('disabled', false);
- /*       return false;
-    });*/
+/*funcend*********/
 
 });
