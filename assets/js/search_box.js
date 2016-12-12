@@ -11,8 +11,9 @@ $(document).ready(function () {
 
     function search(){
         var s = GetArgsFromHref("s", window.location.href);
-        var query=unescape(decodeURI(s).replace("+", " "));        
-        $('#query').val(query);/*$('#query').attr("value",query);var query = $('#query').val();*/        
+        var q=unescape(decodeURI(s).replace("+", " "));
+        $('#query').val(q);/*$('#query').attr("value",query);*/
+        var query = $('#query').val();
         $('#search_content').hide();
         $('#loader').show();
         if (entries == null) {
