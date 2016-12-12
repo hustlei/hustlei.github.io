@@ -71,7 +71,7 @@
         </div>
     </section>
     <main id="main" class="container">
-        {% if is_production %} {{ content | strip_html }} {% else %} {{ content }} {% endif %}
+        {% if is_production %} {{ content | strip }} {% else %} {{ content }} {% endif %}
     </main>
     <section id="nav-bottom" class="container">
         <hr class="my-1" />
