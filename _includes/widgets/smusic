@@ -1,4 +1,5 @@
 <!--css style is configed in my_style-->
+<link rel="stylesheet" type="text/css" href="/assets/widgets/smusic/css/smusic.css" />
 <div class="grid-music-container f-usn">
     <div class="m-music-play-wrap">
         <div class="u-cover"></div>
@@ -35,7 +36,7 @@
 <script>
 {% include widgets/musics_list %}
 </script>
-<script src="/assets/widgets/smusic/js/smusic.min.js"></script>
+<script defer src="/assets/widgets/smusic/js/smusic.min.js"></script>
 <script>
     new SMusic({
         musicList : musicList

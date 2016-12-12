@@ -10,7 +10,6 @@ Usage:
     {% endif %}
 -->{% endcomment %}
 
-<!-- mathjax config similar to math.stackexchange -->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {
@@ -24,6 +23,5 @@ Usage:
     }
   });
 </script>
-
 <script type="text/javascript" defer
 src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML-full"></script>

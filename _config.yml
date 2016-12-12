@@ -57,18 +57,18 @@ JB :
   theme : lei-metro
    # Some JB helpers refer to these paths; change them here if needed. user can use them too.
   #
-  archive_path: /pages/archive.html
   categories_path : /pages/categories.html
   pkmcategories_path : /pages/pkmcategories.html
   itcategories_path : /pages/itcategories.html
   designcategories_path : /pages/designcategories.html
   lifecategories_path : /pages/lifecategories.html
   tags_path : /pages/tags.html
+  archive_path: /pages/archive.html
+  search_path : /pages/search.html
   messages_path : /pages/messages.html
   music_path : /pages/music.html
-  about_path : /pages/about.html
   links_path : /pages/links.html
-  weiboxiu_path : /pages/weiboxiu.html
+  about_path : /pages/about.html
   atom_path : /atom.xml
   rss_path : /rss.xml
 
