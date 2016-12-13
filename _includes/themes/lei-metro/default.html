@@ -14,7 +14,7 @@
     <!-- Bootstrap core css and custom styles -->
     <link rel="stylesheet" href="/assets/widgets/bootstrap-4.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ ASSET_PATH }}/css/style.min.css">
-    {% unless page.id %}<link rel="stylesheet" href="{{ ASSET_PATH }}/css/toc.min.css">{% endunless %}
+    {% unless page.id == empty %}<link rel="stylesheet" href="{{ ASSET_PATH }}/css/toc.min.css">{% endunless %}
     <link rel="stylesheet" href="{{ ASSET_PATH }}/css/pygments.min.css">
 </head>
 <body>

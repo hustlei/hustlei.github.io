@@ -131,16 +131,17 @@ $(document).ready(function () {
                 html += '<section><pre  style="background-color: transparent;border: 0;">' + htmlEscape(match.content) + '</pre></section>';
                 html += '<footer><p>更新日期：' + match.date + '</p></footer>';
                 html += '</article>';
+                $('#search_content').attr("class", "text-success");
             }
         } else {
             html += '<article class="nested">';
-            html += '<h1>你输入的关键词没有搜索结果，请更换关键词！ O(∩_∩)O~</h1>';
+            html += '<p class="lead">你输入的关键词没有搜索结果，请更换关键词！ O(∩_∩)O~</p>';
             html += '</article>';
+            $('#search_content').attr("class", "text-warning");
         }
 
         $('#search_result').html(html);
         $('#loader').hide();
-        $('#search_content').attr("class", "text-success");
         $('#search_content').show();
     }
 /*funcend*********/
