@@ -26,7 +26,7 @@
 </style>
 
 <!-- Duoshuo Comment BEGIN -->
-<div class="ds-thread"{% if page.wordpress_id %} data-thread-key="{{page.wordpress_id}}"{% endif %}
+<div class="ds-thread"{% if page.wordpress_id %} data-thread-key="{{page.wordpress_id}}"{% endif %}></div>
 <script type="text/javascript">
 var duoshuoQuery = {short_name:'{{ site.JB.comments.duoshuo.short_name }}'};
   (function() {
