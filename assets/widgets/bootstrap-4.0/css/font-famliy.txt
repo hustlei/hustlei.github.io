@@ -1,0 +1,8 @@
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+
+font-family: "Arial","Microsoft YaHei","÷ÚÌו","ËÎÌו",sans-serif;
+
+
+code,kbd,pre,samp
+font-family:Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace
+font-family:monospace,"Courier New","Liberation Mono",Consolas,Monaco,Menlo
