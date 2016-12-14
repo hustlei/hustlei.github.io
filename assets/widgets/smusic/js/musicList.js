@@ -39,3 +39,7 @@ var musicList = [
         src    : 'http://www.smohan.net/data/upfiles/media/2015/05/smusic/2015051705.mp3'
     }
 ];
+
+new SMusic({
+    musicList : musicList
+});

@@ -2,11 +2,8 @@
   {{ content }}
 </section>
 
-{% if page.id != message %}
+{% if page.comments == true %}
 <section>
-<!-- UYAN NEW COMMENT BEGIN -->
-<div id="uyan_newcmt_unit"></div>
-<script type="text/javascript" defer src="http://v2.uyan.cc/code/uyan.js?uid=2120813"></script>
-<!-- UYAN NEW COMMENT END -->
+{% include widgets/uyan_comment %}
 </section>
 {% endif %}

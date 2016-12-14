@@ -1,9 +1,9 @@
 <!--css style is configed in my_style-->
 <link rel="stylesheet" type="text/css" href="/assets/widgets/smusic/css/smusic.css" />
-<div class="grid-music-container f-usn">
-    <div class="m-music-play-wrap">
-        <div class="u-cover"></div>
-        <div class="m-now-info">
+<div class="grid-music-container f-usn container">
+    <div class="m-music-play-wrap row">
+        <div class="u-cover col-sm-3"></div>
+        <div class="m-now-info col-sm-9">
             <h1 class="u-music-title"><strong>标题</strong><small>歌手</small></h1>
             <div class="m-now-controls">
                 <div class="u-control u-process">
@@ -20,25 +20,22 @@
                     <a class="volume-control"></a>
                 </div>
             </div>
-            <div class="m-play-controls">
+            <div class="m-play-controls row">
+                <div class="col-sm-6">
                 <a class="u-play-btn prev" title="上一曲"></a>
                 <a class="u-play-btn ctrl-play play" title="暂停"></a>
                 <a class="u-play-btn next" title="下一曲"></a>
+                </div><div class="col-sm-6">
                 <a class="u-play-btn mode mode-list current" title="列表循环"></a>
                 <a class="u-play-btn mode mode-random" title="随机播放"></a>
                 <a class="u-play-btn mode mode-single" title="单曲循环"></a>
+                </div>
             </div>
         </div>
     </div>
     <div class="f-cb">&nbsp;</div>
     <div class="m-music-list-wrap"></div>
 </div>
-<script>
-{% include widgets/musics_list %}
-</script>
+
 <script defer src="/assets/widgets/smusic/js/smusic.min.js"></script>
-<script>
-    new SMusic({
-        musicList : musicList
-    });
-</script>
+<script defer src="/assets/widgets/smusic/js/musiclist.js"></script>
