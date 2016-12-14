@@ -1,6 +1,7 @@
 <!--css style is configed in my_style-->
 <link rel="stylesheet" type="text/css" href="/assets/widgets/smusic/css/smusic.css" />
-<div class="grid-music-container f-usn container">
+<div class="container">
+<div class="grid-music-container f-usn">
     <div class="m-music-play-wrap row">
         <div class="u-cover col-sm-3"></div>
         <div class="m-now-info col-sm-9">
@@ -36,6 +37,6 @@
     <div class="f-cb">&nbsp;</div>
     <div class="m-music-list-wrap"></div>
 </div>
-
+</div>
 <script defer src="/assets/widgets/smusic/js/smusic.min.js"></script>
 <script defer src="/assets/widgets/smusic/js/musiclist.js"></script>
