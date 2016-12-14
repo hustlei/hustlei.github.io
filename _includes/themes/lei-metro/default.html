@@ -70,7 +70,7 @@
             </div>
         </div>
     </section>
-    <main id="main" class="container">
+    <main id="main" class="container py-1">
         {% if is_production %} {{ content | strip }} {% else %} {{ content }} {% endif %}
     </main>
     <section id="nav-bottom" class="container">
@@ -78,7 +78,7 @@
         <nav class="row text-xs-center db-footer-links px-3">
             <a class="col-md-4" href="{{ site.JB.links_path }}" rel="nofollow">友情链接</a>
             <a class="col-md-4" href="{{ site.JB.messages_path }}" rel="nofollow">留言板</a>
-            <a class="col-md-4" href="{{ site.JB.about_path }}" rel="nofollow">关于我</a>
+            <a class="col-md-4" href="{{ site.JB.about_path }}" rel="nofollow">关&nbsp;于</a>
         </nav>
         <hr class="my-1" />
     </section>
@@ -87,12 +87,10 @@
             <div class="row">
                 <div class="col-md-4 text-xs-center"><img src="/assets/qr.png" style="max-width: 200px;" alt="二维码" /></div>
                 <div class="col-md-8">
-                    <p>{% include widgets/statcounter %}</p>
-                    <p>&copy; 2013-{{ site.time | date: '%Y' }} <a href="http://weibo.com/hustlei" target="_blank" title="Author's Sina Wibo Main Page">lileilei</a> All Rights Reserved.</p>
-                    <p>
-                        本站基于<a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
-                        和<a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>构建.
-                    </p>
+                    <p><small>{% include widgets/statcounter %}</small></p>
+                    <p><small>&copy; 2013-{{ site.time | date: '%Y' }} <a href="http://weibo.com/hustlei" target="_blank" title="Author's Sina Wibo Main Page">lileilei</a> All Rights Reserved.</small></p>
+                    <p><small>
+                        本站基于<a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>和<a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>构建.</small></p>
                 </div>
             </div>
         </div>

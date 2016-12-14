@@ -1,16 +1,12 @@
-<section id="page" class="py-2">
+<section id="page" class="py-1">
   {{ content }}
 </section>
 
-<section id="comments">
-  {% include JB/comments %}
-</section>
-
-{% if page.url == site.JB.messages_path %}
+{% if page.id != message %}
 <section>
-  <br/><br/><br/><br/>
-  {% include widgets/recent_visitors %}
-  <br/><br/>
-  {% include widgets/recent_comments %}
+<!-- UYAN NEW COMMENT BEGIN -->
+<div id="uyan_newcmt_unit"></div>
+<script type="text/javascript" defer src="http://v2.uyan.cc/code/uyan.js?uid=2120813"></script>
+<!-- UYAN NEW COMMENT END -->
 </section>
 {% endif %}
