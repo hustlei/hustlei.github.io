@@ -21,12 +21,12 @@
       </div>
     </div>
     <div class="m-play-controls row">
-      <div class="col-xs-6 text-xs-center">
+      <div class="col-sm-6 text-xs-center">
         <a class="u-play-btn prev" title="上一曲"></a>
         <a class="u-play-btn ctrl-play play" title="暂停"></a>
         <a class="u-play-btn next" title="下一曲"></a>
       </div>
-      <div class="col-xs-6">
+      <div class="col-sm-6">
         <div class="u-control u-volume">
           <div class="volume-process" data-volume="0.50">
             <span class="volume-current"></span>
