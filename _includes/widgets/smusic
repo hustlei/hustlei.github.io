@@ -1,42 +1,47 @@
 <!--css style is configed in my_style-->
 <link rel="stylesheet" type="text/css" href="/assets/widgets/smusic/css/smusic.css" />
 <div class="container">
-<div class="grid-music-container f-usn">
+  <div class="grid-music-container f-usn mx-auto">
     <div class="m-music-play-wrap row">
-        <div class="u-cover col-sm-3"></div>
-        <div class="m-now-info col-sm-9">
-            <h1 class="u-music-title"><strong>标题</strong><small>歌手</small></h1>
-            <div class="m-now-controls">
-                <div class="u-control u-process">
-                    <span class="buffer-process"></span>
-                    <span class="current-process"></span>
-                </div>
-                <div class="u-control u-time">00:00/00:00</div>
-                <div class="u-control u-volume">
-                    <div class="volume-process" data-volume="0.50">
-                        <span class="volume-current"></span>
-                        <span class="volume-bar"></span>
-                        <span class="volume-event"></span>
-                    </div>
-                    <a class="volume-control"></a>
-                </div>
-            </div>
-            <div class="m-play-controls row">
-                <div class="col-sm-6">
-                <a class="u-play-btn prev" title="上一曲"></a>
-                <a class="u-play-btn ctrl-play play" title="暂停"></a>
-                <a class="u-play-btn next" title="下一曲"></a>
-                </div><div class="col-sm-6">
-                <a class="u-play-btn mode mode-list current" title="列表循环"></a>
-                <a class="u-play-btn mode mode-random" title="随机播放"></a>
-                <a class="u-play-btn mode mode-single" title="单曲循环"></a>
-                </div>
-            </div>
+      <div class="col-sm-4 p-2">
+        <div class="u-cover mx-auto"></div>
+      </div>
+      <div class="m-now-info col-sm-8 text-xs-center">
+        <h1 class="u-music-title pr-2">
+          <strong>标题</strong>
+          <small>歌手</small>
+        </h1>
+        <div class="m-now-controls">
+          <div class="u-control u-process">
+            <span class="buffer-process"></span>
+            <span class="current-process"></span>
+          </div>
+          <div class="u-control u-time">00:00/00:00</div>
         </div>
+      </div>
     </div>
-    <div class="f-cb">&nbsp;</div>
-    <div class="m-music-list-wrap"></div>
+    <div class="m-play-controls row">
+      <div class="col-xs-6 text-xs-center">
+        <a class="u-play-btn prev" title="上一曲"></a>
+        <a class="u-play-btn ctrl-play play" title="暂停"></a>
+        <a class="u-play-btn next" title="下一曲"></a>
+      </div>
+      <div class="col-xs-6">
+        <div class="u-control u-volume">
+          <div class="volume-process" data-volume="0.50">
+            <span class="volume-current"></span>
+            <span class="volume-bar"></span>
+            <span class="volume-event"></span>
+          </div>
+          <a class="volume-control"></a>
+        </div>
+        <a class="u-play-btn mode mode-list current ml-1" title="列表循环"></a>
+        <a class="u-play-btn mode mode-random" title="随机播放"></a>
+        <a class="u-play-btn mode mode-single" title="单曲循环"></a>
+      </div>
+    </div>
+    <div class="m-music-list-wrap mt-1"></div>
+  </div>
 </div>
-</div>
-<script defer src="/assets/widgets/smusic/js/smusic.min.js"></script>
-<script defer src="/assets/widgets/smusic/js/musiclist.js"></script>
+<script defer="" src="/assets/widgets/smusic/js/smusic.min.js"></script>
+<script defer="" src="/assets/widgets/smusic/js/musiclist.js"></script>

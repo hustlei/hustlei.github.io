@@ -10,7 +10,6 @@
 /*html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu{margin:0;padding:0;-webkit-tap-highlight-color:rgba(0,0,0,0);word-wrap: break-word;font-size: inherit;line-height: inherit;overflow: visible;}
 header,footer,section,article,aside,nav,address,figure,figcaption,menu,details{display:block;}*/
 .f-cb{height: 0;}
-.f-cb:after{display:block;content:" ";height:0;visibility:hidden;clear: both;}
 .f-ib{display:inline-block;}
 .f-din{display:inline;}
 .f-dn{display:none;}
@@ -45,26 +44,15 @@ header,footer,section,article,aside,nav,address,figure,figcaption,menu,details{d
 ::-webkit-scrollbar-thumb:vertical:active {background-color: #2e86ef}
 /*
 html,body{
-    width: 100%;
-    height: 100%;
     background-color: #3792ef;
-    overflow: hidden;
-    font-family: "Microsoft Yahei","微软雅黑","Helvetica Neue","Hiragino Sans GB",Helvetica,Tahoma,sans-serif;
-}*/
+*/
 
 /*SMusic*/
 .grid-music-container{
-    /*width: auto;/*520px;*/
-    /*height: auto;/*676px;*/
-    /*padding: 20px;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    margin-top: -158px;
-    margin-left: -280px;*/
+    max-width: 600px;
     background-color: rgba(195,222,249,1);
-    font-family: "Microsoft Yahei","微软雅黑","Helvetica Neue","Hiragino Sans GB",Helvetica,Tahoma,sans-serif;
     text-shadow: 1px 0 0 rgba(255,255,255,.7);
+    padding: 20px;
 }
 
 .grid-music-container .m-music-play-wrap{
@@ -75,9 +63,6 @@ html,body{
     height: 121px;
     overflow: hidden;
     background: url(/assets/widgets/smusic/img/music_icons.png) 0 0 no-repeat;
- /*   position: absolute;
-    top: 0;
-    left: 0;*/
 }
 .grid-music-container .u-cover img{
     display: block;
@@ -86,6 +71,8 @@ html,body{
     max-height: 100%;
     border-radius: 50%;
     padding: 0;
+    margin: 1rem;
+    display: hidden;
 }
 .grid-music-container .u-cover.play{
     -webkit-animation: Circle 10s linear infinite 0s forwards;
@@ -113,8 +100,7 @@ html,body{
 }
 
 .grid-music-container .m-now-info{
-    /*margin-left: 25px;*/
-    height: 100%;
+
 }
 .grid-music-container .m-now-info h1{
     font-weight: normal;
@@ -142,7 +128,6 @@ html,body{
 .grid-music-container .m-now-controls .u-process{
     width: 220px;
     height: 4px;
-    position: relative;
     background-color: #cecfd4;
 }
 .grid-music-container .m-now-controls .u-process .buffer-process,.grid-music-container .m-now-controls .u-process .current-process{
@@ -150,9 +135,9 @@ html,body{
     width: 0;
     height: 4px;
     position: absolute;
-    top:0;
+    top 0;
     left: 0;
-    background-color: #3792ef;
+    background-color: #3792ef;    
     z-index: 1;
 }
 .grid-music-container .m-now-controls .u-process .buffer-process{
@@ -164,19 +149,18 @@ html,body{
     font-size: 12px;
     color: #585957;
 }
-.grid-music-container .m-now-controls .u-volume{
+.grid-music-container .u-volume{
     overflow: visible;
-    text-align: center;
-    position: relative;
-    margin-left: 20px;
+    width: 24px;
+    display: inline;
 }
 .grid-music-container .u-volume .volume-process{
     width: 3px;
     height: 50px;
-    background: #cecfd4;
     position: absolute;
     top: -54px;
-    left: 6px;
+    left: 16px;
+    background: #cecfd4;
     cursor: pointer;
     visibility: hidden; /*设置不可见性，最好不要使用display:none，不然高度很难获取*/
 }
@@ -214,8 +198,7 @@ html,body{
     bottom: 50%;
     -webkit-transition: bottom .2s linear;
     transition: bottom .2s linear;
-   /* z-index: 2;*/
-   /* opacity: 0;*/
+    z-index: 2;
 }
 .grid-music-container .u-volume .volume-process .volume-bar:hover,
 .grid-music-container .u-volume .volume-process .volume-bar:active{
@@ -238,17 +221,12 @@ html,body{
     background-position: -158px -98px;
 }
 .grid-music-container .m-music-list-wrap{
-    margin-left: 135px;
-    margin-right: 25px;
-    /*height: 120px;*/
-    min-height:300px;
-    max-height:580px;
     border: 1px solid rgba(255,255,255,.7);
-    /*border: 1px solid rgba(198,226,255,.5);*/
     overflow-x: hidden;
-    overflow-y: auto;
 }
-.grid-music-container .m-music-list-wrap ul{}
+.grid-music-container .m-music-list-wrap ul{
+padding-left: 5px;
+}
 .grid-music-container .m-music-list-wrap li{
     display: block;
     line-height: 30px;

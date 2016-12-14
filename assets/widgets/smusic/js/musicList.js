@@ -4,39 +4,22 @@
     
 var musicList = [
     {
-        title : '属于',
-        singer : '梁静茹',
+        title : '忧伤还是快乐',
+        singer : '',
         cover  : '',
-        src    : 'http://www.smohan.net/data/upfiles/media/2015/05/smusic/2015051701.mp3'
+        src    : 'http://lixiaona.com/gb/voice/youshangkuaile.mp3'
     },
     {
-        title : '夜夜夜夜',
-        singer : '梁静茹',
-        src    : 'http://www.smohan.net/data/upfiles/media/2015/05/smusic/2015051702.mp3'
-    },
-    {
-        title : '时间去哪儿',
-        singer : '王铮亮',
-        cover  : 'http://www.smohan.net/data/upfiles/media/2015/05/smusic/2015051703.jpg',
-        src    : 'http://www.smohan.net/data/upfiles/media/2015/05/smusic/2015051703.mp3'
-    },
-    {
-        title : '她说',
-        singer : '张碧晨',
-        cover  : 'http://www.smohan.net/data/upfiles/media/2015/05/smusic/2015051704.jpg',
-        src    : 'http://www.smohan.net/data/upfiles/media/2015/05/smusic/2015051704.mp3'
-    },
-    {
-        title : 'Tonight I Wanna Cry',
+        title : 'Tonight I Wanna Cry(伴奏版)',
         singer : 'Keith Urban',
         cover  : 'http://www.smohan.net/data/upfiles/media/2015/05/KeithUrban-TonightIWannaCry.jpg',
-        src    : 'http://www.smohan.net/data/upfiles/media/2015/05/KeithUrban-TonightIWannaCry.mp3'
+        src    : 'http://other.web.rc01.sycdn.kuwo.cn/resource/n3/52/67/4090739469.mp3'
     },
     {
-        title : '海阔天空',
-        singer : 'beyond',
-        cover  : 'http://www.smohan.net/data/upfiles/media/2015/05/smusic/2015051705.jpg',
-        src    : 'http://www.smohan.net/data/upfiles/media/2015/05/smusic/2015051705.mp3'
+        title : 'The Truth That You Leave',
+        singer : 'pianoboy',
+        cover  : '',
+        src    : 'http://other.web.ra01.sycdn.kuwo.cn/resource/n3/128/24/86/2594804573.mp3'
     }
 ];
 
