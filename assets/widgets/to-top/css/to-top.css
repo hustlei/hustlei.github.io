@@ -1,11 +1,11 @@
 #back-top {
   position: fixed;
-  bottom: 30px;
-  margin-left: 1040px;
+  bottom: 25px;
+  right: 25px;
 }
 #back-top a {
-  width: 54px;
-  height: 54px;
+  width: 45px;
+  height: 45px;
   display: block;
   background: #ddd url(../img/bg_up_arrow.png) no-repeat center center;
   background-color: #aaa;
