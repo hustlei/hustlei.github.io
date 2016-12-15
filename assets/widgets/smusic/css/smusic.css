@@ -151,15 +151,18 @@ html,body{
 }
 .grid-music-container .u-volume{
     overflow: visible;
-    width: 24px;
-    display: inline;
+    position: relative;
+    width: 20px!important;
+    height: 18px!important;
+    margin-right: 10px!important;
+    display: inline-block;
 }
 .grid-music-container .u-volume .volume-process{
     width: 3px;
     height: 50px;
     position: absolute;
     top: -54px;
-    left: 16px;
+    left: 8px;
     background: #cecfd4;
     cursor: pointer;
     visibility: hidden; /*设置不可见性，最好不要使用display:none，不然高度很难获取*/
