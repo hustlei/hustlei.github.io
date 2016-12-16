@@ -74,7 +74,6 @@ var glist = [
             {
                 "name": "default",
                 "img": [
-                    "柳侑绮.jpg",
                     "柳侑绮1.jpg",
                     "柳侑绮2.jpg",
                     "柳侑绮3.jpg",

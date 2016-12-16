@@ -4,22 +4,21 @@ var gname=glist[i].name;
 var aname=glist[i].album[j].name;
 var img=glist[i].album[j].img;
 
-document.write(gname+'--'+aname);
+document.write('<header class="col-xs-12 text-xs-center m-1"><h2>'+gname);
+if(aname != "default")document.write('--'+aname);
+document.write('</h2></header>');
 for(var k in img)
 {
-document.write('<div class="col-sm-3 col-xs-4 card">');
-document.write('<img class="card-img-top w-100" src="'+root+img[k]+'">'); 
-document.write('<div class="card-block"><h4 class="card-title">');
+document.write('<figure class="figure col-md-6 text-xs-center">');
+document.write('<img class="figure-img img-fluid" src="'+root+img[k]+'">');
 var fnarr=img[k].split(/[\,.]/);
-var fn=fnarr[fnarr.length-2];
-document.write(fn);
-document.write('</h4></div></div>');
+document.write('<figcaption class="figure-caption">'+fnarr[fnarr.length-2]+'</figcaption>');
+document.write('</figure>');
 }
 
   function GetArgsFromHref(sArgName, sHref) {
         var args = sHref.split("?");
         var retval = "";
-
         if (args[0] == sHref) /*参数为空*/ {
             return retval; /*无需做任何处理*/
         }
