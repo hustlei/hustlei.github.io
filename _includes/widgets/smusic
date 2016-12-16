@@ -43,5 +43,5 @@
     <div class="m-music-list-wrap mt-1"></div>
   </div>
 </div>
-<script defer="" src="/assets/widgets/smusic/js/smusic.min.js"></script>
-<script defer="" src="/assets/widgets/smusic/js/musiclist.js"></script>
+<script async src="/assets/widgets/smusic/js/smusic.min.js"></script>
+<script async src="/assets/widgets/smusic/js/musiclist.js"></script>
