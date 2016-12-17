@@ -7,7 +7,7 @@ var img=glist[i].album[j].img;
 document.getElementById('now').innerHTML = gname;
 document.write('<header class="col-xs-12 text-xs-center m-1"><h2>'+gname);
 if(aname != "default")document.write('--'+aname);
-document.write('</h2></header>');
+document.write('</h2></header><div class="row">');
 for(var k in img)
 {
 document.write('<figure class="figure col-md-6 text-xs-center">');
@@ -16,12 +16,49 @@ var fnarr=img[k].split(/[\,.]/);
 document.write('<figcaption class="figure-caption">'+fnarr[fnarr.length-2]+'</figcaption>');
 document.write('</figure>');
 }
+document.write('</div>');
+
+var url,ii,jj;
+i=parseInt(i);j=parseInt(j);
+if(j>0){
+ii=i;jj=j-1;
+}
+else if(j==0 && i > 0){
+ii=i-1;jj=glist[ii].album.length-1;
+}
+if(j==0 && i==0){
+url="æ²¡æœ‰äº†";
+}
+else{
+url='<a href="girl.html?i='+ii+'&j='+jj+'">';
+if(glist[ii].album[jj].name!="default")
+url+=glist[ii].album[jj].name+" - ";
+url+=glist[ii].name+'</a>';
+}
+document.write('<p>[ä¸Šä¸€é¡µï¼š'+url+']</p><p>[ä¸‹ä¸€é¡µï¼š');
+
+if(j<glist[i].album.length-1){
+ii=i;jj=j+1;
+}
+else if(j==glist[i].album.length-1 && i < glist.length-1){
+ii=i+1;jj=0;
+}
+if(i==glist.length-1 && j==glist[i].album.length-1){
+url="æ²¡æœ‰äº†";
+}
+else{
+url='<a href="girl.html?i='+ii+'&j='+jj+'">';
+if(glist[ii].album[jj].name!="default")
+url+=glist[ii].album[jj].name+" - ";
+url+=glist[ii].name+'</a>';
+}
+document.write(url+']</p>');
 
   function GetArgsFromHref(sArgName, sHref) {
         var args = sHref.split("?");
         var retval = "";
-        if (args[0] == sHref) /*²ÎÊıÎª¿Õ*/ {
-            return retval; /*ÎŞĞè×öÈÎºÎ´¦Àí*/
+        if (args[0] == sHref) /*å‚æ•°ä¸ºç©º*/ {
+            return retval; /*æ— éœ€åšä»»ä½•å¤„ç†*/
         }
         var str = args[1];
         args = str.split("&");
