@@ -4,6 +4,7 @@ var gname=glist[i].name;
 var aname=glist[i].album[j].name;
 var img=glist[i].album[j].img;
 
+document.getElementById('now').innerHTML = gname;
 document.write('<header class="col-xs-12 text-xs-center m-1"><h2>'+gname);
 if(aname != "default")document.write('--'+aname);
 document.write('</h2></header>');
