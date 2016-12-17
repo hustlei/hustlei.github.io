@@ -74,14 +74,14 @@ var glist = [
             {
                 "name": "default",
                 "img": [
+                    "柳侑绮.jpg",
                     "柳侑绮1.jpg",
                     "柳侑绮2.jpg",
                     "柳侑绮3.jpg",
                     "柳侑绮4.jpg",
                     "柳侑绮5.jpg",
                     "柳侑绮6.jpg",
-                    "柳侑绮7.jpg",
-                    "柳侑绮8.jpg"
+                    "柳侑绮7.jpg"
                 ]
             }
         ]
