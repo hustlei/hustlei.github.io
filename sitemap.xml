@@ -16,13 +16,11 @@ title : Sitemap
     {% for page in site.pages %}
     {% if page.layout != nil %}
     {% if page.layout != 'feed' %}
-    {% if page.group == 'navigation' %}
     <url>
       <loc>{{ site.production_url }}{{ page.url | remove: 'index.html' }}</loc>
       <changefreq>monthly</changefreq>
       <priority>0.80</priority>
     </url>
-    {% endif %}
     {% endif %}
     {% endif %}
     {% endfor %}
