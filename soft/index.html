@@ -1,30 +1,28 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="keywords" content="finesoft, tinnysoft, handysoft, minsoft, toolsoft">
-    <meta name="description" content="minsoftwares, 工具小软件, tools">
-    <meta name="author" content="{{ site.author.name }}">
-    <meta name="robots" content="all">
-    <link rel="shortcut icon" href="/assets/favicon.ico">
-    <title>finesoft - my handy softwares</title>
-    <link rel="stylesheet" href="/assets/widgets/bootstrap-4.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ ASSET_PATH }}/css/style.min.css">
-</head>
-<body>
-    <header id="header" style="background: #373c3a">
-        <div class="container pr-0">
-            <div class="clearfix navbar-dark">
-                <button class="navbar-toggler float-xs-right hidden-sm-up" type="button" data-toggle="collapse" data-target="#nav-header"></button>
-                <a class="navbar-brand text-muted" href="/">Home</a>
-                <nav class="float-xs-right hidden-xs-down">
-                    <a href="{{ site.JB.about_path }}" class="text-muted" rel="nofollow" title="关于我">关于</a>
-                    <span class="text-muted">/</span>
-                    <a href="{{ site.JB.messages_path }}" class="text-muted" rel="nofollow" title="留言板">留言板</a>
+---
+layout: custom
+title: "finesoft - handy softwares"
+tagline: 
+keywords: "finesoft, tinnysoft, handysoft, minsoft, toolsoft"
+description: "minsoftwares, 工具小软件, tools"
+id: girls
+comments: false
+---
+    <section id="nav-main" style="background: #242424">
+        <div class="container hidden-sm-up">
+                <nav class="collapse navbar-toggleable-xs" id="nav-header">
+                    <ul class="nav navbar-nav navbar-dark">
+                        {% capture home_url %}{{ HOME_PATH | append: '/index.html' | replace: '//', '/' }}{% endcapture %}
+                        <li class="nav-item {% if page.id == "home" %} active {% endif %}">
+                            <a class="nav-link" href="/" rel="nofollow">Home</a>
+                        </li>
+                        <li class="nav-item {% if page.id == 'soft' %} active {% endif %}">
+                            <a class="nav-link" href="/soft" rel="nofollow">Soft</a>
+                        </li>
+                    </ul>
                 </nav>
-            </div>
+        </div>
+    </section>
+    
             <section class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
@@ -32,10 +30,10 @@
                 </ol>
                 <div class="carousel-inner" role="listbox">
                     <div class="carousel-item text-xs-center active">
-                        <img class="mx-auto" src="http://hustlei.qiniudn.com/epubviewer/epubviewer1.1-lite.png" alt="epuviewer lite">
+                        <img class="mx-auto" src="http://hustlei.qiniudn.com/soft/soft1.jpg" alt="epuviewer lite">
                     </div>
                     <div class="carousel-item text-xs-center">
-                        <img class="mx-auto" src="http://hustlei.qiniudn.com/epubviewer/epubviewer1.1.png" alt="epuviewer">
+                        <img class="mx-auto" src="http://hustlei.qiniudn.com/soft/soft2.jpg" alt="epuviewer">
                     </div>
                 </div>
                 <a class="left carousel-control" href="#carousel-example" role="button" data-slide="prev">
@@ -47,18 +45,17 @@
                     <span class="sr-only">Next</span>
                 </a>
             </section>
-        </div>
-    </header>
+
 
     <main id="main" class="container py-1">
         <div class="row">
             <article class="col-md-6 col-lg-4 p-2">
                 <div class="card">
-                    <img class="card-img-top w-100" src="http://hustlei.qiniudn.com/epubviewer/epubviewer1.1.png" alt="EpubViewer">
+                    <div class="text-xs-center"><img class="card-img-top mx-auto" src="http://hustlei.qiniudn.com/soft/epub.ico" alt="EpubViewer"></div>
                     <div class="card-block">
                         <h4 class="card-title">EpubViewer</h4>
                         <p class="card-text">EpubViewer是一个比较清新的Epub阅读器，包含了许多我自己想要的而功能。</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="epubviewer.html" class="btn btn-sm btn-primary float-xs-right">detail</a>
                     </div>
                 </div>
             </article>
@@ -72,40 +69,4 @@
             </article>
         </div>
     </main>
-
-    <section id="nav-bottom" class="container">
-        <hr class="my-1" />
-        <nav class="row text-xs-center db-footer-links px-3">
-            <a class="col-md-4" href="{{ site.JB.links_path }}" rel="nofollow">友情链接</a>
-            <a class="col-md-4" href="{{ site.JB.messages_path }}" rel="nofollow">留言板</a>
-            <a class="col-md-4" href="{{ site.JB.about_path }}" rel="nofollow">关&nbsp;于</a>
-        </nav>
-        <hr class="my-1" />
-    </section>
-    <footer id="footer" class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 text-xs-center"><img src="/assets/qr.png" style="max-width: 200px;" alt="二维码" /></div>
-                <div class="col-md-8">
-                    <p><small>{% include widgets/statcounter %}</small></p>
-                    <p><small>&copy; 2013-{{ site.time | date: '%Y' }} <a href="http://weibo.com/hustlei" target="_blank" title="Author's Sina Wibo Main Page">lileilei</a> All Rights Reserved.</small></p>
-                    <p>
-                        <small>
-                            本站基于<a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>和<a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>构建.
-                        </small>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- Scripts -->
-    <script defer src="/assets/widgets/jquery-3.1/js/jquery-3.1.1.min.js"></script>
-    <script defer src="/assets/widgets/tether-1.4/js/tether.min.js"></script>
-    <script defer src="/assets/widgets/bootstrap-4.0/js/bootstrap.min.js"></script>
-    {% if page.id == "search" %}
-    <script defer src="/assets/widgets/search_box.js"></script> {% endif %}
-    {% if is_production and page.content contains "$" %} {% include widgets/mathjax %} {% endif %}
-    {% include widgets/baidu_share %}
-    {% include widgets/back_top_button %}
-</body>
-</html>
+    

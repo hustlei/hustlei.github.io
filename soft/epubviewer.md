@@ -1,9 +1,6 @@
 ---
-layout: page
+layout: soft
 title: EpubViewer
-category:  
-group:  
-tags:  
 keywords:  
 description:  
 
