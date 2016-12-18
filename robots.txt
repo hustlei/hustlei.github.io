@@ -5,5 +5,5 @@ Disallow: /BingSiteAuth.xml
 Disallow: /ed4f2f21f88489ffd63606dbdfa89d89.txt
 Disallow: /sogousiteverification.txt
 Disallow: /ed4f2f21f88489ffd63606dbdfa89d89.txt
-Disallow: /ed4f2f21f88489ffd63606dbdfa89d89.txt
+Disallow: /shenma-site-verification.txt
 Sitemap: sitemap.xml
