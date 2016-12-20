@@ -8,7 +8,7 @@ $(document).ready(function () {
 
     $('#search-form').submit(function (e) {
         var s=decodeURI(escape($('#query').val()));
-        history.replaceState(null, "", "/pages/search.html?s="+s);
+        history.pushState({}, "", "/pages/search.html?s="+s);//history.replaceState(null,"","/pages/search.html?s="+s);
         search();
         return false;
     });

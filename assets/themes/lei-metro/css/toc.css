@@ -33,28 +33,28 @@
 
 /*由于jekyll模板是把post文章内的h1作为标题的，所以从h2开始计数*/
 article section h2:before {
-	content: counter(sect1)" ";
+	content: counter(sect1)" ";color: #0275d8;
 }
 
 article section h3:before {
-	content: counter(sect1)"."counter(sect2)" ";
+	content: counter(sect1)"."counter(sect2)" ";color: #0275d8;
 }
 
 article section h4:before {
-	content: counter(sect1)"."counter(sect2)"."counter(sect3)" ";
+	content: counter(sect1)"."counter(sect2)"."counter(sect3)" ";color: #0275d8;
 }
 
 article section h2 {
 	counter-increment: sect1;
 	counter-reset: sect3;
-	counter-reset: sect2;
+	counter-reset: sect2;color: #0275d8;
 }
 
 article section h3 {
 	counter-increment: sect2;
-	counter-reset: sect3;
+	counter-reset: sect3;color: #0275d8;
 }
 
 article section h4 {
-	counter-increment: sect3;
+	counter-increment: sect3;color: #0275d8;
 }

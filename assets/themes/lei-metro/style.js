@@ -1,0 +1,1 @@
+$("blockquote").addClass("blockquote");
