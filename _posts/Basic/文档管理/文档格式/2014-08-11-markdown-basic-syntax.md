@@ -318,7 +318,7 @@ $$
 
 ## 行区块(pandoc)
 
-以竖线 (|) 加上一個空格开始的行。行与行间的文字在输出时将以原样保留，行首的空白字符也一样会被保留。
+以竖线 (`|`) 加上一個空格开始的行。行与行间的文字在输出时将以原样保留，行首的空白字符也一样会被保留。
 
 ~~~ markdown
 | The limerick packs laughs anatomical
@@ -328,6 +328,7 @@ $$
 | And the clean ones so seldom are comical
 ~~~
 
+> 使用kramdown解释器的请注意，kramdown不能正确解析行区块，会把这个当做表格，所以用kramdown就不要用航区块了。
 
 # 文本元素/行级元素
 
@@ -533,7 +534,7 @@ Markdown 可以利用反斜杠来插入一些在语法中有其它意义的符�
 
 支持用反斜杠帮助插入原始符号的符号有
 
-~~~ markdown
+~~~
 \   反斜线
 `   反引号
 *   星号
@@ -554,7 +555,7 @@ _   底线
 
 在kramdown中还有
 
-~~~ markdown
+~~~
 =
 :
 |
@@ -571,7 +572,7 @@ $
 
 在pandoc中和jekyll中都支持用yaml描述文档信息，尽管pandoc支持yaml在文档任意位置，但是一般在文档开始。yaml文档开始和结尾于三个减号。yaml内可以描述文档标题、作者等信息，以及jekyll控制信息，甚至用户自定义信息（在pandoc及jekyll中可以通过特定语法引用）。
 
-~~~ markdown
+~~~ yaml
 ---
 layout: post
 title:  'This is the title: it contains a colon'

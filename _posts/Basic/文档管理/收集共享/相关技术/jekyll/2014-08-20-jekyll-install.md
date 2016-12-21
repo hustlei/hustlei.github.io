@@ -24,21 +24,19 @@ revision:
 
 ## 安装包
 + Ruby（[下载](http://rubyinstaller.org/downloads/)）
-+ Ruby DevKit（[下载](http://rubyinstaller.org/downloads/)）
-+ Jekyll
-+ Rouge(或者[pygments](http://jekyll-windows.juthilo.com/3-syntax-highlighting/))
++ Jekyll(在ruby里用gem安装，下载是自动的)
++ 可选安装(个人认为使用新版jekyll就不要安装了)
+    - Ruby DevKit（[下载](http://rubyinstaller.org/downloads/)）
+    - Rouge(或者[pygments](http://jekyll-windows.juthilo.com/3-syntax-highlighting/))
 
 > [Devkit](http://rubyinstaller.org/add-ons/devkit/)是一个能够简化在 Windows上编译即使用Ruby C/C++扩展（如 RDiscount 和 RedCloth）的工具箱。安装jekyll就必须先安装devkit。
 
+> 初学者建议只安装ruby和jekyll
+
+
 ## 安装步骤
 1. 安装Ruby，勾选add to path选项。
-2. 安装devkit
-    + 解压DevKit，假如解压到D:\RubyDevKit
-    + cmd中执行:`cd D:\RubyDevKit`
-    + cmd中执行:`ruby dk.rb init`
-    + 在config.yml文件尾部加入Ruby安装路径（一般情况下已经自动添加了，一般可以跳过此步）
-    + cmd中执行:`ruby dk.rb install`
-3. cmd中执行:`gem install jekyll`
+2. cmd中执行:`gem install jekyll`
     + 如果出现ERROR:  Could not find a valid gem 'jekyll'错误,原因是国内网络不能访问gems网站(rubygems.org;gems.github.com等)
 
         可以采用如下方式解决（[参考](http://ruby.taobao.org/)）：
@@ -51,9 +49,13 @@ revision:
 
         - echo comspec  确认该变量为cmd.exe
         - REG DELETE "HKCU\Software\Microsoft\Command Processor" /v AutoRun 然后重试
-
+2. 安装devkit（安装rdiscount等需要的）
+    + 解压DevKit，假如解压到D:\RubyDevKit
+    + cmd中执行:`cd D:\RubyDevKit`
+    + cmd中执行:`ruby dk.rb init`
+    + 在config.yml文件尾部加入Ruby安装路径（一般情况下已经自动添加了，一般可以跳过此步）
+    + cmd中执行:`ruby dk.rb install`
 4. cmd中执行:`gem install rouge`
-
 5. cmd中执行:`gem install rdiscount`
 
 > 更换markdown解释器：jekyll默认是用Maruku做markdown的解释器，但Maruku是ruby写的，效率较低，可以换成用c写的RDiscount或kramdown，效率更好。
