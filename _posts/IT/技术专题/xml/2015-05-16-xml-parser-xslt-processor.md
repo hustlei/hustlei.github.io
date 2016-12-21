@@ -80,7 +80,7 @@ Microsoft.XMLDOM实际上是调用了msxml，并且版本比较低，版本情�
 + `var xmlDoc = new ActiveXObject("Msxml2.DOMDocument.6.0");` //ver 6
 
 
-~~~
+~~~ javascript
 var xmldoc = new ActiveXObject("Msxml2.DOMDocument.6.0")
 var xsldoc = new ActiveXObject("Msxml2.DOMDocument.6.0")
 xmldoc.load("books.xml")
@@ -90,7 +90,7 @@ var content=xmldoc.transformNode(xsldoc)
 
 也可以使用msxml的XSLTemplate对象
 
-~~~
+~~~ javascript
 var xslt = new ActiveXObject("Msxml2.XSLTemplate.6.0");
 var xslDoc = new ActiveXObject("Msxml2.FreeThreadedDOMDocument.6.0");
 var xslProc;
@@ -118,7 +118,7 @@ WScript.Echo(content);
 
 + msxml的transform输出只能是unicode编码，但是可以用如下复杂方法解决
 
-~~~ JavaScript
+~~~ javascript
 var xmlresult=new ActiveXObject("MSXML2.DOMDocument.6.0")
 xml.loadXML(content)
 var p=xmlresult.createProcessingInstruction("xml", "version=\"1.0\" encoding=\"utf-8\"")

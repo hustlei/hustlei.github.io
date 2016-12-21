@@ -52,9 +52,6 @@ revision:
 + `\mathbb{}`，空心粗体blackboard
 + `\mathnormal{}`，正常字体
 
-
-
-
 # 数学公式
 
 ## 公式中的分组

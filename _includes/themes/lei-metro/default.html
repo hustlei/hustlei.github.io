@@ -30,7 +30,7 @@
                 </nav>
             </div>
             <section class="text-xs-center hidden-xs-down pt-1 pb-2 text-white">
-                <script>document.wirte("<h2>If you do not leave me</h2><h2> I will be by your side until the end.</h2>");</script>
+                <script>document.write("<h2>If you do not leave me</h2><h2> I will be by your side until the end.</h2>");</script>
             </section>
         </div>
     </header>
@@ -70,7 +70,8 @@
         </div>
     </section>
     <main id="main" class="container py-1">
-        {% if is_production %} {{ content | strip_newlines | replace: "    ", " " | replace: "   ", " " | replace: "  ", " " }} {% else %} {{ content}} {% endif %}
+        {% if is_production %} {% if page.content contains 'code' %} {{ content }} {% else %} {{ content | strip_newlines | replace: "                      ", " " | replace: "     ", " " | replace: "   ", " " | replace: "  ", " " }} {% endif %}
+         {% else %} {{ content}} {% endif %}
     </main>
     <section id="nav-bottom" class="container">
         <hr class="my-1" />
@@ -103,5 +104,15 @@
     {% if page.content contains "$" %} {% include widgets/mathjax %} {% endif %}
     {% include widgets/baidu_share %}
     {% include widgets/back_top_button %}
+{% if is_production %}<script>
+(function(){
+  var bp = document.createElement('script');
+  var curProtocol = window.location.protocol.split(':')[0];
+  if (curProtocol === 'https') {bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';}
+  else {bp.src = 'http://push.zhanzhang.baidu.com/push.js';}
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(bp, s);
+})();
+</script>{% endif %}
 </body>
 </html>
