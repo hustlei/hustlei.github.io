@@ -9,7 +9,7 @@ exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 
 markdown: kramdown
 # Maruku kramdown rdiscount Redcarpet
-
+root: http://hustlei.tk
 # excerpt_separator: "####"
 # github pages hasn't coderay
 kramdown:
