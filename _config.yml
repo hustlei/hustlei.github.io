@@ -27,7 +27,8 @@ kramdown:
   enable_coderay: false
   syntax_highlighter: rouge
   syntax_highlighter_opts:
-    line_numbers:    false
+    block:
+      line_numbers:   true
   
 # github pages mandatory default setting, modify can't take effect
 highlighter: rouge

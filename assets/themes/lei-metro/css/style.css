@@ -34,10 +34,23 @@
   display: inline-block;
   margin-right: 1rem;
 }
-.highlighter-rouge{
+/*code*/
+.highlight code, .highlight table{
   border: 1px solid #ddd;
   border-radius: 3px;
 }
+.highlight th, .highlight td{
+  border: none
+}
+.highlight .lineno{
+color: gray;
+padding-left:4px;
+padding-right:10px;
+}
+.highlight table tr td:first-child{
+background-color:#dfdfdf;
+}
+
 .active .nav-link{
   font-weight: bold;
 }

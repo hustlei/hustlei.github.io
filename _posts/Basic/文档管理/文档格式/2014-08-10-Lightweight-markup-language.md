@@ -64,7 +64,7 @@ revision:
     - 2001，txt2tags，txt2tags team
     - 2002，reStructuredText，David Goodger
     - 2002，AsciiDoc，Stuart Rackham
-    - 2002, Wiki
+    - 2002，Wiki
     - 2004，Markdown，John Gruber
 
 事实上轻量级标记语言有很多，它们在很多地方有相似的地方，比如都有多级标题、列表、强调等格式，甚至有不少语言在某些表达方式上是兼容的，同时也有不少差异，编辑器及转换工具差异更大，轻量级标记语言之间有很多可以相互转换。并且有不少轻量级标记语言本身也有很多版本，比如markdown就有标准版、github版、php增强版、pandoc版等。主要轻量级标记语言有：
