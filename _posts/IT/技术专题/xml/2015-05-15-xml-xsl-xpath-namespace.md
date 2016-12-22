@@ -76,7 +76,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocat
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://docbook.org/ns/docbook xsd/docbook.xsd
                              http://www.w3.org/1999/xlink xsd/xlink.xsd
-                             http://www.w3.org/2001/XInclude xsd/xinclude.xsd>
+                             http://www.w3.org/2001/XInclude xsd/xinclude.xsd">
 ~~~
 
 ## xslt与namespace/xmlns

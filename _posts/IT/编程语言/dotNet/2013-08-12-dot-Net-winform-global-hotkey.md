@@ -24,7 +24,7 @@ if (e.KeyCode == Keys.F1)
 {
     //如果还有keypress事件，不让此快捷键触发其事件可加一句代码
     e.Handled = true; //将Handled设置为true，指示已经处理过KeyPress事件
-    事件函数();        //执行按下快捷键的动作
+    事件函数();       //执行按下快捷键的动作
 }
 ~~~
 

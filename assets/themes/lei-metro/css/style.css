@@ -61,6 +61,12 @@ border:1px solid gray;
   /*border-radius: 2px;*/
   margin: 0 0 5px 5px;
 }
+code.highlighter-rouge{
+line-height: 1.6;
+}
+.highlighter-rouge .highlight{
+overflow-x:auto;
+}
 .highlight table, .highlight th, .highlight td{
   border: none
 }

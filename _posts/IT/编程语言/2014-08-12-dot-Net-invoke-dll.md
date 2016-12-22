@@ -86,7 +86,7 @@ BOOL Beep(DWORD dwFreq, DWORD dwDuration)
 
 以C#为例，由于DWORD是4字节的整数，因此可以用int或uint作为C#对应类型。bool类型与Bool对应。因此可以用C#编写该函数原型如下：
 
-~~~ hpp
+~~~ cpp
 public static extern bool Beep(int frequency, int duration);
 ~~~
 
@@ -147,9 +147,9 @@ public static extern bool Beep(int frequency, int duration);
 
 在C#中对其进行调用的方法是：
 
-~~~csharp
+~~~ csharp
 [DllImport("file.dll")]
-extern static int FunctionName(ref byte param1, ref byte param2);
+public static extern int FunctionName(ref byte param1, ref byte param2);
 ~~~
 
 看到这，可能有人会问，&是取地址，*是传送指针，为何都只用ref就可以了呢？一种可能的解释是ref是一个具有重载特性的修饰符，会自动识别是取地址还是传送指针。
@@ -162,7 +162,7 @@ extern static int FunctionName(ref byte param1, ref byte param2);
 
 ~~~csharp
 [DllImport("file.dll")]
-extern static int FunctionName(ref byte param1[1], ref byte param2);
+static extern int FunctionName(ref byte param1[1], ref byte param2);
 ~~~
 
 
