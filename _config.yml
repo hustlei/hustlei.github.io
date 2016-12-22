@@ -28,7 +28,7 @@ kramdown:
   syntax_highlighter: rouge
   syntax_highlighter_opts:
     block:
-      line_numbers:   true
+      line_numbers:   table
   
 # github pages mandatory default setting, modify can't take effect
 highlighter: rouge
