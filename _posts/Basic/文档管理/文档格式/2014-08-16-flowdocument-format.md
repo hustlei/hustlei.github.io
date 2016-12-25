@@ -18,11 +18,15 @@ revision:
 
 # WPF中的文档简介
 
-WPF中的文档功能使得可以使用xaml编写文档并通过wpf程序/浏览器等显示，并可以调用直接.net的打包、打印等功能。WPF 基于文档用途将文档分成两个大的类别；这些文档类别分别被称为“固定文档”和“流文档”。即FixedDocument和FlowDocument。
+WPF中的文档功能使得可以使用xaml编写文档并通过wpf程序/浏览器等显示，并可以直接调用.net的打包、打印等功能。WPF把文档按用途分成两个大的类别:“固定文档”和“流文档”，即FixedDocument和FlowDocument。
 
-+ FlowDocument可以直接在浏览器中显示。
 + FlowDocument主要是面向表现(显示)的，类似html，对文档结构描述的功能极弱
-+ FlowDocument可以方便的嵌入.net控件，且方便用C#等语言操作
++ FlowDocument可以方便的嵌入.net控件，且方便用C#等语言操作，更加适合打印，感觉类似pdf。
+
+> FlowDocument可以直接在浏览器中显示。
+
+> wpf文档是可编程的，内部可以加入按钮等wpf控件，并且可以添加动作代码。
+
 
 # FlowDocument
 

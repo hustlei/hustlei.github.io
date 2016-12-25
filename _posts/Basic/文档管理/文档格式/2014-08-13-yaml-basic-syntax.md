@@ -21,7 +21,7 @@ revision:
 
 YAML最初是Yet Another Markup Language(另一种标记语言)的缩写，后来为了强调yaml是以数据为中心重新命名为递归写法YAML Ain’t Markup Language(YAML 不是一种标记语言)。
 
-YAML的数据组织主要依靠的是空白，缩进，分行等结构。。相对于XML，YAML更加简洁明了，可读性更高，更易于表达数据序列（清单、散列表，标量等）。
+YAML的数据组织主要依靠的是空白，缩进，分行等结构。相对于XML，YAML更加简洁明了，可读性更高，更易于表达数据序列（清单、散列表，标量等）。
 
 可以对比一下如下表达相同内容的xml和yaml代码块：
 

@@ -18,7 +18,7 @@ revision:
 
 # mathjax简介
 
-MathJax 是一个开源的基于 Ajax 的数学公式显示的解决方案。用mathjax可以正确显示html网页中直接插入的下列公式源码
+MathJax 是一个开源的基于 Ajax 的数学公式显示的解决方案。用mathjax可以正确显示html网页中直接插入的多种公式源码，包括:
 
 + LaTex公式
 + mathml公式

@@ -18,7 +18,7 @@ revision:
 
 
 # 简述
-个人通常将latex公式插入markdown文档中，在jekyll中用mathjax显示，或者用pandoc转换。本笔记记录了我用的比较多的latex公式用法，虽然不全，但是一般应用应该够了。
+latex公式功能强大，源代码也十分紧凑易读。个人通常将latex公式插入markdown文档中，用pandoc转换为其他文档格式(如word)，转换为html则使用用mathjax显示。本笔记记录了我用的比较多的latex公式用法，虽然不全，但是一般应用应该够了。
 
 ## markdown中插入公式
 
@@ -30,15 +30,39 @@ revision:
 
 ### 独立数学公式
 + 置于`\[`和`\]`之间
-+ 置于`$$`和`$$`之间（latex好像不支持，markdown可以）
++ 置于`$$`和`$$`之间（latex好像不支持，但可以用于在markdown中插入latex公式）
 
 > 相当于latex中的`\begin{displaymath}`和`\end{displaymath}`
 
 ## 公式引用
 + 给独立公式加上`\label{}`标签，如`\label{eq:eps}`
-+ 采用`\ref`引用，如`\ref{eq:eps}`
++ 采用`\ref`或`\eqref`引用，如`\ref{eq:eps}`
 
 > 需要引用的公式在插入时，需要置于`\begin{equation}`和`\end{equation}`之间
+
+
+示例如下：
+
+~~~ tex
+In equation \eqref{eq:sample}, we find the value of an
+interesting integral:
+
+\begin{equation}
+  \int_0^\infty \frac{x^3}{e^x-1}\,dx = \frac{\pi^4}{15}
+  \label{eq:sample}
+\end{equation}
+~~~
+
+显示效果如下：
+
+In equation \eqref{eq:sample}, we find the value of an
+interesting integral:
+
+\begin{equation}
+  \int_0^\infty \frac{x^3}{e^x-1}\,dx = \frac{\pi^4}{15}
+  \label{eq:sample}
+\end{equation}
+
 
 ## latex公式中的文本
 

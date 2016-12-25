@@ -21,19 +21,23 @@ revision:
 
 markdown作为一种轻量级标记语言，语法由较少的几个符号组成，这些精挑细选的符号，很简洁，也很容易理解，能够清晰的表达整个文档的结构。
 
-不同的解释器对markdown语法有不同的扩展，目前，个人认为pandoc的语法最为强大。用jekyll可以把markdown直接转换为html静态网站，因此，本人用的最多的还是jekyll解释器。
-
-在jekyll上，因为rdiscount，redcarpet解释器在使用latex公式时会出现上标错误，因此，改用kramdown解释器。所以，我的文档基本上都需要同时遵守kramdown markdown语法和pandoc markdown 语法。
+使用解释器可以方便的把markdown格式转换为其它标记文档格式或显示更美观的文档格式，比如pdf,html等。网络上也有非常多的各种markdown解释器，并且大多都是免费的。但是很多解释器都对markdown语法进行了扩展，使得功能更强大，当然也导致各种扩展语法并不兼容。
 
 > 主流的markdown版本有：markdown_strict, Github-flavored markdown, php markdown extra, multimarkdown, pandoc, kramdown etc.
+
+
+目前，个人认为pandoc的语法最为强大。我经常用jekyll可以把markdown直接转换为html静态网站，因此，本人用的最多的还是jekyll解释器。使用jekyll建立静态网站，也有多种解释器可以选择，但是因为rdiscount，redcarpet解释器在使用latex公式时会出现上标错误，建议用kramdown解释器。
+
+所以，我的文档基本上都需要同时遵守kramdown markdown语法和pandoc markdown 语法。
+
+kramdown和pandoc所支持的markdown都对标准语法进行了扩展，本文重点介绍两者相同的语法。
 
 markdown语法元素根据作用不同主要分为2类：
 
 + 结构元素/块级元素(区块元素):表示文档结构，比如段落，引用，列表
 + 文本元素/行级元素(区段元素):表示文本格式，比如强调，链接
 
-kramdown和pandoc所支持的markdown都对标准语法进行了扩展，本文重点介绍两者相同的语法。
-
+分别介绍如下:
 
 # 结构元素/块级元素
 
@@ -41,7 +45,7 @@ kramdown和pandoc所支持的markdown都对标准语法进行了扩展，本文�
 
 Markdown 段落是由一个或多个连续的文本行组成，它的**前后要有一个以上的空行**。普通段落不该用空格或制表符来缩进。
 
-> github支持强制换行，即源文件换行目标文件也自动换行，段落前后不要求有空行。pandoc需要特定选项才支持此功能。
+> github支持强制换行，即源文件换行目标文件也自动换行，段落前后不要求有空行。pandoc，kramdown都需要设定选项才支持此功能。
 
 ## 标题
 
