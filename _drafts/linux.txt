@@ -1,0 +1,15 @@
+查看Linux版本信息
+http://www.cnblogs.com/kerrycode/p/4315900.html
+ubuntu清理多余内核
+http://www.cnblogs.com/xiangzi888/archive/2012/03/18/2404926.html
+升级Ubuntu
+http://www.cnblogs.com/hui314/p/ubuntu_upgrade.html
+http://www.tuicool.com/articles/quIvmaZ
+Archlinux安装
+http://www.cnblogs.com/vachester/p/5635819.html
+VBox配置网络http://www.jianshu.com/p/98b8965b1d10      事实上VBOX用dhcpcd enp0s3就可以了
+VBox增强http://www.cnblogs.com/hufan/p/Arch_Linux_installed_in_VirtualBox.html
+ubuntu修改hostname
+http://yanchao90.blog.163.com/blog/static/17946025201272201358669/
+CentOS安装
+http://www.jb51.net/os/78318.html
