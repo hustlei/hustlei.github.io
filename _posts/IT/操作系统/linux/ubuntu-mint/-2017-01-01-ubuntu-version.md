@@ -1,10 +1,11 @@
 ---
 layout: post
 title: linux桌面
-category: 操作系统
+group: IT
+category: linux
 tags: [linux]
 keywords: [linux]
-description: linux桌面, unity, Gnome, KDE, Cinnamon, MATE, Lxde, Xfce
+description: [linux桌面, unity, Gnome, KDE, Cinnamon, MATE, Lxde, Xfce]
 
 author: lileilei
 revision:
