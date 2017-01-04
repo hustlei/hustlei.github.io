@@ -1,8 +1,9 @@
 ---
 layout: post
 title: linux各发行版软件管理工具
+group: IT
 category: linux
-tags: [linux]
+tags: [linux, 操作系统]
 keywords: [linux, apt, apt-get, yum, pacman, dpkg, rpm]
 description: linux软件管理工具, apt, apt-get, yum, pacman, dpkg, rpm, zypp, urpmi, slzckpkg, emerge, pisi
 
@@ -243,5 +244,3 @@ Gentoo</th>
 <td>cat /var/lib/portage | more</td>
 </tr>
 </tbody></table>
-
-
