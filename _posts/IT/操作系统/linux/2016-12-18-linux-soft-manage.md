@@ -1,7 +1,7 @@
 ---
 layout: post
 title: linux各发行版软件管理工具
-category: 操作系统
+category: linux
 tags: [linux]
 keywords: [linux, apt, apt-get, yum, pacman, dpkg, rpm]
 description: linux软件管理工具, apt, apt-get, yum, pacman, dpkg, rpm, zypp, urpmi, slzckpkg, emerge, pisi
@@ -9,7 +9,7 @@ description: linux软件管理工具, apt, apt-get, yum, pacman, dpkg, rpm, zypp
 author: lileilei
 revision:
     editor: lileilei
-    date: 2016-12-18
+    date: 2017-01-01
 ---
 
 * 目录

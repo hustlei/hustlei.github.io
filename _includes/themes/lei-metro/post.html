@@ -15,7 +15,7 @@
   <header>
     <h1><a href="{{ site.root }}{{ page.url }}">{{ page.title }}</a>{% if page.tagline %} <small>{{ page.tagline }}</small>{% endif %}</h1>
     <p class="text-muted">
-       <small>{{ page.date | date: "%Y-%m-%d" }}</small>
+       <small>{{ page.date | date: "%Y-%m-%d" }}</small>&nbsp;<small>({{ page.revision.date | date: "%Y-%m-%d" }}更新)</small>
     </p>
   </header>
 
