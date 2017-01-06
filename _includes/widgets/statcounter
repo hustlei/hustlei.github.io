@@ -1,4 +1,5 @@
 <!-- End of StatCounter Code for Default Guide -->
+{% if is_production %}
 <a href="http://zh_cn.statcounter.com/p10008162/summary/daily-pur-labels-area-last7days/?guest=1">
 <!-- Start of StatCounter Code for Default Guide -->
 <script type="text/javascript">
@@ -17,4 +18,4 @@ counter" href="http://statcounter.com/" target="_blank"><img
 class="statcounter"
 src="//c.statcounter.com/10008162/0/42211a39/0/" alt="free
 hit counter"></a></div></noscript>
-</a> Persons Viewed 
+</a> Persons Viewed {% endif %}
