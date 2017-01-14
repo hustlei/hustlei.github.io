@@ -16,6 +16,8 @@ $(document).ready(function () {
 
     function search(){
         var query = $('#query').val();
+        if(query.match(/^\s*$/)){return;}
+
         $('#search_content').hide();
         $('#loader').show();
         if (entries == null) {
