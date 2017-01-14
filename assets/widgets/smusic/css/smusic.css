@@ -1,4 +1,4 @@
-/**
+﻿/**
  * SMusic
  * Author:Smohan
  * Version:1.0.0
@@ -71,7 +71,7 @@ html,body{
     max-height: 100%;
     border-radius: 50%;
     padding: 0;
-    margin: 1rem;
+    margin: 0rem;
     display: hidden;
 }
 .grid-music-container .u-cover.play{

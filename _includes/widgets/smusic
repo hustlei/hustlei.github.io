@@ -1,4 +1,4 @@
-<!--css style is configed in my_style-->
+﻿<!--css style is configed in my_style-->
 <link rel="stylesheet" type="text/css" href="/assets/widgets/smusic/css/smusic.css" />
 <div class="container">
   <div class="grid-music-container f-usn mx-auto">
@@ -43,5 +43,12 @@
     <div class="m-music-list-wrap mt-1"></div>
   </div>
 </div>
-<script async src="/assets/widgets/smusic/js/smusic.min.js"></script>
-<script async src="/assets/widgets/smusic/js/musiclist.js"></script>
+<script>
+var musicList = [ {% include lists/music_list %} ];
+</script>
+<script src="/assets/widgets/smusic/js/smusic.min.js"></script>
+<script>
+    new SMusic({
+        musicList : musicList
+    });
+</script>
