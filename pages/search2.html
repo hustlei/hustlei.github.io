@@ -1,0 +1,27 @@
+---
+layout: page
+title: 站内搜索 
+header: Pages
+comments: false
+id: search
+---
+{% include JB/setup %}
+<style>
+#bdcs-search-inline{
+margin: 3rem auto;
+}
+#default-searchbox{
+margin: 1rem auto 3rem;
+}
+</style>
+
+<div id="search_content" class="text-info">
+<p class="display-4 text-sm-center"><small><small>站内搜索<small class="text-muted" style="font-size:1.2rem">(下述搜索框使用百度站内搜索搜索本站)</small></small></small></p>
+
+  <div id="search_result mx-auto px-auto">
+  <script type="text/javascript">(function(){document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E'));var bdcs = document.createElement('script');bdcs.type = 'text/javascript';bdcs.async = true;bdcs.src = 'http://znsv.baidu.com/customer_search/api/js?sid=15579770859248013351' + '&plate_url=' + encodeURIComponent(window.location.href) + '&t=' + Math.ceil(new Date()/3600000);var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(bdcs, s);})();</script>
+  </div>
+</div>
+
+
+
