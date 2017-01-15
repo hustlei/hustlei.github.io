@@ -16,7 +16,15 @@ $(document).ready(function () {
 
     function search(){
         var query = $('#query').val();
-        if(query.match(/^\s*$/)){return;}
+        if(query.match(/^\s*$/)){
+        html = '';
+        html += '<p class="lead">请先输入要搜索的内容！ O(∩_∩)O~</p>';
+        $('#search_content').attr("class", "text-warning");
+        $('#search_result').html(html);
+        $('#loader').hide();
+        $('#search_content').show();
+        return;
+        }
 
         $('#search_content').hide();
         $('#loader').show();
