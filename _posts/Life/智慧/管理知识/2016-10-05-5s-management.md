@@ -1,16 +1,16 @@
 ---
 layout: post
 title: 5s管理
-catergories: 管理知识
+categories: [管理知识]
 group: Life
 tags: 管理
 keywords: [管理, 5s]
 description: 5s管理,5s中外不同解释,5s英文意义,5s日文意义,欧美5s,日本5s
 
-author： lileilei
+author: lileilei
 revision:
     editor: lileilei
-    date： 2014-10-05
+    date: 2014-10-05
 ---
 
 ## 5s简介

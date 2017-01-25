@@ -1,7 +1,7 @@
 ---
 layout: post
 title: linux学习路径
-category: 操作系统
+category: linux
 tags: [linux]
 keywords: [linux]
 description: linux学习路径
