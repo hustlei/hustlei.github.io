@@ -6,4 +6,5 @@ Disallow: /ed4f2f21f88489ffd63606dbdfa89d89.txt
 Disallow: /sogousiteverification.txt
 Disallow: /ed4f2f21f88489ffd63606dbdfa89d89.txt
 Disallow: /shenma-site-verification.txt
+Disallow: /baidu_verify_LCZzTwH1cE.html
 Sitemap: sitemap.xml
