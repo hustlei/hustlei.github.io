@@ -74,13 +74,13 @@ n=dll.sum(1,2)
 python中仅有4个类型可以直接传递给dll函数
 
 + None：C语言的NULL指针
-+ byte objects：ANSI字符串（char *）
-+ string:unicode字符串(wchar_t *)
++ byte objects：ANSI字符串（char \*）
++ string:unicode字符串(wchar_t \*)
 + integer:C语言整形(int)
 
 传递其他类型参数给dll函数，必须使用ctypes 数据类型
 
-### ctypes基础数据类型
+## ctypes基础数据类型
 
 ctypes定义了一系列类型用于兼容c数据类型，这些类型以`c_`开头
 
@@ -97,8 +97,8 @@ ctypes定义了一系列类型用于兼容c数据类型，这些类型以`c_`开
 |c_uint| unsigned int| int |
 |c_long| long| int| 
 |c_ulong| unsigned long| int| 
-|c_longlong| __int64 or long long |int| 
-|c_ulonglong| unsigned __int64 or unsigned long long |int| 
+|c_longlong| \__int64 or long long |int| 
+|c_ulonglong| unsigned \__int64 or unsigned long long |int| 
 |c_size_t| size_t| int| 
 |c_ssize_t| ssize_t or Py_ssize_t| int| 
 |c_float| float| float| 
@@ -130,9 +130,9 @@ p.value=b"hi"
 ~~~
 
 
-### ctypes复杂数据类型
+## ctypes复杂数据类型
 
-#### 数组
+### 数组
 
 ~~~ python
 n=10
