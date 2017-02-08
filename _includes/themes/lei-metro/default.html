@@ -101,7 +101,7 @@
     <script defer src="{{ ASSET_PATH }}/style.js"></script>
     <script defer src="/assets/widgets/bootstrap-4.0/js/bootstrap.min.js"></script>
     {% if page.id == "search" %}<script defer src="/assets/widgets/search_box.js"></script> {% endif %}
-    {% if page.content contains "$" %} {% include widgets/mathjax %} {% endif %}
+    {% if page.content contains "$" or page.content contains "{equation" %} {% include widgets/mathjax %} {% endif %}
     {% include widgets/baidu_share %}
     {% include widgets/back_top_button %}
 {% if is_production %}<script>

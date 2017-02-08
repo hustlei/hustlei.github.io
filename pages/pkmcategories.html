@@ -16,11 +16,15 @@ id: pkm
 </ul>
 
 {% for category in site.categories %}
-     {% if category[1][1].group == "PKM" %}
+  {% for page in category[1] %}
+     {% if page.group == "PKM" %}
        <h2 id="{{ category[0] }}-ref">{{ category[0] | join: "/" }}</h2>
         <ul>
          {% assign pages_list = category[1] %}
          {% include JB/pages_list %}
         </ul>
+        {% break %}
      {% endif %}
- {% endfor %}
+        {% break %}
+  {% endfor %}
+{% endfor %}
