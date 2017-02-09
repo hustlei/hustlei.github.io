@@ -4,20 +4,17 @@ title : Sitemap
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    {% for post in site.posts %}
     <url>
-      <loc>{{ site.production_url }}{{ post.url }}</loc>
+      <loc>{{ site.production_url }}</loc>
       <changefreq>daily</changefreq>
-      <lastmod>{{ post.date | date: "%Y-%m-%d"}}</lastmod>
       <priority>1.0</priority>
     </url>
-    {% endfor %}
 
     {% for page in site.pages %}
-    {% if page.layout != nil %}
+    {% if page.layout != nil and page.url != "/" %}
     {% if page.layout != 'feed' %}
     <url>
-      <loc>{{ site.production_url }}{{ page.url | remove: 'index.html' }}</loc>
+      <loc>{{ site.production_url }}{{ page.url | append: '.html' }}</loc>
       <changefreq>monthly</changefreq>
       <priority>0.80</priority>
     </url>
@@ -25,9 +22,12 @@ title : Sitemap
     {% endif %}
     {% endfor %}
 
+    {% for post in site.posts %}
     <url>
-      <loc>{{ site.production_url }}</loc>
+      <loc>{{ site.production_url }}{{ post.url }}</loc>
       <changefreq>daily</changefreq>
-      <priority>0.6</priority>
+      <lastmod>{{ post.date | date: "%Y-%m-%d"}}</lastmod>
+      <priority>0.7</priority>
     </url>
+    {% endfor %}
 </urlset>
