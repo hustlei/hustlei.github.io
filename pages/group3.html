@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Life
+title: Design
 header: Posts By Category
 comments: false
-id: life
+id: design
 ---
 
 {% include JB/setup %}
@@ -11,13 +11,13 @@ id: life
 <ul class="tag_box">
   {% assign categories_list = site.categories %}
   {% assign group = page.title %}
-  {% assign path = site.JB.lifecategories_path %}
+  {% assign path = site.JB.group3_name %}
   {% include widgets/group_categories_list %}
 </ul>
 
 {% for category in site.categories %}
   {% for page in category[1] %}
-     {% if page.group == "Life" %}
+     {% if page.group == site.JB.group1_name %}
        <h2 id="{{ category[0] }}-ref">{{ category[0] | join: "/" }}</h2>
         <ul>
          {% assign pages_list = category[1] %}

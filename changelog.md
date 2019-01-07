@@ -1,11 +1,18 @@
 ## Changelog
 
-- **0.8.0:2016.05.05**
+
+
+- **v0.1.9:2019.05.05**
+    - **Features**
+    - 整理版本命令
+    - 修改group配置混乱的问题，全部用配置文件代替硬编码
+
+- **v0.1.8:2016.05.05**
     - **Features**
     - 把mathjax的{% if page.content contains "$" %}取消，不再判断是否含有$,因为网站只会下载一次mathjax.js
  
 
-- **0.7.5:2016.05.04**
+- **v0.1.7:2016.05.04**
     - **Features**
     - 用css给每个文档标题添加序号，给文档目录也添加序号
     - 添加代码高亮设置（kramdown+rouge）
@@ -13,19 +20,19 @@
     - **Bug Fixes**
     - @hustlei 添加group后，首页文章分类下链接不可用，修复该bug.
  
-- **0.7.0:2015.05.04**
+- **v0.1.6:2015.05.04**
     - **Features**
     - @hustlei 自己编写squeezenewline插件（liquid过滤器），用于压缩多个空行，用于首页（可惜在github上不支持）
 
-- **0.6.0:2015.05.04**
+- **v0.1.5:2015.05.04**
     - **Features**
     - atom.xml内title属性进行xmlescape处理，避免search插件等出现解析错误
-    - @hustlei 所有post/*.md文件yaml头增加group, keywords, description属性
+    - @hustlei 所有post/\*.md文件yaml头增加group, keywords, description属性
 
     - **Bug Fixes**
     - @hustlei 修复searchbox出错无提示，搜索内容页面没有反应的问题。
 
-- **0.5.0:2015.05.04**
+- **v0.1.4:2015.05.04**
     - **Features**
     - @hustlei 清理外部引用代码，加快网页速度，减少重复引用。
     - 将分享悬浮按钮添加到整个网站。删除模板中post.html内的widgets/share_buttons引用，在default.html中添加baidu分享悬浮按钮引用。
@@ -35,7 +42,7 @@
     - title改为网站名+当前网页名
     - 添加<meta name="Robots" Content="All">到default.html。
 
-- **0.4.0:2015.05.02**
+- **v0.1.3:2015.05.02**
     - @hustlei 保留没有用到的一部分文件，未用到的文件有
         + CNAME
         + _plugins
@@ -47,16 +54,16 @@
     - 去掉百度统计和clicki统计插件，把两个网站链接做在友情链接里。
     - 修改README文件内容。
 
-- **0.3.0:2015.05.01**
+- **v0.1.2:2015.05.01**
     - **Features**
     - 把微博墙合并到关于我页面内，去掉联系我的内容。
     - categories配合group，形成两级分类。导航菜单用取消“分类”，用group（pkm、IT、design、life四个菜单）的内容代替。
 
-- **0.2.0:2014.12.01**
+- **v0.1.1:2014.12.01**
     - **Features**
     - 取消天气等插件
 
-- **0.1.0 : 2014.08.24**
+- **v0.1.0 : 2014.08.24**
     - **Features**
     - 引用基于 bootstrap 的jekyll模板用于在hustlei.github.io存储个人文档.
     - @hustlei 将除index外网页放入pages文件夹.

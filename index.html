@@ -2,8 +2,8 @@
 layout: default
 title: "首页"
 tagline: "Home Page"
-keywords: [PKM, IT, Design, Life, 文档格式, 编程, linux, opencascade, wpf, c#, 科技前沿关注, 船舶海工, CAE, 设计]
-description: "lileilei's 个人 PKM, lileilei's 个人笔记, 生活常识、知识、IT学习、编程学习、设计学习、船舶专业学习等的积累、总结"
+keywords: [PKM, markdown, 编程, opencascade, .net, python, rust, 船舶海工, 设计]
+description: "个人PKM, 编程、设计、船舶专业等知识总结"
 comments: false
 id: home
 ---
@@ -14,65 +14,65 @@ id: home
     <article class="col-md-6 col-lg-4 p-2">
         <header>
             <h2>
-                <a href="{{ site.JB.pkmcategories_path }}" title="PKM分类文章">PKM</a>
+                <a href="{{ site.JB.group1_path }}" title="{{site.JB.group1_disp}}分类文章">{{site.JB.group1_disp}}</a>
             </h2>
             <hr/>
         </header>
         <section>
-            {% assign posts_category = 'PKM' %}
+            {% assign post_group = site.JB.group1_name %}
             {% include widgets/posts_collate2 %}
         </section>
         <footer>
-            <a class="btn btn-sm btn-outline-primary float-xs-right" href="{{ site.JB.pkmcategories_path }}" rel="nofollow"
+            <a class="btn btn-sm btn-outline-primary float-xs-right" href="{{ site.JB.group1_path }}" rel="nofollow"
                title="查看更多本类文章">more ...</a>
         </footer>
     </article>
     <article class="col-md-6 col-lg-4 p-2">
         <header>
             <h2>
-                <a href="{{ site.JB.itcategories_path }}" title="Coding分类文章">IT</a>
+                <a href="{{ site.JB.group2_path }}" title="{{site.JB.group2_disp}}分类文章">{{site.JB.group2_disp}}</a>
             </h2>
             <hr/>
         </header>
         <section>
-            {% assign posts_category = 'IT' %}
+            {% assign post_group = site.JB.group2_name %}
             {% include widgets/posts_collate2 %}
         </section>
         <footer>
-                <a class="btn btn-sm btn-outline-primary float-xs-right" href="{{ site.JB.itcategories_path  }}" rel="nofollow"
-                   title="查看更多本类文章">more ...</a>
+            <a class="btn btn-sm btn-outline-primary float-xs-right" href="{{ site.JB.group2_path }}" rel="nofollow"
+               title="查看更多本类文章">more ...</a>
         </footer>
     </article>
     <article class="col-md-6 col-lg-4 p-2">
         <header>
             <h2>
-                <a href="{{ site.JB.designcategories_path }}" title="Design分类文章">Design</a>
+                <a href="{{ site.JB.group3_path }}" title="{{site.JB.group3_disp}}分类文章">{{site.JB.group3_disp}}</a>
             </h2>
             <hr/>
         </header>
         <section>
-            {% assign posts_category = 'Design' %}
+            {% assign post_group = site.JB.group3_name %}
             {% include widgets/posts_collate2 %}
         </section>
         <footer>
-                <a class="btn btn-sm btn-outline-primary float-xs-right" href="{{ site.JB.designcategories_path }}" rel="nofollow"
-                   title="查看更多本类文章">more ...</a>
+            <a class="btn btn-sm btn-outline-primary float-xs-right" href="{{ site.JB.group3_path }}" rel="nofollow"
+               title="查看更多本类文章">more ...</a>
         </footer>
     </article>
     <article class="col-md-6 col-lg-4 p-2">
         <header>
             <h2>
-                <a href="{{ site.JB.lifecategories_path }}" title="Life分类文章">Life</a>
-            <hr/>
+                <a href="{{ site.JB.group4_path }}" title="{{site.JB.group4_disp}}分类文章">{{site.JB.group4_disp}}</a>
             </h2>
+            <hr/>
         </header>
         <section>
-            {% assign posts_category = 'Life' %}
+            {% assign post_group = site.JB.group4_name %}
             {% include widgets/posts_collate2 %}
         </section>
         <footer>
-                <a class="btn btn-sm btn-outline-primary float-xs-right" href="{{site.JB.lifecategories_path}}" rel="nofollow"
-                   title="查看更多本类文章">more ...</a>
+            <a class="btn btn-sm btn-outline-primary float-xs-right" href="{{ site.JB.group4_path }}" rel="nofollow"
+               title="查看更多本类文章">more ...</a>
         </footer>
     </article>
 </div>

@@ -57,12 +57,22 @@ JB :
   version : 0.3.0
   theme : lei-metro
    # Some JB helpers refer to these paths; change them here if needed. user can use them too.
+  #文章分为4大类
+  group1_name: PKM
+  group2_name: Coding
+  group3_name: Design
+  group4_name: Life
+  #每个类别在首页等位置显示名称
+  group1_disp: PKM
+  group2_disp: Coding
+  group3_disp: Design
+  group4_disp: Life
   #
-  categories_path : /pages/categories.html
-  pkmcategories_path : /pages/pkmcategories.html
-  itcategories_path : /pages/itcategories.html
-  designcategories_path : /pages/designcategories.html
-  lifecategories_path : /pages/lifecategories.html
+  groups_path : /pages/groups.html
+  group1_path : /pages/group1.html
+  group2_path : /pages/group2.html
+  group3_path : /pages/group3.html
+  group4_path : /pages/group4.html
   tags_path : /pages/tags.html
   archive_path: /pages/archive.html
   search_path : /pages/search.html

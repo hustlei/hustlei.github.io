@@ -25,7 +25,7 @@ Usage:
   
   {% for post in site.posts  %}
     {% if posts_num > p %}
-      {% if post.group == posts_category %}
+      {% if post.group == post_group %}
         {% capture posts_num %} {{ posts_num | minus: 1 }} {% endcapture %}
         <li class="nobr"><a href="{{ BASE_PATH }}{{ post.url }}" rel="nofollow">
                {{ post.title }}</a></li>
@@ -35,5 +35,5 @@ Usage:
     {% endif %}
   {% endfor %}
 </ul>
-{% assign posts_category = nil %}
+{% assign post_group = nil %}
 {% assign posts_num = 12 %}
