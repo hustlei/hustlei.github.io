@@ -17,7 +17,7 @@ id: design
 
 {% for category in site.categories %}
   {% for page in category[1] %}
-     {% if page.group == site.JB.group1_name %}
+     {% if page.group == site.JB.group3_name %}
        <h2 id="{{ category[0] }}-ref">{{ category[0] | join: "/" }}</h2>
         <ul>
          {% assign pages_list = category[1] %}
