@@ -2,10 +2,10 @@
 <ol class="breadcrumb px-0" style="background:transparent">
   <li class="breadcrumb-item"><a href="/">Home</a></li>
   {% if page.group %}
-      <li class="breadcrumb-item">{% for g in groups %} {% if g.name == group %}
-      <a href={% g.path %}>{{ g.disp }}</a></li>
+      <li class="breadcrumb-item">{% for g in site.JB.groups %} {% if g.name == page.group %}
+      <a href={{ g.path }}>{{ g.disp }}</a></li>
       {% if page.categories != empty %}
-      <li class="breadcrumb-item"><a href="{% g.name %}#{{ category[0] }}-ref">分类</a></li>  
+      <li class="breadcrumb-item"><a href="{{ g.path }}#{{ category[0] }}-ref">分类</a></li>
   {% endif %}{% endif %}{% endfor %}{% endif %}
   <li class="breadcrumb-item active">正文</li>
 </ol>
