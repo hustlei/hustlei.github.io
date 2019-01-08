@@ -227,6 +227,14 @@ pacman -S git
 
 msys2中，git依赖curl,vim,perl，所以安装git后，自动会安装好vim。
 
+**git 中文显示数字问题**
+
+git中如果存在中文文件名，则会显示为\232\333这种形式，特别不方便，并且文件名变的特别长。
+
+解决办法：
+
+ git config --global core.quotepath false
+
 # 安装及配置zsh
 shell的类型有很多种，linux下默认的是bash，虽然bash的功能已经很强大，但对于以懒惰为美德的程序员来说，bash的提示功能不够强大，界面也不够炫，并非理想工具。
 而zsh的功能极其强大，只是配置过于复杂，起初只有极客才在用。后来，有个穷极无聊的程序员可能是实在看不下去广大猿友一直只能使用单调的bash, 于是他创建了一个名为[oh-my-zsh的开源项目](https://github.com/robbyrussell/oh-my-zsh)

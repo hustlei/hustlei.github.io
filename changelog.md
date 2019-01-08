@@ -2,6 +2,12 @@
 
 Changelog只记录jekyll模板修改，不记录post文件修改
 
+- **v0.1.12:2019.01.07**
+    - **Features**
+    - gittalk拆分为script和container两部分。因为script部分需要在jquery后加载
+    - **BugFixed**
+    - 修复了gittalk不能工作的问题。
+    
 - **v0.1.11:2019.01.06**
     - **Features**
     - 修改commit为gittalk
