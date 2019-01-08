@@ -21,7 +21,7 @@ msys2是一个在windows上模拟linux环境的软件。在msys2上可以使用�
 msys2支持linux shell的常用命令，默认安装了bash、dash等也可以安装zsh。更为方便的是在msys2中，也可以直接运行windows程序，比如notepad, start命令等等，也能够使用cmd的命令。
 
 ## msys2安装
-windows上安装msys2非常简单，直接在msys2官网[<http://msys2.github.io/>]上下载exe安装包，双击运行安装即可。
+windows上安装msys2非常简单，直接在msys2官网[<http://msys2.github.io>]上下载exe安装包，双击运行安装即可。
 
 官网上有两个版本可以下载，分别是32位和64位的。下载32位的即可以在32位windows上安装也可以在64位windows上安装，64位的安装包只能在64位windows上安装。
 
@@ -357,7 +357,7 @@ ConEmu官网下载地址：<https://conemu.github.io/>
 5. 在commands下文本框内输入如下代码：
 
 ~~~bat
-set MSYS2_PATH_TYPE=inherit & set MSYSTEM=mingw64 & set D="C:\msys64" & %D%\usr\bin\bash.exe --login -new_console:C:"%D%\msys2.ico"
+set MSYS2_PATH_TYPE=inherit & set MSYSTEM=mingw64 & set "D=C:\msys64" & %D%\usr\bin\bash.exe --login -i -new_console:C:"%D%\msys2.ico"
 ~~~
 
 MSYS2_PATH_TYPE=inherit表示合并windows系统的path变量。
@@ -429,9 +429,11 @@ Emacs还有自动保存的功能，当你改动了一个文件还未存盘的话
 + 查看package源：`C-h v package-archives`
 + 添加package源: `M-x customize-variable RET package-archives`
     - 选择 INS 回车，可以添加package源，例如：
-        
+
+    ~~~
     name:  melpa
     URL: https://melpa.org/packages/
+    ~~~
         
 + 强制刷新packages：`M-x package-refresh-contents`。PS：刷新过程可能会有点慢，可以切换到其他文件先做别的事。
 
