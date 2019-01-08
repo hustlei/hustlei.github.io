@@ -4,7 +4,7 @@ title: pacman常用命令
 category: 编程环境
 group: Coding
 tags: [msys2, pacman]
-keywords:[msys2, pacman]
+keywords: [msys2, pacman]
 description: pacman常用命令
 
 author: lileilei
