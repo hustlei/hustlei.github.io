@@ -58,10 +58,10 @@ JB :
   theme : lei-metro
    # Some JB helpers refer to these paths; change them here if needed. user can use them too.
   #文章分为4大类
-  group_names: [{name:PKM,disp:PKM,path:/pages/pkm.html},
-                {name:Coding,disp:Coding,path:/pages/coding.html},
-                {name:Design,disp:Design,path:/pages/design.html},
-                {name:Life,disp:Life,path:/pages/life.html}]
+  groups: [ {name: 'PKM',disp: 'PKM',path: '/pages/pkm.html'},
+            {name: 'Coding',disp: 'Coding',path: '/pages/coding.html'},
+            {name: 'Design',disp: 'Design',path: '/pages/design.html'},
+            {name: 'Life',disp: 'Life',path: '/pages/life.html'}]
   #
   groups_path : /pages/pages.html
   tags_path : /pages/tags.html
