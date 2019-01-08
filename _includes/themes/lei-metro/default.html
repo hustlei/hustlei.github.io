@@ -43,18 +43,9 @@
                         <li class="nav-item {% if page.id == "home" %} active {% endif %}">
                             <a class="nav-link" href="/" rel="nofollow">Home</a>
                         </li>
-                        <li class="nav-item {% if page.id == site.JB.group1_name %} active {% endif %}">
-                            <a class="nav-link" href="{{ site.JB.group1_path }}" rel="nofollow">{{site.JB.group1_name}}</a>
-                        </li>
-                        <li class="nav-item {% if page.id == site.JB.group2_name %} active {% endif %}">
-                            <a class="nav-link" href="{{ site.JB.group2_path }}" rel="nofollow">{{site.JB.group2_name}}</a>
-                        </li>
-                        <li class="nav-item {% if page.id == site.JB.group3_name %} active {% endif %}">
-                            <a class="nav-link" href="{{ site.JB.group3_path }}" rel="nofollow">{{site.JB.group3_name}}</a>
-                        </li>
-                        <li class="nav-item {% if page.id == site.JB.group4_name %} active {% endif %}">
-                            <a class="nav-link" href="{{ site.JB.group4_path }}" rel="nofollow">{{site.JB.group4_name}}</a>
-                        </li>
+                        {% for g in site.JB.groups %}
+                        <li class="nav-item {% if page.id == g.name %} active {% endif %}">
+                        <a class="nav-link" href="{{ g.path }}" rel="nofollow">{{g.disp}}</a></li>{% endfor %}
                         <li class="nav-item {% if page.id == 'music' %} active {% endif %}">
                             <a class="nav-link" href="{{ site.JB.music_path }}" rel="nofollow">音乐</a>
                         </li>

@@ -1,23 +1,23 @@
 ---
 layout: page
-title: PKM
+title: IT
 header: Posts By Category
 comments: false
-id: pkm
+id: it
 ---
 
 {% include JB/setup %}
 
 <ul class="tag_box">
   {% assign categories_list = site.categories %}
-  {% assign group = site.JB.group1_name %}
-  {% assign path = site.JB.group1_path %}
+  {% assign group = site.JB.groups[1].name %}
+  {% assign path = site.JB.groups[1].path %}
   {% include widgets/group_categories_list %}
 </ul>
 
 {% for category in site.categories %}
   {% for page in category[1] %}
-     {% if page.group == site.JB.group1_name %}
+     {% if page.group == site.JB.groups[1].name %}
        <h2 id="{{ category[0] }}-ref">{{ category[0] | join: "/" }}</h2>
         <ul>
          {% assign pages_list = category[1] %}
