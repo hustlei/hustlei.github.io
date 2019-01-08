@@ -2,11 +2,11 @@
 <ol class="breadcrumb px-0" style="background:transparent">
   <li class="breadcrumb-item"><a href="/">Home</a></li>
   {% if page.group %}
-  <li class="breadcrumb-item"><a href="/pages/{{page.group | downcase}}categories.html">{{ page.group }}</a></li>
-  {% endif %}
-  {% if page.categories != empty %}
-  <li class="breadcrumb-item"><a href="/pages/{{page.group | downcase}}categories.html#{{ category[0] }}-ref">分类</a></li>
-  {% endif %}
+      <li class="breadcrumb-item">{% for g in groups %} {% if g.name == group %}
+      <a href={% g.path %}>{{ g.disp }}</a></li>
+      {% if page.categories != empty %}
+      <li class="breadcrumb-item"><a href="{% g.name %}#{{ category[0] }}-ref">分类</a></li>  
+  {% endif %}{% endif %}{% endfor %}{% endif %}
   <li class="breadcrumb-item active">正文</li>
 </ol>
 </nav>
