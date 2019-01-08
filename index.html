@@ -11,68 +11,21 @@ id: home
 {% include JB/setup %}
 {% assign posts_num = 12 %}
 <div class="row">
+{% for g in site.JB.groups %}
     <article class="col-md-6 col-lg-4 p-2">
         <header>
             <h2>
-                <a href="{{ site.JB.group1_path }}" title="{{site.JB.group1_disp}}分类文章">{{site.JB.group1_disp}}</a>
+                <a href="{{ g.path }}" title="{{g.disp}}分类文章">{{g.disp}}</a>
             </h2>
             <hr/>
         </header>
         <section>
-            {% assign post_group = site.JB.group1_name %}
+            {% assign post_group = g.name %}
             {% include widgets/posts_collate2 %}
         </section>
         <footer>
-            <a class="btn btn-sm btn-outline-primary float-xs-right" href="{{ site.JB.group1_path }}" rel="nofollow"
+            <a class="btn btn-sm btn-outline-primary float-xs-right" href="{{ g.path }}" rel="nofollow"
                title="查看更多本类文章">more ...</a>
         </footer>
-    </article>
-    <article class="col-md-6 col-lg-4 p-2">
-        <header>
-            <h2>
-                <a href="{{ site.JB.group2_path }}" title="{{site.JB.group2_disp}}分类文章">{{site.JB.group2_disp}}</a>
-            </h2>
-            <hr/>
-        </header>
-        <section>
-            {% assign post_group = site.JB.group2_name %}
-            {% include widgets/posts_collate2 %}
-        </section>
-        <footer>
-            <a class="btn btn-sm btn-outline-primary float-xs-right" href="{{ site.JB.group2_path }}" rel="nofollow"
-               title="查看更多本类文章">more ...</a>
-        </footer>
-    </article>
-    <article class="col-md-6 col-lg-4 p-2">
-        <header>
-            <h2>
-                <a href="{{ site.JB.group3_path }}" title="{{site.JB.group3_disp}}分类文章">{{site.JB.group3_disp}}</a>
-            </h2>
-            <hr/>
-        </header>
-        <section>
-            {% assign post_group = site.JB.group3_name %}
-            {% include widgets/posts_collate2 %}
-        </section>
-        <footer>
-            <a class="btn btn-sm btn-outline-primary float-xs-right" href="{{ site.JB.group3_path }}" rel="nofollow"
-               title="查看更多本类文章">more ...</a>
-        </footer>
-    </article>
-    <article class="col-md-6 col-lg-4 p-2">
-        <header>
-            <h2>
-                <a href="{{ site.JB.group4_path }}" title="{{site.JB.group4_disp}}分类文章">{{site.JB.group4_disp}}</a>
-            </h2>
-            <hr/>
-        </header>
-        <section>
-            {% assign post_group = site.JB.group4_name %}
-            {% include widgets/posts_collate2 %}
-        </section>
-        <footer>
-            <a class="btn btn-sm btn-outline-primary float-xs-right" href="{{ site.JB.group4_path }}" rel="nofollow"
-               title="查看更多本类文章">more ...</a>
-        </footer>
-    </article>
+    </article>{% endfor%}
 </div>
