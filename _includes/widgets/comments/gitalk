@@ -8,8 +8,8 @@ var gitalk = new Gitalk({
   repo: 'hustlei.github.io',
   owner: 'hustlei',
   admin: ['hustlei'],
-  id: location.pathname,      // 页面唯一标识
-  distractionFreeMode: false  // Facebook-like distraction free mode
+  id: location.pathname,
+  distractionFreeMode: false
 })
 
 gitalk.render('gitalk-container')

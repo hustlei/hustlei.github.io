@@ -1,14 +1,24 @@
 ## Changelog
 
+Changelog只记录jekyll模板修改，不记录post文件修改
+
+- **v0.1.11:2019.01.06**
+    - **Features**
+    - 修改commit为gittalk
+    - 删除host by code pages
+    - 配置文件中root从hustlei.ml修改为hustlei.github.io
+    - 修改readme
+    - **BugFixed**
+    - 修改qrcode
 
 
-- **v0.1.10:2019.06.05**
+- **v0.1.10:2019.01.05**
     - **Features**
     - 修改网站description，进行简化
     - **BugFixed**
     - 修改group2-4页面错误
 
-- **v0.1.9:2019.05.05**
+- **v0.1.9:2019.01.05**
     - **Features**
     - 整理版本命令
     - 修改group配置混乱的问题，全部用配置文件代替硬编码

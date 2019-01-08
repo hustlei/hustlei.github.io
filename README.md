@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-
-# hustlei.github.io
-
-li lei lei's personal documents
-
-
 # Introduction
 
-基于[Jekyll-Bootstrap](http://jekyllbootstrap.com)，主要用于个人资料整理，放在github上备份，同时也公开共享。所有内容遵循[CC BY-NC-SA 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/cn/)协议。
+本博客基于[Jekyll-Bootstrap](http://jekyllbootstrap.com) , 主要为日常coding,design知识整理备忘，同时也公开共享。所有内容遵循[CC BY-NC-SA 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/cn/)协议。
 
 ## Usage
 
@@ -18,6 +11,10 @@ li lei lei's personal documents
 |- _config.yml     #配置文件
 |- index.html      #主页文件
 |- pages           #和index.html处于相同地位的网站页面
+|  |- archive.html
+|  |- tags.html
+|  |- search.html
+|  |- about.html
 |- _drafts         #草稿文件夹
 |- _posts          #源文件夹
 |  |- file.md
@@ -36,15 +33,10 @@ li lei lei's personal documents
 |- LICENSE
 |- README
 |- changelog.md
+|- sitemap.xml
 |- Rakefile
 ~~~
 
-+ 未用但保留的文件
-    - CNAME
-    - _plugins
-    - pages.html
-    - archive.html
-    - sitemap.xml
 + 已用widgets文件
     - back_top_button
     - baidu_share
@@ -54,7 +46,7 @@ li lei lei's personal documents
     - ————
     - links_list
     - categories_list
-    - recent_comments
+    - comments
     - recent_posts_list
     - recent_visitors
 + 未用widgets说明
@@ -73,14 +65,14 @@ li lei lei's personal documents
 > 
 > 普通文件夹下文件在liquid语句编译后直接按目录结构复制到_site文件夹
 
-+ _config.yml是整个jekyll的配置文件,没有的话就用默认设置
-+ _site文件夹是默认的静态网站输出位置
-+ _layouts文件夹内文件不需要修改。因为模板文件仅仅是简单的引用了themes内的模板文件。模板文件有三个
++ \_config.yml是整个jekyll的配置文件,没有的话就用默认设置
++ \_site文件夹是默认的静态网站输出位置
++ \_layouts文件夹内文件不需要修改。因为模板文件仅仅是简单的引用了themes内的模板文件。模板文件有三个
     - post: post文档的默认模板
     - page: 列出文档的模板，本站用于除index外的pages文件夹下html文件
     - default: 主页模板
-+ _includes/themes文件夹内是themes文件，因为_layouts内设置了themes，因此thems内的模板才是jekyll的真实模板文件
-+ _includes/widgets文件夹内是一些额外功能代码，一般在themes内通过{% include widget_name %}引用。
++ \_includes/themes文件夹内是themes文件，因为_layouts内设置了themes，因此thems内的模板才是jekyll的真实模板文件
++ \_includes/widgets文件夹内是一些额外功能代码，一般在themes内通过{% include widget_name %}引用。
 
 
 ### post文档yaml头建议
@@ -88,8 +80,9 @@ li lei lei's personal documents
 ~~~
 layout: 文档模板
 title: 文档标题
-category: 文档类别
-group: 文档分组
+subtitle: 文档小标题
+category: 分类
+group: 文档分组(大分类)
 tags: 文档标签
 tagline: 宣传标语
 keywords: 关键字
