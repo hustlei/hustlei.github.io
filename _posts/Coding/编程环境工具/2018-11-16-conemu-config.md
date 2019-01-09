@@ -1,12 +1,12 @@
 ---
 layout: post
-title: ConEmu配置msys2
-subtitle: 为msys2更换conemu终端
+title: ConEmu设置
+subtitle: 
 category: 编程环境
 group: Coding
-tags: [msys2, conemu]
-keywords: [msys2, conemu]
-description: conemu手动添加msys2 task
+tags: [conemu]
+keywords: [conemu]
+description: conemu
 
 author: lileilei
 revision:
