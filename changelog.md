@@ -6,7 +6,7 @@ Changelog只记录jekyll模板修改，不记录post文件修改
     - **Features**
     - 修改post导航条，为"Home>group>category1,category2>正文"格式
     - 导航条独立为widget
-    - 删除CNAME
+    - 删除CNAME, product_url由name.ml修改为name.github.io
     - **BugFixed**
     - 修复各个group page错误的问题。
 
