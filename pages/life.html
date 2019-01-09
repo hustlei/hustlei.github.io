@@ -10,14 +10,14 @@ id: life
 
 <ul class="tag_box">
   {% assign categories_list = site.categories %}
-  {% assign group = site.JB.groups[0].name %}
-  {% assign path = site.JB.groups[0].path %}
+  {% assign group = site.JB.groups[3].name %}
+  {% assign path = site.JB.groups[3].path %}
   {% include widgets/group_categories_list %}
 </ul>
 
 {% for category in site.categories %}
   {% for page in category[1] %}
-     {% if page.group == site.JB.groups[0].name %}
+     {% if page.group == site.JB.groups[3].name %}
        <h2 id="{{ category[0] }}-ref">{{ category[0] | join: "/" }}</h2>
         <ul>
          {% assign pages_list = category[1] %}

@@ -1,6 +1,15 @@
 ## Changelog
 
 Changelog只记录jekyll模板修改，不记录post文件修改
+，修复group page错误，
+- **v0.1.13:2019.01.08**
+    - **Features**
+    - 修改post导航条，为"Home>group>category1,category2>正文"格式
+    - 导航条独立为widget
+    - 删除CNAME, product_url由name.ml修改为name.github.io
+    - **BugFixed**
+    - 修复各个group page错误的问题。
+
 
 - **v0.1.12:2019.01.07**
     - **Features**

@@ -10,14 +10,14 @@ id: design
 
 <ul class="tag_box">
   {% assign categories_list = site.categories %}
-  {% assign group = site.JB.group_names[2] %}
-  {% assign path = site.JB.group_paths[2] %}
+  {% assign group = site.JB.groups[2].name %}
+  {% assign path = site.JB.groups[2].path %}
   {% include widgets/group_categories_list %}
 </ul>
 
 {% for category in site.categories %}
   {% for page in category[1] %}
-     {% if page.group == site.JB.group_names[2] %}
+     {% if page.group == site.JB.groups[2].name %}
        <h2 id="{{ category[0] }}-ref">{{ category[0] | join: "/" }}</h2>
         <ul>
          {% assign pages_list = category[1] %}
