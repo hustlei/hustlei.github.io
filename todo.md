@@ -1,6 +1,7 @@
-准备把图片迁移至 https://imgchr.com/hustlei 并备份至 coding.net  过https://coding.net/u/hustlei/p/blobstore/git 
+# todo
 
-
+搜索引擎认证
+/favico错误
+soft
 add subtitle
-
 修改站名
