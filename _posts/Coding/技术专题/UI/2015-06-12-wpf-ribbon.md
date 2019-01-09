@@ -47,7 +47,7 @@ revision:
 
 微软最早发布的Ribbon控件，界面与Office2007相同，下载需要[获得授权](https://profile.microsoft.com/RegSysProfileCenter/wizard.aspx?wizid=5fed1051-2e7b-4049-8177-0fdaae5f475c&lcid=1033)（[可参考这里](http://www.cnblogs.com/gnielee/archive/2010/05/10/wpf4-ribbon-quick-access-toolbar.html)）。微软已停止对其更新。
 
-![](http://hustlei.qiniudn.com/FluentRibbon/WPFRibbonControl.png)
+![]({{ site.img }}/FluentRibbon/WPFRibbonControl.png)
 
 # Microsft Ribbon for WPF
 
@@ -55,7 +55,7 @@ revision:
 
 可以直接在msdn上下载Microsoft Ribbon for WPF Source and Samples.msi或者Microsoft Ribbon for WPF.msi安装。
 
-![](http://hustlei.qiniudn.com/FluentRibbon/WPFRibbon.png)
+![]({{ site.img }}/FluentRibbon/WPFRibbon.png)
 
 # Fluent Ribbon
 
@@ -65,7 +65,7 @@ revision:
 
 最早在codeplex上，名称为Fluent Ribbon Control Suite，后来改名为Fluent Ribbon，后又迁移到github上。至今仍在更新。
 
-![](http://hustlei.qiniudn.com/FluentRibbon/FluentRibbon.png)
+![]({{ site.img }}/FluentRibbon/FluentRibbon.png)
 
 
 # 参考链接

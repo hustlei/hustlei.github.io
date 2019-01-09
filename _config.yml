@@ -53,6 +53,9 @@ production_url : https://hustlei.github.io
 
 safe: false
 
+#img url
+img : https://coding.net/u/hustlei/p/blobstore/git/raw/master/img
+
 JB :
   version : 0.3.0
   theme : lei-metro

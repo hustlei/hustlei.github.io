@@ -109,41 +109,41 @@ revision:
 + 甲板建筑物内处所，面对着全甲板间高度开口，且开口上沿板高度不超过其邻近甲板横梁高度25mm时
     - 如开口的宽度大于等于该开口处甲板宽度的90%，则从实际端部开口起，至该处甲板宽度的一半可不计入围蔽处所；见下图
  
-        ![fig1](http://hustlei.qiniudn.com/tonnage/1-1.jpg "图1")
+        ![fig1]({{ site.img }}/tonnage/1-1.jpg "图1")
 
     - 如该处所的宽度由于任何布置上的原因，不包括由于船壳板的收敛，使其宽度小于开口处甲板宽度的90%，则从开口线起，至船体横向宽度≤开口处甲板宽度90%处，可不计入围蔽处所。见以下3图
 
-        ![fig2](http://hustlei.qiniudn.com/tonnage/1-2.jpg "图2")
+        ![fig2]({{ site.img }}/tonnage/1-2.jpg "图2")
 
-        ![fig3](http://hustlei.qiniudn.com/tonnage/1-3.jpg "图3")
+        ![fig3]({{ site.img }}/tonnage/1-3.jpg "图3")
 
-        ![fig4](http://hustlei.qiniudn.com/tonnage/1-4.jpg "图4")
+        ![fig4]({{ site.img }}/tonnage/1-4.jpg "图4")
 
     - 如果两个处所由一间隔区分开，而且间隔区除了舷墙和栏杆外事完全开敞的，则可按前述两种情况免除计量。见下图
   
-        ![fig5](http://hustlei.qiniudn.com/tonnage/1-5.jpg "图5")
+        ![fig5]({{ site.img }}/tonnage/1-5.jpg "图5")
 
         但是如果两个处所之间的间隔距离小于间隔区甲板最小宽度的一半，就不适合这种免除。见下图
 
-        ![fig6](http://hustlei.qiniudn.com/tonnage/1-6.jpg "图6")
+        ![fig6]({{ site.img }}/tonnage/1-6.jpg "图6")
 
 + 在架空露天甲板下的处所，其开敞的两侧与船体除了必要的支柱外并无其它连接。见下图
     - 该种处所可以设置栏杆、舷墙上沿板，或在船边安设支柱；
     - 但栏杆顶或舷墙顶与舷边上沿板的距离应≥0.75m，且≥该处所高度的1/3。 
 
-    ![fig7](http://hustlei.qiniudn.com/tonnage/1-7.jpg "图7")
+    ![fig7]({{ site.img }}/tonnage/1-7.jpg "图7")
 
 + 伸展到两舷的建筑物，两侧相对开口的高度不小于0.75m及建筑物高度的1/3，如果该建筑物只有一侧有开口，则从处所中免除从开口向内最多伸到该开口处甲板宽度的一半。见下图
 
-    ![fig8](http://hustlei.qiniudn.com/tonnage/1-8.jpg "图8")
+    ![fig8]({{ site.img }}/tonnage/1-8.jpg "图8")
 
 + 建筑物内，直接位于顶甲板上无覆盖的*露天开口*下的处所，可免除开口区域以下处所。见下图
 
-    ![fig9](http://hustlei.qiniudn.com/tonnage/1-9.jpg "图9")
+    ![fig9]({{ site.img }}/tonnage/1-9.jpg "图9")
 
 + 建筑物的界限舱壁形成的某一壁龛，壁龛是露天的，其开口高度为甲板间高，无封闭设备，而且壁龛内宽度不大于其入口处宽度，同时入口伸至内壁的深度不大于入口处宽度的2倍。见下图
 
-    ![fig10](http://hustlei.qiniudn.com/tonnage/1-10.jpg "图10")
+    ![fig10]({{ site.img }}/tonnage/1-10.jpg "图10")
 
 ## 丈量及计算说明
 
