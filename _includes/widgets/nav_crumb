@@ -1,0 +1,13 @@
+<nav id="nav-crumb">
+<ol class="breadcrumb px-0" style="background:transparent">
+  <li class="breadcrumb-item"><a href="/">Home</a></li>
+  {% if page.group %}{% for g in site.JB.groups %}{% if g.name == page.group %}
+     <li class="breadcrumb-item"><a href={{ g.path }}>{{ g.disp }}</a></li>
+     {% if page.categories != empty %}{% for i in (0..(page.categories.size-1)) %}
+       {% if i != 0 %} , {% endif %}
+       <li class="breadcrumb-item"><a href="{{ g.path }}#{{ page.categories[i] }}-ref">{{page.categories[i]}}</a></li>
+     {% endfor %}{% endif %}
+  {% endif %}{% endfor %}{% endif %}
+  <li class="breadcrumb-item active">正文</li>
+</ol>
+</nav>
