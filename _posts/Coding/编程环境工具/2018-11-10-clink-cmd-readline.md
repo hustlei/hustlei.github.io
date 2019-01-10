@@ -2,7 +2,7 @@
 loyout: post
 title: 让windows下cmd命令行拥有行编辑(readline)能力
 subtitle: clink 增强cmd命令行
-category: 编程环境、工具
+category: 编程环境
 group: Coding
 tags: [命令行]
 keywords: [cmd, 命令行, readline, 行编辑, clink]

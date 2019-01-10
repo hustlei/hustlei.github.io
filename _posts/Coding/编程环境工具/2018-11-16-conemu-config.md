@@ -42,12 +42,17 @@ ConEmu是一个非常好用的终端，支持标签切换功能，可以在conem
 
 这样就只能启动一个conemu了，conemu支持多标签，所以启动一个就ok了。
 
-
 ## 设置字体
 
 1. 打开Settings对话框
 2. 选择General>>Fonts选项
 3. 在Main console font下选择Size为14
+4. 取消Monospace选项
+
+**中文字体重叠问题**
+
+勾选Monospace选项在某些命令，比如git中会出现中文字体重叠。所以要取消Monospace选项
+
 
 ## 设置背景图片
 
@@ -136,6 +141,19 @@ conemu的状态栏，感觉没啥用，我通常都不显示状态栏。方法�
 1. 打开Settings对话框
 2. 选择Fetures>>Status bar选项
 3. 取消选择Show status bar选项
+
+## emacs中C-V不能翻页的问题
+
+conemu中Ctr+V默认为粘贴，所以会导致conemu中emacs C-V不能翻页。
+
+如果用emacs多，建议设置如下：
+
+1. 打开Settings对话框
+2. 选择Keys & Macro>>Paste选项
+3. Paste mode #1(Ctrl+V)下，勾选Do nothing
+
+> 这样设置后整个conemu内如果用msys2等Ctrl+V都不能粘贴，但是可以用shift+Insert粘贴，cmd内不受影响。
+> 所以，如果不用emacs的话，就不用这么设置了。
 
 ## 为conemu设置当前目录打开的右键菜单
 

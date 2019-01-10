@@ -2,7 +2,7 @@
 loyout: post
 title: 为什么不用powershell
 subtitle: 
-category: 编程环境、工具
+category: 编程环境
 group: Coding
 tags: [命令行, 脚本]
 keywords: [命令行, 脚本, powershell]

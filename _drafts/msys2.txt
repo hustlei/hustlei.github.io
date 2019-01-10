@@ -1,7 +1,0 @@
-MSYS2 users can install Emacs (64bits build) with the following:
-
-pacman -S mingw-w64-x86_64-emacs
-For the 32bits build, evaluate:
-pacman -S mingw-w64-i686-emacs
-
-使用acman -S emacs不会安装相关依赖，并且会出现 missing file msys-gobject-2.0-0.dll的问题
