@@ -3,6 +3,8 @@ var j = GetArgsFromHref("j", window.location.href);
 var gname=glist[i].name;
 var aname=glist[i].album[j].name;
 var img=glist[i].album[j].img;
+var dir=gname+"/"
+if(aname != "default") dir+=aname+"/";
 
 document.getElementById('now').innerHTML = gname;
 document.write('<header class="col-xs-12 text-xs-center m-1"><h2>'+gname);
@@ -11,7 +13,7 @@ document.write('</h2></header><div class="row">');
 for(var k in img)
 {
 document.write('<figure class="figure col-md-6 text-xs-center">');
-document.write('<img class="figure-img img-fluid" src="'+root+img[k]+'">');
+document.write('<img class="figure-img img-fluid" src="'+root+dir+img[k]+'">');
 var fnarr=img[k].split(/[\,.]/);
 document.write('<figcaption class="figure-caption">'+fnarr[fnarr.length-2]+'</figcaption>');
 document.write('</figure>');

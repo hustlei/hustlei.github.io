@@ -1,12 +1,12 @@
 ---
 loyout: post
-title: ÎªÊ²Ã´²»ÓÃpowershell
+title: ä¸ºä»€ä¹ˆä¸ç”¨powershell
 subtitle: 
-category: ±à³Ì»·¾³¡¢¹¤¾ß
+category: ç¼–ç¨‹çŽ¯å¢ƒã€å·¥å…·
 group: Coding
-tags: [ÃüÁîÐÐ, ½Å±¾]
-keywords: [ÃüÁîÐÐ, ½Å±¾, powershell]
-description: ÎªÊ²Ã´²»ÓÃpowershell
+tags: [å‘½ä»¤è¡Œ, è„šæœ¬]
+keywords: [å‘½ä»¤è¡Œ, è„šæœ¬, powershell]
+description: ä¸ºä»€ä¹ˆä¸ç”¨powershell
 
 author: lileilei
 revision:
@@ -14,67 +14,67 @@ revision:
     date: 2018-12-11
 ---
 
-+ Ä¿Â¼
++ ç›®å½•
 {:toc}
 
-±¾À´¶ÔpowershellÎÞ¸Ð£¬µ«ÊÇ¿´µ½powershell×÷ÎªwindowsµÄÏÂÒ»´ú½Å±¾£¬²»½ö½ÓÌæcmd£¬²¿·ÖÃüÁî¼æÈÝbash£¬²¢ÇÒ»¹ÄÜ¹»ÔÚlinuxÏÂÔËÐÐ£¬¹¦ÄÜ³¬¹ýshell£¬·Ç³£Ç¿´ó£¬ã¿ã½×Å±Ècmd¸üºÃµÄÌåÑé£¬windowsÏÂÓÃshell¸÷ÖÖ²»±ã£¬Ë³±ãÁË½âÁËÒ»ÏÂ¡£
+æœ¬æ¥å¯¹powershellæ— æ„Ÿï¼Œä½†æ˜¯çœ‹åˆ°powershellä½œä¸ºwindowsçš„ä¸‹ä¸€ä»£è„šæœ¬ï¼Œä¸ä»…æŽ¥æ›¿cmdï¼Œéƒ¨åˆ†å‘½ä»¤å…¼å®¹bashï¼Œå¹¶ä¸”è¿˜èƒ½å¤Ÿåœ¨linuxä¸‹è¿è¡Œï¼ŒåŠŸèƒ½è¶…è¿‡shellï¼Œéžå¸¸å¼ºå¤§ï¼Œæ†§æ†¬ç€æ¯”cmdæ›´å¥½çš„ä½“éªŒï¼Œwindowsä¸‹ç”¨shellå„ç§ä¸ä¾¿ï¼Œé¡ºä¾¿äº†è§£äº†ä¸€ä¸‹ã€‚
 
-## powershellµÄÌØµã
+## powershellçš„ç‰¹ç‚¹
 
-+ powershell¼æÈÝ²¿·ÖshellÃüÁîÃû
-    - ±ÈÈçlsµÈ£¬µ«ÊÇÖ»ÊÇdirµÈÃüÁîµÄ±ðÃû£¬²ÎÊýÒ²²»Ì«Ò»Ñù¡£
-+ powershell¼æÈÝ²¿·ÖcmdÃüÁî
-    - dirµÈÃüÁî¿ÉÒÔÖ±½ÓÓÃ
-    - doskeyµÈÃüÁîÐèÒªÕâÑùÓÃ`doskey /exename=powershell.exe ls=dir`ÕæÐÄ²»·½±ã
-    - titleÃüÁî²»ÄÜÓÃÐèÒª$host.ui.RawUI.WindowTitle=xx,²»·½±ã
-    - cmdÉèÖÃ»·¾³±äÁ¿ÓÃset path=xx%path%¾ÍokÁË£¬µ«ÊÇpowershellÐèÒª$env:path="xxx;"+$env:path
-+ powershell»ùÓÚ.net framework£¬ÃæÏò¶ÔÏó£¬¿ÉÒÔµ÷ÓÃ.netµÄÒ»Ð©¿â£¬¹¦ÄÜÇ¿´ó¡£
-    - È·Êµ¹¦ÄÜÇ¿´ó£¬µ«ÊÇ´ó¶àÊýÃüÁî¶¼±ä³ÉÁËget-xxmethod£¬set-xxmethodÕâÑùµÄ
-    - powershell¸üÏñÊÇÒ»¸ö±à³ÌÓïÑÔ£¬×÷Îª½Å±¾ºÜÇ¿´ó£¬ÔÚ¿ØÖÆÌ¨ÖÐÓÃºÜ²»·½±ã
-+ powershell¿ØÖÆÌ¨Ö§³ÖÀ©Õ¹£¬ÓÐºÜ¶àÏß³ÌµÄÀ©Õ¹¿ÉÒÔ°²×°£¬±ÈÈçÐÐ±à¼­¹¦ÄÜ
-    - È·ÊµÓÐÕâÐ©¹¦ÄÜ£¬µ«ÊÇwin7µÈÃ»ÓÐ°²×°.net framework4.5,ºÜ¶à°²×°²»ÁË£¬±ØÐëÕÛÌÚÒ»ÏÂ£¬Éý¼¶powershellºÍ.net framework
++ powershellå…¼å®¹éƒ¨åˆ†shellå‘½ä»¤å
+    - æ¯”å¦‚lsç­‰ï¼Œä½†æ˜¯åªæ˜¯dirç­‰å‘½ä»¤çš„åˆ«åï¼Œå‚æ•°ä¹Ÿä¸å¤ªä¸€æ ·ã€‚
++ powershellå…¼å®¹éƒ¨åˆ†cmdå‘½ä»¤
+    - dirç­‰å‘½ä»¤å¯ä»¥ç›´æŽ¥ç”¨
+    - doskeyç­‰å‘½ä»¤éœ€è¦è¿™æ ·ç”¨`doskey /exename=powershell.exe ls=dir`çœŸå¿ƒä¸æ–¹ä¾¿
+    - titleå‘½ä»¤ä¸èƒ½ç”¨éœ€è¦$host.ui.RawUI.WindowTitle=xx,ä¸æ–¹ä¾¿
+    - cmdè®¾ç½®çŽ¯å¢ƒå˜é‡ç”¨set path=xx%path%å°±okäº†ï¼Œä½†æ˜¯powershelléœ€è¦$env:path="xxx;"+$env:path
++ powershellåŸºäºŽ.net frameworkï¼Œé¢å‘å¯¹è±¡ï¼Œå¯ä»¥è°ƒç”¨.netçš„ä¸€äº›åº“ï¼ŒåŠŸèƒ½å¼ºå¤§ã€‚
+    - ç¡®å®žåŠŸèƒ½å¼ºå¤§ï¼Œä½†æ˜¯å¤§å¤šæ•°å‘½ä»¤éƒ½å˜æˆäº†get-xxmethodï¼Œset-xxmethodè¿™æ ·çš„
+    - powershellæ›´åƒæ˜¯ä¸€ä¸ªç¼–ç¨‹è¯­è¨€ï¼Œä½œä¸ºè„šæœ¬å¾ˆå¼ºå¤§ï¼Œåœ¨æŽ§åˆ¶å°ä¸­ç”¨å¾ˆä¸æ–¹ä¾¿
++ powershellæŽ§åˆ¶å°æ”¯æŒæ‰©å±•ï¼Œæœ‰å¾ˆå¤šçº¿ç¨‹çš„æ‰©å±•å¯ä»¥å®‰è£…ï¼Œæ¯”å¦‚è¡Œç¼–è¾‘åŠŸèƒ½
+    - ç¡®å®žæœ‰è¿™äº›åŠŸèƒ½ï¼Œä½†æ˜¯win7ç­‰æ²¡æœ‰å®‰è£….net framework4.5,å¾ˆå¤šå®‰è£…ä¸äº†ï¼Œå¿…é¡»æŠ˜è…¾ä¸€ä¸‹ï¼Œå‡çº§powershellå’Œ.net framework
     
-## powershellÃüÁî±¾ÉíÌØÊâµÄµØ·½
+## powershellå‘½ä»¤æœ¬èº«ç‰¹æ®Šçš„åœ°æ–¹
 
-### ps1½Å±¾Ö´ÐÐÓÐ²»¹Ø±Õ¿ØÖÆÌ¨µÄ·½·¨
+### ps1è„šæœ¬æ‰§è¡Œæœ‰ä¸å…³é—­æŽ§åˆ¶å°çš„æ–¹æ³•
 
-batÖ´ÐÐºó¿ØÖÆÌ¨²»¹Ø±ÕºÜ¼òµ¥£¬Ö±½ÓÔÚbatÎÄ¼þ×îºóÌí¼Ócmd¾ÍokÁË¡£powershell½Å±¾Ä©Î²Ìí¼ÓpowershellÃüÁî²»¹ÜÓÃ¡£µ±È»batÄ©Î²Ìí¼ÓpowershellÃüÁî£¬½Å±¾Ö´ÐÐÍêºóÒ²Ò»Ñù»á¹Ø±Õ¡£
+batæ‰§è¡ŒåŽæŽ§åˆ¶å°ä¸å…³é—­å¾ˆç®€å•ï¼Œç›´æŽ¥åœ¨batæ–‡ä»¶æœ€åŽæ·»åŠ cmdå°±okäº†ã€‚powershellè„šæœ¬æœ«å°¾æ·»åŠ powershellå‘½ä»¤ä¸ç®¡ç”¨ã€‚å½“ç„¶batæœ«å°¾æ·»åŠ powershellå‘½ä»¤ï¼Œè„šæœ¬æ‰§è¡Œå®ŒåŽä¹Ÿä¸€æ ·ä¼šå…³é—­ã€‚
 
-ÔõÑù²ÅÄÜÈÃ½Å±¾Ö´ÐÐÍêºó´ò¿ªpowershell¿ØÖÆÌ¨²»¹Ø±ÕÄØ£¿ÐèÒªÔÚ½Å±¾Ä©Î²Ìí¼ÓÈçÏÂÃüÁî£º
+æ€Žæ ·æ‰èƒ½è®©è„šæœ¬æ‰§è¡Œå®ŒåŽæ‰“å¼€powershellæŽ§åˆ¶å°ä¸å…³é—­å‘¢ï¼Ÿéœ€è¦åœ¨è„šæœ¬æœ«å°¾æ·»åŠ å¦‚ä¸‹å‘½ä»¤ï¼š
 
 ```powershell
 PowerShell -NoExit
 ```
 
-### powershellÉèÖÃ»·¾³±äÁ¿
+### powershellè®¾ç½®çŽ¯å¢ƒå˜é‡
 
-¿ÉÒÔÊ¹ÓÃÈçÏÂ´úÂë£º
+å¯ä»¥ä½¿ç”¨å¦‚ä¸‹ä»£ç ï¼š
 
 `$env:path= "C:\Program Files\Notepad++;"+$env:path`
 
-Ò²¿ÉÒÔÊ¹ÓÃ
+ä¹Ÿå¯ä»¥ä½¿ç”¨
 
 `$env:path+= ";C:\Program Files\Notepad++"`
 
-### powershellÉèÖÃ¿ØÖÆÌ¨±êÌâ
+### powershellè®¾ç½®æŽ§åˆ¶å°æ ‡é¢˜
 
 `$host.ui.RawUI.WindowTitle="new title"`
 
 `$host.ui.RawUI.WindowTitle=$host.ui.RawUI.WindowTitle+"title"`
 
-Óë`$host.ui.RawUI.WindowTitle+="title"`ÏàÍ¬
+ä¸Ž`$host.ui.RawUI.WindowTitle+="title"`ç›¸åŒ
 
-### ÃüÁî±ðÃû¼ÓÈë²ÎÊý
+### å‘½ä»¤åˆ«ååŠ å…¥å‚æ•°
 
-ÔÚcmdÖÐÊ¹ÓÃ
+åœ¨cmdä¸­ä½¿ç”¨
 
 ```bat
 doskey cargo1=cargo $* --target i686-pc-windows-msvc
 ```
 
-ºóÖ´ÐÐcargo1 xxx£¬Êµ¼ÊÉÏ»áÖ´ÐÐcargo xxx --target i686-pc-windows-msvc
+åŽæ‰§è¡Œcargo1 xxxï¼Œå®žé™…ä¸Šä¼šæ‰§è¡Œcargo xxx --target i686-pc-windows-msvc
 
-ÔÚpowershellÖÐÊµÏÖ¸Ã¹¦ÄÜÐèÒª¶¨Òåfunction¡£¾ßÌåÈçÏÂ£º
+åœ¨powershellä¸­å®žçŽ°è¯¥åŠŸèƒ½éœ€è¦å®šä¹‰functionã€‚å…·ä½“å¦‚ä¸‹ï¼š
 
 ```
 function cargofun { cargo $args --target i686-pc-windows-msvc};
@@ -82,9 +82,9 @@ Set-Alias cargo1 cargofun
 ```
 
 
-### ´ò¿ªpowershell²¢Ö´ÐÐÓï¾ä
+### æ‰“å¼€powershellå¹¶æ‰§è¡Œè¯­å¥
 
-ÔÚps1½Å±¾ÖÐ£¬Î²²¿Ìí¼ÓÈçÏÂÓï¾ä£¬¿ÉÒÔÔÚ½Å±¾Ö´ÐÐÍêºó´ò¿ªpowershell¿ØÖÆÌ¨£¬²¢Ö´ÐÐfunctionºÍset-aliasÃüÁî¡£
+åœ¨ps1è„šæœ¬ä¸­ï¼Œå°¾éƒ¨æ·»åŠ å¦‚ä¸‹è¯­å¥ï¼Œå¯ä»¥åœ¨è„šæœ¬æ‰§è¡Œå®ŒåŽæ‰“å¼€powershellæŽ§åˆ¶å°ï¼Œå¹¶æ‰§è¡Œfunctionå’Œset-aliaså‘½ä»¤ã€‚
 
 ```
 PowerShell -NoExit -Command {
@@ -92,26 +92,26 @@ PowerShell -NoExit -Command {
     Write-host 'PS: Ready for copile rust progam running on win7,8,10!' }
 ```
 
-ÔÚbatÖÐ¿ÉÒÔÓÃÈçÏÂÃüÁî
+åœ¨batä¸­å¯ä»¥ç”¨å¦‚ä¸‹å‘½ä»¤
 
 ```
 powershell -NoExit -Command "$Host.UI.RawUI.WindowTitle += ' - rust4win7up'; Write-host 'PS: Ready for copile rust progam running on win7,8,10!'"
 ```
 
-×¢ÒâÔÚps1ÖÐ¿ÉÒÔ°ÑÃüÁî´úÂë·ÅÔÚ´óÀ¨ºÅ{}ÖÐ£¬´úÂë¿ÉÒÔ»»ÐÐ¡£ÔÚbatÖÐ£¬Ö»ÄÜ°Ñ´úÂë·ÅÔÚÒýºÅÄÚ£¬²¢ÇÒ²»ÄÜ»»ÐÐ¡£
+æ³¨æ„åœ¨ps1ä¸­å¯ä»¥æŠŠå‘½ä»¤ä»£ç æ”¾åœ¨å¤§æ‹¬å·{}ä¸­ï¼Œä»£ç å¯ä»¥æ¢è¡Œã€‚åœ¨batä¸­ï¼Œåªèƒ½æŠŠä»£ç æ”¾åœ¨å¼•å·å†…ï¼Œå¹¶ä¸”ä¸èƒ½æ¢è¡Œã€‚
 
-## ²»ÓÃpowershellµÄÀíÓÉ
+## ä¸ç”¨powershellçš„ç†ç”±
 
-+ ±¾ÈËÓÃwin7£¬²»Ïë°²×°.net 4.5µÈµÈÅÓ´óµÄ¶«Î÷
-+ ²»Ï²»¶get-xx,set-xxÕâÐ©Óï·¨
-+ powershell alias»¹Ã»ÓÐdoskeyºÃÓÃ
-+ powershell¸ü¸Ätitle£¬¸ü¸Ä»·¾³±äÁ¿²»·½±ãµÈµÈ
-+ ±¾ÈË¸ü¶àµÄÊÇÔÚ¿ØÖÆÌ¨ÉÏÊ¹ÓÃÃüÁî£¬¿ÉÒÔËµcmd±Èpowershell¸ü·½±ã
-+ °²×°clinkµÈÐ¡¹¤¾ßÄÜÈÃcmdÒ²Ö§³ÖÐÐ±à¼­¹¦ÄÜ
-+ Ê¹ÓÃcmder¿ÉÒÔÊ¹cmd¿ØÖÆÌ¨¸üÇ¿´ó
-+ 2018Äêºómsys2¿ÉÒÔ±È½ÏÍêÕûµÄÖ§³Öshell£¬gcc£¬emacs£¬vim£¬ÉõÖÁ¿ÉÒÔ°²×°qt,gtk,python
++ æœ¬äººç”¨win7ï¼Œä¸æƒ³å®‰è£….net 4.5ç­‰ç­‰åºžå¤§çš„ä¸œè¥¿
++ ä¸å–œæ¬¢get-xx,set-xxè¿™äº›è¯­æ³•
++ powershell aliasè¿˜æ²¡æœ‰doskeyå¥½ç”¨
++ powershellæ›´æ”¹titleï¼Œæ›´æ”¹çŽ¯å¢ƒå˜é‡ä¸æ–¹ä¾¿ç­‰ç­‰
++ æœ¬äººæ›´å¤šçš„æ˜¯åœ¨æŽ§åˆ¶å°ä¸Šä½¿ç”¨å‘½ä»¤ï¼Œå¯ä»¥è¯´cmdæ¯”powershellæ›´æ–¹ä¾¿
++ å®‰è£…clinkç­‰å°å·¥å…·èƒ½è®©cmdä¹Ÿæ”¯æŒè¡Œç¼–è¾‘åŠŸèƒ½
++ ä½¿ç”¨cmderå¯ä»¥ä½¿cmdæŽ§åˆ¶å°æ›´å¼ºå¤§
++ 2018å¹´åŽmsys2å¯ä»¥æ¯”è¾ƒå®Œæ•´çš„æ”¯æŒshellï¼Œgccï¼Œemacsï¼Œvimï¼Œç”šè‡³å¯ä»¥å®‰è£…qt,gtk,python
 
-ËùÒÔ£¬Ð¡µÄÅú´¦ÀíÓÃbat(cmd+clink)¡£¿ØÖÆÌ¨ÓÃmsys2£¬¹û¶Ï·ÅÆúpowershell¡£
+æ‰€ä»¥ï¼Œå°çš„æ‰¹å¤„ç†ç”¨bat(cmd+clink)ã€‚æŽ§åˆ¶å°ç”¨msys2ï¼Œæžœæ–­æ”¾å¼ƒpowershellã€‚
 
 
 

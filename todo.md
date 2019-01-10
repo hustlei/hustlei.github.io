@@ -1,6 +1,5 @@
 # todo
-
-搜索引擎认证
+about
 /favico错误
 soft
 add subtitle

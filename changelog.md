@@ -1,7 +1,14 @@
 ## Changelog
 
-Changelog只记录jekyll模板修改，不记录post文件修改
-，修复group page错误，
+Changelog不记录_post文件夹相关修改
+
+- **v0.1.14:2019.01.09**
+    - **Features**
+    - 删除多余的搜索引擎认证，仅留baidu 360 bing
+    - 移动所有图片到coding.net，修改图片存放路径配置为site.img
+    - **BugFixed**
+    - post中用{{site.img}}/url应用图片，修复图片不能访问问题
+
 - **v0.1.13:2019.01.08**
     - **Features**
     - 修改post导航条，为"Home>group>category1,category2>正文"格式

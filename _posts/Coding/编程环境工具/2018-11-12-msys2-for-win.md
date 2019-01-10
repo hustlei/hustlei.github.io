@@ -82,7 +82,7 @@ $ ping baidu.com
 
 **解决方法**
 
-新建/usr/bin/win文件，文件内容如下：
+新建/bin/win文件，文件内容如下：
 
 > PS：msys2中根目录/默认为msys2安装地址C:/msys2。
 
@@ -94,13 +94,13 @@ $@ |iconv -f gbk -t utf-8
 新建/etc/profile.d/alias.sh文件，文件内容如下：
 
 ~~~
-alias ls="/usr/bin/ls --color=tty --show-control-chars"
-alias grep="/usr/bin/grep --color"
-alias ll="/usr/bin/ls --color=tty --show-control-chars -l"
+alias ls="/bin/ls --color=tty --show-control-chars"
+alias grep="/bin/grep --color"
+alias ll="/bin/ls --color=tty --show-control-chars -l"
  
-alias ping="/usr/bin/win ping"
-alias netstat="/usr/bin/win netstat"
-alias nslookup="/usr/bin/win nslookup"
+alias ping="/bin/win ping"
+alias netstat="/bin/win netstat"
+alias nslookup="/bin/win nslookup"
 ~~~
 
 重新启动msys2后效果：
@@ -233,7 +233,9 @@ git中如果存在中文文件名，则会显示为\232\333这种形式，特别
 
 解决办法：
 
- git config --global core.quotepath false
+~~~
+git config --global core.quotepath false
+~~~
 
 # 安装及配置zsh
 shell的类型有很多种，linux下默认的是bash，虽然bash的功能已经很强大，但对于以懒惰为美德的程序员来说，bash的提示功能不够强大，界面也不够炫，并非理想工具。
@@ -315,13 +317,15 @@ source ~/.zshrc
 
 ~~~
 $ vim t
-\_arguments:451: \_vim\_files: function definition file not found
+_arguments:451: _vim_files: function definition file not found
 ~~~
 
-解决方法：将~/.zcompdump\*删除即可
+解决方法：将`~/.zcompdump*`删除即可
 
-$ rm -rf ~/.zcompdump\*
-$ exec zsh
+~~~shell
+rm -rf ~/.zcompdump*
+exec zsh
+~~~
 
 ** zsh在使用git命令卡顿的问题**
 
@@ -329,13 +333,12 @@ $ exec zsh
 
 解决办法：
 
-设置 oh-my-zsh 不读取文件变化信息（在 git 项目目录执行下列命令）
-
-$ git config --add oh-my-zsh.hide-dirty 1
-
-如果你还觉得慢，可以再设置 oh-my-zsh 不读取任何 git 信息
-
-$ git config --add oh-my-zsh.hide-status 1
+~~~shell
+##设置 oh-my-zsh 不读取文件变化信息（在 git 项目目录执行下列命令）
+git config --add oh-my-zsh.hide-dirty 1
+##如果你还觉得慢，可以再设置 oh-my-zsh 不读取任何 git 信息
+git config --add oh-my-zsh.hide-status 1
+~~~
 
 okey 了，如果想恢复，设置成0就好
 
@@ -357,7 +360,7 @@ ConEmu官网下载地址：<https://conemu.github.io/>
 5. 在commands下文本框内输入如下代码：
 
 ~~~bat
-set MSYS2_PATH_TYPE=inherit & set MSYSTEM=mingw64 & set "D=C:\msys64" & %D%\usr\bin\bash.exe --login -i -new_console:C:"%D%\msys2.ico"
+set MSYS2_PATH_TYPE=inherit & set MSYSTEM=mingw64 & set "D=C:\msys64" & %D%\usr\bin\bash --login -i -new_console:C:"%D%\msys2.ico"
 ~~~
 
 MSYS2_PATH_TYPE=inherit表示合并windows系统的path变量。
@@ -401,7 +404,9 @@ Emacs还有自动保存的功能，当你改动了一个文件还未存盘的话
 
 在~/.emacs: 中添加下面的lisp语句
 
+~~~
 (setq backup-directory-alist '(("" . "~/bak/")))
+~~~
 
 ## emacs 包管理及源设置
 
@@ -424,8 +429,8 @@ Emacs还有自动保存的功能，当你改动了一个文件还未存盘的话
 
 **源配置**
 
-+ 在~/.emacs文件中添加: `(require 'package)`。否则后边的命令无法执行
 + 在~/.emacs文件中添加：`(package-initialize)`。启动时加载安装的扩展
++ 在~/.emacs文件中添加: `(require 'package)`。否则后边的package命令无法执行
 + 查看package源：`C-h v package-archives`
 + 添加package源: `M-x customize-variable RET package-archives`
     - 选择 INS 回车，可以添加package源，例如：
@@ -498,7 +503,6 @@ qt安装后非常大，如果需要，请谨慎安装。
 python对windows的支持很好，并且即使下载windows版安装包安装后，在msys2里也能调用，所以不想折腾就直接用windows版本的python吧。
 
 ## 参考文章
-# 参考资料
 
 + [MSYS2](http://www.rswiki.org/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/msys2?rev=1416044574)
 + [msys2使用小结](http://www.annhe.net/article-3482.html)
