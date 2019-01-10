@@ -91,6 +91,7 @@
     <script defer src="{{ ASSET_PATH }}/style.js"></script>
     <script defer src="/assets/widgets/bootstrap-4.0/js/bootstrap.min.js"></script>
     {% if page.id == "search" %}<script defer src="/assets/widgets/search_box.js"></script> {% endif %}
+    {% include widgets/highlightjs_number %}
     {% unless page.comment==false %}
     {% include widgets/comments/gitalk_script %} {% endunless %}    
     {% if page.content contains "$" or page.content contains "{equation" %} {% include widgets/mathjax %} {% endif %}

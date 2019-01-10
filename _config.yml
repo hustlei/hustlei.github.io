@@ -25,13 +25,14 @@ kramdown:
 # whether set math_engine must include mathjax.js byyourself，so i dont use 
 #  math_engine_opts: preview
   enable_coderay: false
-  syntax_highlighter: rouge
-  syntax_highlighter_opts:
-    block:
-      line_numbers:   table
+  #disabled using js
+  # syntax_highlighter: rouge
+  # syntax_highlighter_opts:
+    # block:
+      # line_numbers:   table
   
 # github pages mandatory default setting, modify can't take effect
-highlighter: rouge
+#highlighter: rouge
 
 #paginate: 5
 
