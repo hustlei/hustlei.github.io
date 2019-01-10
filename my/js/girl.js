@@ -5,6 +5,7 @@ var aname=glist[i].album[j].name;
 var img=glist[i].album[j].img;
 var dir=gname+"/"
 if(aname != "default") dir+=aname+"/";
+dir=encodeURI(dir);
 
 document.getElementById('now').innerHTML = gname;
 document.write('<header class="col-xs-12 text-xs-center m-1"><h2>'+gname);

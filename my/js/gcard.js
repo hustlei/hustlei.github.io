@@ -7,6 +7,7 @@ for(var j in alist)
 {
 var dir=gname+"/";
 if(alist[j].name != "default") dir+=alist[j].name+"/";
+dir=encodeURI(dir);
 card+='<div class="col-md-3 col-sm-4 col-xs-6">';
 card+='<a href="girl.html?i='+i+'&j='+j+'">';
 card+='<img class="w-100" src="'+root+dir+alist[j].img[0]+'">'; 
