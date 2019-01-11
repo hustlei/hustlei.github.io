@@ -1,11 +1,8 @@
 # todo
-
-
 /favico错误
-soft
 add subtitle
 修改站名
 
 暂缓
-auto_number
 commandline
+soft download

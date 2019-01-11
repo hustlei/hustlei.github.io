@@ -1,3 +1,0 @@
-<script defer type="text/javascript">
-  $('pre').addClass("line-numbers").css("white-space", "pre-wrap");
-</script>

@@ -1,1 +1,2 @@
 {% include widgets/comments/gitalk %}
+{% unless page.comment==false %}{% include widgets/comments/gitalk_script %} {% endunless %}

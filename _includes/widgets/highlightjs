@@ -1,2 +1,7 @@
-<script src="/assets/widgets/prismjs/prism.js"></script>
 <link rel="stylesheet" href="/assets/widgets/prismjs/prism.css">
+<script defer src="/assets/widgets/prismjs/prism.js"></script>
+{% comment %}<!--
+<script defer type="text/javascript">
+$('pre').addClass("line-numbers").css("white-space", "pre-wrap");</script>
+因为有些浏览器defer只对非src起作用，所以直接加入prism.js
+-->{% endcomment %}

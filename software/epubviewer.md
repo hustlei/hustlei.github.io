@@ -26,4 +26,4 @@ EpubViwer是本人在编写一个船舶专业软件时，准备用Epub电子文�
 
 软件界面：
 
-![](http://hustlei.qiniudn.com/epubviewer/epubviewer1.1-lite.png)
+![]({{ site.img }}/epubviewer/epubviewer1.1-lite.png)
