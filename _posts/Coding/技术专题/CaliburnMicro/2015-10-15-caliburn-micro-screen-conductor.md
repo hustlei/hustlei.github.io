@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Caliburn.Micro中的Screen和Conductor
-category: .net框架
-group: IT
+category: Caliburn.Micro
+group: Coding
 tags: [Caliburn.Micro]
 keywords: [Caliburn.Micro, MVVM, WPF框架, .NET框架]
 description:  Caliburn.Micro MVVM框架简介

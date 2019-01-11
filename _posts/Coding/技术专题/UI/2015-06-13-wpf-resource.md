@@ -148,6 +148,8 @@ Content资源和独立文件对于用户来说没有多大区别，调用方式�
 <Label Content="{DynamicResource label2}" /> 
 ~~~
 
+> {staticresource resourcekey="keyname"} 与{staticresource keyname}相同
+
 ## .resx资源(嵌入资源/Embedded Resource)
 
 可以提供对字符串，图片、二进制数据的存储

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Caliburn.Micro Bootstrapper及IOC容器配置
-category: .net框架
+category: Caliburn.Micro
 group: Coding
 tags: [Caliburn.Micro]
 keywords: [Caliburn.Micro, MVVM, WPF框架, .NET框架]

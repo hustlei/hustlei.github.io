@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Caliburn.Micro入门
-category: .net框架
+category: [Caliburn.Micro]
 group: Coding
 tags: [Caliburn.Micro]
 keywords: [Caliburn.Micro, MVVM, WPF框架, .NET框架]
@@ -16,7 +16,6 @@ revision:
 + 目录
 {:toc}
 
-# Caliburn.Micro Hello World
 
 ## 新建工程
 本文只介绍ViewModel First的方式，因为View First比较少用，虽然CM也支持。
@@ -36,7 +35,7 @@ namespace Caliburn.Micro.Hello {
 }
 ~~~
 
-### 创建ViewModel
+## 创建ViewModel
 创建ViewModel，ViewModel需要继承PropertyChangedBase，PropertyChangedBase实现了INotifyPropertyChanged接口，并让Notify事件在UI线程上执行。代码如下：
 
 ~~~ csharp
@@ -66,7 +65,7 @@ namespace Caliburn.Micro.Hello {
 }
 ~~~
 
-### 配置BootStraper
+## 配置BootStraper
 使用CM就必需要有一个BootStraper，BootStraper对CM进行配置，并通过主ViewModel启动View。所以我们首先创建一个继承BootStraper的类。BootStraper最简单的形式如下：
 
 ~~~ csharp

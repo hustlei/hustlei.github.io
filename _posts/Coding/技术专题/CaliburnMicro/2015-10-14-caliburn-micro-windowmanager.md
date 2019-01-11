@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Caliburn.Micro中的WindowManager
-category: .net框架
+category: Caliburn.Micro
 group: Coding
 tags: [Caliburn.Micro]
 keywords: [Caliburn.Micro, MVVM, WPF框架, .NET框架]

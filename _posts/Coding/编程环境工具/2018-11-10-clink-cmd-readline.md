@@ -1,7 +1,7 @@
 ---
-loyout: post
-title: 让windows下cmd命令行拥有行编辑(readline)能力
-subtitle: clink 增强cmd命令行
+layout: post
+title: cmd命令行增强工具clink
+subtitle: 让windows下cmd命令行拥有行编辑(readline)能力
 category: 编程环境
 group: Coding
 tags: [命令行]
@@ -16,6 +16,7 @@ revision:
 
 + 目录
 {:toc}
+
 
 linux下shell终端里有行编辑功能，在命令提示符下默认可以像emacs一样编辑输入的命令。比如：
 
