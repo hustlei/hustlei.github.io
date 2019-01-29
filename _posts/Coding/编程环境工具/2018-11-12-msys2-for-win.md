@@ -502,7 +502,19 @@ qt安装后非常大，如果需要，请谨慎安装。
 
 python对windows的支持很好，并且即使下载windows版安装包安装后，在msys2里也能调用，所以不想折腾就直接用windows版本的python吧。
 
-## 参考文章
+## gcc找不到链接库路径问题
+
+在pacman中安装了SDL等库，但是gcc链接的时候就是提示找不到sdl。
+
+解决方法：在msys2_shell.cmd中加入如下代码
+
+~~~
+set LIBRARY_PATH=C:\msys64\mingw64\lib
+~~~
+
+> 在shell里使用LIBRARY_PATH=/mingw64/lib是不行的
+
+# 参考文章
 
 + [MSYS2](http://www.rswiki.org/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/msys2?rev=1416044574)
 + [msys2使用小结](http://www.annhe.net/article-3482.html)

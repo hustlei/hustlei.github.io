@@ -42,7 +42,7 @@ C#调用C++/CLI类注意事项
 + ref类的函数（方法）参数可以直接使用Native C++类类型，但是C#无法理解这些参数
     - 也就是说，public函数不要用Native C++类类型作为参数类型
 
-C#可以调用Native C++类类型，无论使用Pinvoke还是其他方法，Native类类型作为参数都很难处理。当然也有处理的方法（目前我只知道C#调用Native C++ struct类型的方法）
+C#可以调用Native C++类类型，无论使用Pinvoke还是其他方法，Native类类型作为参数都很难处理。当然也有处理的方法（通常是把native类重新包装）
 
 # C++/CLI调用C#
 

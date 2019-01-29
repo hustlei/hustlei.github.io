@@ -139,3 +139,14 @@ set MSYS2_PATH_TYPE=inherit & set MSYSTEM=mingw64 & set "PATH=%ConEmuDrive%\msys
 不论怎么设置都改变不了这个问题，只能到官网重新下载conemu最新版安装。或者使用cmder自带的conemu。
 
 ConEmu官网下载地址<https://conemu.github.io/>
+
+## conemu中配置gcc链接库路径问题
+
+在pacman中安装了SDL等库，但是gcc链接的时候就是提示找不到sdl。
+
+解决方法：在Startup>Envirenment对话框中配置
+
+~~~
+set LIBRARY_PATH=C:\msys64\mingw64\lib
+~~~
+
