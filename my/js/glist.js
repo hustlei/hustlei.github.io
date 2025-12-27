@@ -94,4 +94,4 @@ var glist = [
     },
 ];
 
-var root="https://coding.net/u/hustlei/p/blobstore/git/raw/master/img"+"/girls/";
+var root="https://gitlab.com/hustlei/fs/-/raw/main/"+"images/girls/";
